@@ -82,6 +82,7 @@ class NavMeshTesterTool : public SampleTool
 	float m_randomRadius;
 	bool m_sposSet;
 	bool m_eposSet;
+	bool m_showCoord;
 
 	int m_pathIterNum;
 	dtPolyRef m_pathIterPolys[MAX_POLYS]; 

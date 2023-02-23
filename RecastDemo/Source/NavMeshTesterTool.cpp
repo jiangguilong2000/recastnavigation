@@ -233,7 +233,8 @@ NavMeshTesterTool::NavMeshTesterTool() :
 	m_eposSet(false),
 	m_pathIterNum(0),
 	m_pathIterPolyCount(0),
-	m_steerPointCount(0)
+	m_steerPointCount(0),
+	m_showCoord(true)
 {
 	m_filter.setIncludeFlags(SAMPLE_POLYFLAGS_ALL ^ SAMPLE_POLYFLAGS_DISABLED);
 	m_filter.setExcludeFlags(0);
@@ -1376,23 +1377,52 @@ void NavMeshTesterTool::handleRender()
 void NavMeshTesterTool::handleRenderOverlay(double* proj, double* model, int* view)
 {
 	GLdouble x, y, z;
-	
+	char buf[64];
+
 	// Draw start and end point labels
 	if (m_sposSet && gluProject((GLdouble)m_spos[0], (GLdouble)m_spos[1], (GLdouble)m_spos[2],
-								model, proj, view, &x, &y, &z))
+		model, proj, view, &x, &y, &z))
 	{
-		imguiDrawText((int)x, (int)(y-25), IMGUI_ALIGN_CENTER, "Start", imguiRGBA(0,0,0,220));
+		if (m_showCoord)
+		{
+			snprintf(buf, sizeof(buf), "Start (%.1f, %.1f, %.1f)", m_spos[0], m_spos[1], m_spos[2]);
+			imguiDrawText((int)x, (int)(y - 25), IMGUI_ALIGN_CENTER, buf, imguiRGBA(0, 0, 0, 220));
+		}
+		else
+			imguiDrawText((int)x, (int)(y - 25), IMGUI_ALIGN_CENTER, "Start", imguiRGBA(0, 0, 0, 220));
+	}
+
+
+
+	if (m_toolMode == TOOLMODE_RAYCAST && m_hitResult && m_showCoord &&
+		gluProject((GLdouble)m_hitPos[0], (GLdouble)m_hitPos[1], (GLdouble)m_hitPos[2],
+			model, proj, view, &x, &y, &z))
+	{
+		snprintf(buf, sizeof(buf), "HitPos (%.1f, %.1f, %.1f)", m_hitPos[0], m_hitPos[1], m_hitPos[2]);
+		imguiDrawText((int)x, (int)(y - 25), IMGUI_ALIGN_CENTER, buf, imguiRGBA(0, 0, 0, 220));
 	}
 	if (m_eposSet && gluProject((GLdouble)m_epos[0], (GLdouble)m_epos[1], (GLdouble)m_epos[2],
-								model, proj, view, &x, &y, &z))
+		model, proj, view, &x, &y, &z))
 	{
-		imguiDrawText((int)x, (int)(y-25), IMGUI_ALIGN_CENTER, "End", imguiRGBA(0,0,0,220));
+		if (m_showCoord)
+		{
+			float totalCost = 0.0f;
+			for (int i = 0; i + 1 < m_nstraightPath; i++)
+				totalCost += dtVdist(&m_straightPath[i * 3], &m_straightPath[(i + 1) * 3]);
+			snprintf(buf, sizeof(buf), "End (%.1f, %.1f, %.1f), Cost %.1f", m_epos[0], m_epos[1], m_epos[2], totalCost);
+			imguiDrawText((int)x, (int)(y - 25), IMGUI_ALIGN_CENTER, buf, imguiRGBA(0, 0, 0, 220));
+		}
+		else
+			imguiDrawText((int)x, (int)(y - 25), IMGUI_ALIGN_CENTER, "End", imguiRGBA(0, 0, 0, 220));
 	}
-	
+
 	// Tool help
 	const int h = view[3];
-	imguiDrawText(280, h-40, IMGUI_ALIGN_LEFT, "LMB+SHIFT: Set start location  LMB: Set end location", imguiRGBA(255,255,255,192));	
+	imguiDrawText(280, h - 40, IMGUI_ALIGN_LEFT, "LMB+SHIFT: Set start location  LMB: Set end location", imguiRGBA(255, 255, 255, 192));
 }
+
+
+
 
 void NavMeshTesterTool::drawAgent(const float* pos, float r, float h, float c, const unsigned int col)
 {
