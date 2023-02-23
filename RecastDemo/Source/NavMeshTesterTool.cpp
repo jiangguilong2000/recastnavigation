@@ -31,11 +31,16 @@
 #include "NavMeshTesterTool.h"
 #include "Sample.h"
 #include "Recast.h"
+#include <iostream>
+#include <sstream>
+#include <string>
 #include "RecastDebugDraw.h"
 #include "DetourNavMesh.h"
 #include "DetourNavMeshBuilder.h"
 #include "DetourDebugDraw.h"
 #include "DetourCommon.h"
+
+using namespace std;
 
 #ifdef WIN32
 #	define snprintf _snprintf
@@ -218,7 +223,7 @@ NavMeshTesterTool::NavMeshTesterTool() :
 	m_navMesh(0),
 	m_navQuery(0),
 	m_pathFindStatus(DT_FAILURE),
-	m_toolMode(TOOLMODE_PATHFIND_FOLLOW),
+	m_toolMode(TOOLMODE_PATHFIND_STRAIGHT),
 	m_straightPathOptions(0),
 	m_startRef(0),
 	m_endRef(0),
@@ -1009,6 +1014,23 @@ void NavMeshTesterTool::recalc()
 											   m_polys, m_parent, &m_npolys, MAX_POLYS);
 		}
 	}
+		if (m_toolMode == TOOLMODE_PATHFIND_STRAIGHT&& m_nstraightPath>0) 
+    	{
+    		stringstream os;
+    		os << "total point size=" << m_nstraightPath<< ",";
+    
+    		//m_sample->getContext()->log(RC_LOG_PROGRESS, "total point size=%d", m_nstraightPath);
+    		
+    		for (int i = 0; i < m_nstraightPath; ++i)
+    		{
+    			if (i > 0&&i%10==0) {
+    				m_sample->getContext()->log(RC_LOG_PROGRESS, "%s", os.str().c_str());
+    				os.str("");
+    			}
+    			os << "[" << m_straightPath[i * 3] << "," << m_straightPath[i * 3 + 1] << "," << m_straightPath[i * 3 + 2] << "] ";
+    		}
+    		m_sample->getContext()->log(RC_LOG_PROGRESS, "%s", os.str().c_str());
+    	}
 }
 
 static void getPolyCenter(dtNavMesh* navMesh, dtPolyRef ref, float* center)
