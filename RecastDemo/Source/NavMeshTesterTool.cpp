@@ -467,7 +467,27 @@ void NavMeshTesterTool::handleMenu()
 	}
 	imguiUnindent();
 
-	imguiSeparator();	
+	imguiSeparator();
+
+	imguiLabel("Extend Operation");
+
+	if (imguiButton("Copy Log"))
+	{
+		for (int i = 0; i < m_sample->getContext()->getLogCount(); ++i)
+		{
+		
+			const char* content=m_sample->getContext()->getLogText(i);
+		
+			//ImGuiIO &io = ImGui::GetIO(); io.SetClipboardTextFn = _IMGUISetClipboardText; io.GetClipboardTextFn = _IMGUIGetClipboardText;
+			
+			
+		}
+		
+			
+		recalc();
+	}
+	
+	
 }
 
 void NavMeshTesterTool::handleClick(const float* /*s*/, const float* p, bool shift)
@@ -1025,6 +1045,7 @@ void NavMeshTesterTool::recalc()
     		{
     			if (i > 0&&i%10==0) {
     				m_sample->getContext()->log(RC_LOG_PROGRESS, "%s", os.str().c_str());
+    				
     				os.str("");
     			}
     			os << "[" << m_straightPath[i * 3] << "," << m_straightPath[i * 3 + 1] << "," << m_straightPath[i * 3 + 2] << "] ";
@@ -1433,6 +1454,8 @@ void NavMeshTesterTool::handleRenderOverlay(double* proj, double* model, int* vi
 				totalCost += dtVdist(&m_straightPath[i * 3], &m_straightPath[(i + 1) * 3]);
 			snprintf(buf, sizeof(buf), "End (%.1f, %.1f, %.1f), Cost %.1f", m_epos[0], m_epos[1], m_epos[2], totalCost);
 			imguiDrawText((int)x, (int)(y - 25), IMGUI_ALIGN_CENTER, buf, imguiRGBA(0, 0, 0, 220));
+			
+			
 		}
 		else
 			imguiDrawText((int)x, (int)(y - 25), IMGUI_ALIGN_CENTER, "End", imguiRGBA(0, 0, 0, 220));

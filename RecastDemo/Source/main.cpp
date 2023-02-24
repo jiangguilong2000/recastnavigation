@@ -84,6 +84,7 @@ int main(int /*argc*/, char** /*argv*/)
 	SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
 	SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE, 24);
 	
+	
 	// Set color channel depth.
 	SDL_GL_SetAttribute(SDL_GL_RED_SIZE, 8);
 	SDL_GL_SetAttribute(SDL_GL_GREEN_SIZE, 8);
@@ -871,7 +872,8 @@ int main(int /*argc*/, char** /*argv*/)
 			if (imguiBeginScrollArea("Log", 250 + 20, 10, width - 300 - 250, 200, &logScroll))
 				mouseOverMenu = true;
 			for (int i = 0; i < ctx.getLogCount(); ++i)
-				imguiLabel(ctx.getLogText(i));
+				//日志打印
+			imguiLabel(ctx.getLogText(i));
 			imguiEndScrollArea();
 		}
 		
