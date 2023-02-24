@@ -471,19 +471,38 @@ void NavMeshTesterTool::handleMenu()
 
 	imguiLabel("Extend Operation");
 
+	//拷贝
 	if (imguiButton("Copy Log"))
 	{
+		HGLOBAL hGlobal;
+		string allLog = "";
+		string prefix = "total point";
 		for (int i = 0; i < m_sample->getContext()->getLogCount(); ++i)
 		{
-		
-			const char* content=m_sample->getContext()->getLogText(i);
-		
-			//ImGuiIO &io = ImGui::GetIO(); io.SetClipboardTextFn = _IMGUISetClipboardText; io.GetClipboardTextFn = _IMGUIGetClipboardText;
-			
-			
+			string content = string(m_sample->getContext()->getLogText(i));
+			size_t index = content.find(prefix);
+			if (index < content.length())
+			{
+				allLog += content + "\n";
+			}
 		}
-		
-			
+		const char* content = allLog.c_str();
+
+		int bufSize = MultiByteToWideChar(CP_ACP, 0, content, -1, NULL, 0);
+		wchar_t* wbuf = new wchar_t[bufSize];
+		MultiByteToWideChar(CP_ACP, 0, content, -1, wbuf, bufSize);
+
+		hGlobal = GlobalAlloc(GHND, (lstrlenW(wbuf) + 1) * sizeof(wchar_t)); // lstrlenW sizeof(wchar_t)
+		wchar_t* pGlobal = (wchar_t*)GlobalLock(hGlobal); // wchar_t
+		lstrcpyW(pGlobal, wbuf); // lstrcpyW
+		GlobalUnlock(hGlobal);
+
+		OpenClipboard(NULL);
+		EmptyClipboard();
+		SetClipboardData(CF_UNICODETEXT, hGlobal); // UnicodeCF_UNICODETEXT
+		CloseClipboard();
+
+
 		recalc();
 	}
 	
