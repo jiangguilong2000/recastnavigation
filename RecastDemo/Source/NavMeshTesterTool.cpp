@@ -477,14 +477,27 @@ void NavMeshTesterTool::handleMenu()
 		HGLOBAL hGlobal;
 		string allLog = "";
 		string prefix = "total point";
+		bool flag=false;
 		for (int i = 0; i < m_sample->getContext()->getLogCount(); ++i)
 		{
 			string content = string(m_sample->getContext()->getLogText(i));
-			size_t index = content.find(prefix);
-			if (index < content.length())
+
+			if(flag)
 			{
 				allLog += content + "\n";
+			}else
+			{
+				size_t index = content.find(prefix);
+				if(index < content.length())
+				{
+					flag=true;
+					allLog += content + "\n";
+				}
 			}
+			
+			
+				
+			
 		}
 		const char* content = allLog.c_str();
 
@@ -1056,7 +1069,8 @@ void NavMeshTesterTool::recalc()
 		if (m_toolMode == TOOLMODE_PATHFIND_STRAIGHT&& m_nstraightPath>0) 
     	{
     		stringstream os;
-    		os << "total point size=" << m_nstraightPath<< ",";
+		
+    		os << "total point start{"<<m_spos[0]<<","<<  m_spos[1] <<","<<  m_spos[2] <<"} end{"<<m_epos[0]<<","<<  m_epos[1] <<","<<  m_epos[2] <<"}  size=" << m_nstraightPath<< ",";
     
     		//m_sample->getContext()->log(RC_LOG_PROGRESS, "total point size=%d", m_nstraightPath);
     		
