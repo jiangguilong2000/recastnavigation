@@ -195,6 +195,29 @@ project "RecastDemo"
 			"Cocoa.framework",
 		}
 
+project "RecastDll"
+	language "C++"
+	kind "SharedLib"
+	includedirs { 
+	os.getenv("java_home").."/include/win32/",
+	os.getenv("java_home").."/include/",
+		"../Detour/Include",
+		"../Recast/Include"
+	}
+	files {
+		"../RecastDll/Include/*.h",
+		"../RecastDll/Source/*.cpp"
+	}
+
+	-- project dependencies
+	links {
+		"DebugUtils",
+		"Detour",
+		"DetourCrowd",
+		"DetourTileCache",
+		"Recast"
+	}
+
 project "Tests"
 	language "C++"
 	kind "ConsoleApp"
