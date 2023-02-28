@@ -68,7 +68,7 @@ else()
 endif()
 
 
-add_dependencies(RecastDemo DebugUtils Detour DetourCrowd DetourTileCache Recast RecastDll)
+add_dependencies(RecastDemo DebugUtils Detour DetourCrowd DetourTileCache Recast)
 if(APPLE)
   target_link_libraries(RecastDemo ${OPENGL_LIBRARIES} ${SDL2_LIBRARY} DebugUtils Detour DetourCrowd DetourTileCache Recast)
 else()
