@@ -4,8 +4,7 @@ namespace  Util
 
 
     /**JByteaArray -> char* */
-	 static char* ConvertJByteaArrayToChars(JNIEnv* env, jbyteArray bytearray)
-	{
+	 static char* ConvertJByteaArrayToChars(JNIEnv* env, jbyteArray bytearray){
 		char* chars = NULL;
 		jbyte* bytes;
 		bytes = env->GetByteArrayElements(bytearray, 0);
@@ -19,6 +18,7 @@ namespace  Util
 
 		return chars;
 	}
+	
 
 
     /** float* -> jfloatArray */

@@ -199,8 +199,9 @@ project "RecastDll"
 	language "C++"
 	kind "SharedLib"
 	includedirs { 
-	os.getenv("java_home").."/include/win32/",
-	os.getenv("java_home").."/include/",
+		os.getenv("java_home").."/include/win32",
+		os.getenv("java_home").."/include",
+		"../RecastDll/Include",
 		"../Detour/Include",
 		"../Recast/Include"
 	}
@@ -217,6 +218,10 @@ project "RecastDll"
 		"DetourTileCache",
 		"Recast"
 	}
+	
+	-- targetdir "Bin"
+	
+	-- targetname "recast"
 
 project "Tests"
 	language "C++"
