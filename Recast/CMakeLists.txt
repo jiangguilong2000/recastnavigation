@@ -10,6 +10,10 @@ target_include_directories(Recast PUBLIC
     "$<BUILD_INTERFACE:${Recast_INCLUDE_DIR}>"
 )
 
+if(NOT RECASTNAVIGATION_ENABLE_ASSERTS)
+    target_compile_definitions(Recast PUBLIC RC_DISABLE_ASSERTS)
+endif()
+
 set_target_properties(Recast PROPERTIES
         SOVERSION ${SOVERSION}
         VERSION ${LIB_VERSION}
@@ -29,5 +33,5 @@ file(GLOB INCLUDES Include/*.h)
 install(FILES ${INCLUDES} DESTINATION
     ${CMAKE_INSTALL_INCLUDEDIR}/recastnavigation)
 if(MSVC)
-    install(FILES "$<TARGET_FILE_DIR:Recast>/Recast-d.pdb" CONFIGURATIONS "Debug" DESTINATION "lib")
+    install(FILES "$<TARGET_FILE_DIR:Recast>/Recast-d.pdb" CONFIGURATIONS "Debug" DESTINATION "lib" OPTIONAL)
 endif()

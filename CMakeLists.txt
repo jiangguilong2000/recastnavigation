@@ -1,10 +1,10 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.1...4.0)
 
 project(RecastNavigation)
 
 # lib versions
 SET(SOVERSION 1)
-set(LIB_VERSION 1.5.1)
+set(LIB_VERSION 1.6.0)
 string(REPLACE "." "," LIB_VERSION_NUM "${LIB_VERSION}.0")
 
 set_property(GLOBAL PROPERTY CXX_STANDARD 98)
@@ -12,6 +12,9 @@ set_property(GLOBAL PROPERTY CXX_STANDARD 98)
 option(RECASTNAVIGATION_DEMO "Build demo" ON)
 option(RECASTNAVIGATION_TESTS "Build tests" ON)
 option(RECASTNAVIGATION_EXAMPLES "Build examples" ON)
+option(RECASTNAVIGATION_DT_POLYREF64 "Use 64bit polyrefs instead of 32bit for Detour" OFF)
+option(RECASTNAVIGATION_DT_VIRTUAL_QUERYFILTER "Use dynamic dispatch for dtQueryFilter in Detour to allow for custom filters" OFF)
+option(RECASTNAVIGATION_ENABLE_ASSERTS "Enable custom recastnavigation asserts" "$<IF:$<CONFIG:Debug>,ON,OFF>")
 
 if(MSVC AND BUILD_SHARED_LIBS)
     set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
@@ -29,10 +32,16 @@ install(FILES "${RecastNavigation_BINARY_DIR}/version.h" DESTINATION
 # Needed for recastnavigation.pc.in
 set(prefix ${CMAKE_INSTALL_PREFIX})
 set(exec_prefix "\${prefix}")
-set(libdir "\${exec_prefix}/${CMAKE_INSTALL_LIBDIR}")
-set(bindir "\${exec_prefix}/${CMAKE_INSTALL_BINDIR}")
-set(includedir "\${prefix}/${CMAKE_INSTALL_INCLUDEDIR}")
+set(libdir "${CMAKE_INSTALL_FULL_LIBDIR}")
+set(bindir "${CMAKE_INSTALL_FULL_BINDIR}")
+set(includedir "${CMAKE_INSTALL_FULL_INCLUDEDIR}")
 set(PACKAGE_VERSION "${LIB_VERSION}")
+if(RECASTNAVIGATION_DT_POLYREF64)
+    set(PKG_CONFIG_CFLAGS "${PKG_CONFIG_CFLAGS} -DDT_POLYREF64")
+endif()
+if(RECASTNAVIGATION_DT_VIRTUAL_QUERYFILTER)
+    set(PKG_CONFIG_CFLAGS "${PKG_CONFIG_CFLAGS} -DDT_VIRTUAL_QUERYFILTER")
+endif()
 configure_file(
         "${RecastNavigation_SOURCE_DIR}/recastnavigation.pc.in"
         "${RecastNavigation_BINARY_DIR}/recastnavigation.pc"

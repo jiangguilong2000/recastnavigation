@@ -38,10 +38,10 @@ jobs:
 
     - name: Run unit tests
       working-directory: RecastDemo/Bin
-      run: ./Tests
+      run: ./Tests --verbosity high --success
   
   linux-tests:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
     - uses: actions/checkout@v3
@@ -49,7 +49,8 @@ jobs:
     - name: Install opengl and SDL
       run: |
         sudo apt-get update
-        sudo apt-get install -y libgl1-mesa-dev libsdl2-dev
+        sudo apt-get install -y libgl1-mesa-dev libglu1-mesa-dev libsdl2-dev clang
+        clang --version
 
     - name: Download & Install premake
       working-directory: RecastDemo
@@ -68,7 +69,7 @@ jobs:
     
     - name: Run Tests
       working-directory: RecastDemo/Bin
-      run: ./Tests
+      run: ./Tests --verbosity high --success
   
   windows-tests:
     runs-on: windows-2022
@@ -106,4 +107,4 @@ jobs:
 
     - name: Run Tests
       working-directory: RecastDemo/Bin/
-      run: ./Tests.exe
+      run: ./Tests.exe --verbosity high --success

@@ -14,7 +14,13 @@ workspace "recastnavigation"
 
 	location (todir)
 
+	-- Use fast math operations.  This is not required, but it speeds up some calculations 
+	-- at the expense of accuracy.  Because there are some functions like dtMathIsfinite 
+	-- that use floating point functions that become undefined behavior when compiled with
+	-- fast-math, we need to conditionally short-circuit these functions.
 	floatingpoint "Fast"
+	defines { "RC_FAST_MATH" }
+
 	exceptionhandling "Off"
 	rtti "Off"
 	symbols "On"
@@ -28,7 +34,7 @@ workspace "recastnavigation"
  
  	-- release configs
 	filter "configurations:Release"
-		defines { "NDEBUG" }
+		defines { "RC_DISABLE_ASSERTS" }
 		optimize "On"
 		targetdir ( todir .. "/lib/Release" )
 
@@ -241,7 +247,7 @@ project "Tests"
 		"../Recast/Source",
 		"../Tests/Recast",
 		"../Tests",
-		"../Tests/Contrib/Catch"
+		"../Tests/Contrib"
 	}
 	files { 
 		"../Tests/*.h",
@@ -251,20 +257,29 @@ project "Tests"
 		"../Tests/Recast/*.cpp",
 		"../Tests/Detour/*.h",
 		"../Tests/Detour/*.cpp",
-		"../Tests/Contrib/Catch/*.cpp"
+		"../Tests/DetourCrowd/*.cpp",
+		"../Tests/Contrib/catch2/*.cpp"
 	}
 
 	-- project dependencies
 	links { 
 		"DebugUtils",
-		"Detour",
 		"DetourCrowd",
+		"Detour",
 		"DetourTileCache",
 		"Recast",
 	}
 
 	-- distribute executable in RecastDemo/Bin directory
 	targetdir "Bin"
+
+	-- enable ubsan and asan when compiling with clang
+	filter "toolset:clang"
+		-- Disable `-Wnan-infinity-disabled` because Catch uses functions like std::isnan() that
+		-- generate warnings when compiled with -ffast-math.
+		buildoptions { "-Wno-nan-infinity-disabled" }
+		buildoptions { "-fsanitize=undefined", "-fsanitize=address" } -- , "-fsanitize=memory" }
+		linkoptions { "-fsanitize=undefined", "-fsanitize=address" } --, "-fsanitize=memory" }
 
 	-- linux library cflags and libs
 	filter "system:linux"
