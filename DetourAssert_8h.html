@@ -111,13 +111,13 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ad95d59f19355eca1ab12d2773d36455c" id="r_ad95d59f19355eca1ab12d2773d36455c"><td class="memItemLeft" align="right" valign="top">typedef void()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DetourAssert_8h.html#ad95d59f19355eca1ab12d2773d36455c">dtAssertFailFunc</a>(const char *expression, const char *file, int line)</td></tr>
+<tr class="memitem:ad95d59f19355eca1ab12d2773d36455c" id="r_ad95d59f19355eca1ab12d2773d36455c"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a>()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DetourAssert_8h.html#ad95d59f19355eca1ab12d2773d36455c">dtAssertFailFunc</a>(const char *expression, const char *file, int line)</td></tr>
 <tr class="memdesc:ad95d59f19355eca1ab12d2773d36455c"><td class="mdescLeft">&#160;</td><td class="mdescRight">An assertion failure function.  <br /></td></tr>
 <tr class="separator:ad95d59f19355eca1ab12d2773d36455c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a34ec62fa292227b2ce32428549fe2b97" id="r_a34ec62fa292227b2ce32428549fe2b97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DetourAssert_8h.html#a34ec62fa292227b2ce32428549fe2b97">dtAssertFailSetCustom</a> (<a class="el" href="DetourAssert_8h.html#ad95d59f19355eca1ab12d2773d36455c">dtAssertFailFunc</a> *assertFailFunc)</td></tr>
+<tr class="memitem:a34ec62fa292227b2ce32428549fe2b97" id="r_a34ec62fa292227b2ce32428549fe2b97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DetourAssert_8h.html#a34ec62fa292227b2ce32428549fe2b97">dtAssertFailSetCustom</a> (<a class="el" href="DetourAssert_8h.html#ad95d59f19355eca1ab12d2773d36455c">dtAssertFailFunc</a> *assertFailFunc)</td></tr>
 <tr class="memdesc:a34ec62fa292227b2ce32428549fe2b97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the base custom assertion failure function to be used by Detour.  <br /></td></tr>
 <tr class="separator:a34ec62fa292227b2ce32428549fe2b97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ceffd9e0016dfeaabefe418ecd0eacc" id="r_a5ceffd9e0016dfeaabefe418ecd0eacc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="DetourAssert_8h.html#ad95d59f19355eca1ab12d2773d36455c">dtAssertFailFunc</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DetourAssert_8h.html#a5ceffd9e0016dfeaabefe418ecd0eacc">dtAssertFailGetCustom</a> ()</td></tr>
@@ -142,11 +142,12 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">        { \</div>
 <div class="line">            <a class="code hl_typedef" href="DetourAssert_8h.html#ad95d59f19355eca1ab12d2773d36455c">dtAssertFailFunc</a>* failFunc = <a class="code hl_function" href="DetourAssert_8h.html#a5ceffd9e0016dfeaabefe418ecd0eacc">dtAssertFailGetCustom</a>(); \</div>
-<div class="line">            if(failFunc == NULL) { assert(expression); } \</div>
+<div class="line">            if(failFunc == <a class="code hl_define" href="begin__code_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) { assert(expression); } \</div>
 <div class="line">            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!(expression)) { (*failFunc)(#expression, __FILE__, __LINE__); } \</div>
 <div class="line">        }</div>
 <div class="ttc" id="aDetourAssert_8h_html_a5ceffd9e0016dfeaabefe418ecd0eacc"><div class="ttname"><a href="DetourAssert_8h.html#a5ceffd9e0016dfeaabefe418ecd0eacc">dtAssertFailGetCustom</a></div><div class="ttdeci">dtAssertFailFunc * dtAssertFailGetCustom()</div><div class="ttdoc">Gets the base custom assertion failure function to be used by Detour.</div><div class="ttdef"><b>Definition</b> DetourAssert.cpp:30</div></div>
 <div class="ttc" id="aDetourAssert_8h_html_ad95d59f19355eca1ab12d2773d36455c"><div class="ttname"><a href="DetourAssert_8h.html#ad95d59f19355eca1ab12d2773d36455c">dtAssertFailFunc</a></div><div class="ttdeci">void() dtAssertFailFunc(const char *expression, const char *file, int line)</div><div class="ttdoc">An assertion failure function.</div><div class="ttdef"><b>Definition</b> DetourAssert.h:37</div></div>
+<div class="ttc" id="abegin__code_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="begin__code_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> begin_code.h:165</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -158,7 +159,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void() dtAssertFailFunc(const char *expression, const char *file, int line)</td>
+          <td class="memname">typedef <a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a>() dtAssertFailFunc(const char *expression, const char *file, int line)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -195,7 +196,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void dtAssertFailSetCustom </td>
+          <td class="memname"><a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a> dtAssertFailSetCustom </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="DetourAssert_8h.html#ad95d59f19355eca1ab12d2773d36455c">dtAssertFailFunc</a> *&#160;</td>
           <td class="paramname"><em>assertFailFunc</em></td><td>)</td>

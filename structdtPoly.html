@@ -108,10 +108,10 @@ $(document).ready(function(){initNavTree('structdtPoly.html',''); initResizable(
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a84f05dcf69d70b26323b65a0c1c66954" id="r_a84f05dcf69d70b26323b65a0c1c66954"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdtPoly.html#a84f05dcf69d70b26323b65a0c1c66954">setArea</a> (unsigned char a)</td></tr>
+<tr class="memitem:a84f05dcf69d70b26323b65a0c1c66954" id="r_a84f05dcf69d70b26323b65a0c1c66954"><td class="memItemLeft" align="right" valign="top"><a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdtPoly.html#a84f05dcf69d70b26323b65a0c1c66954">setArea</a> (unsigned char <a class="el" href="SDL__opengl__glext_8h.html#ac8729153468b5dcf13f971b21d84d4e5">a</a>)</td></tr>
 <tr class="memdesc:a84f05dcf69d70b26323b65a0c1c66954"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the user defined area id. [Limit: &lt; <a class="el" href="group__detour.html#ga954dc85eacf41248ee76968957484a9e" title="The maximum number of user defined area ids.">DT_MAX_AREAS</a>].  <br /></td></tr>
 <tr class="separator:a84f05dcf69d70b26323b65a0c1c66954"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac625b3f1acf8df354a50464e210300dc" id="r_ac625b3f1acf8df354a50464e210300dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdtPoly.html#ac625b3f1acf8df354a50464e210300dc">setType</a> (unsigned char t)</td></tr>
+<tr class="memitem:ac625b3f1acf8df354a50464e210300dc" id="r_ac625b3f1acf8df354a50464e210300dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdtPoly.html#ac625b3f1acf8df354a50464e210300dc">setType</a> (unsigned char <a class="el" href="SDL__opengl_8h.html#a7d65d00ca3b0630d9b5c52df855b19f5">t</a>)</td></tr>
 <tr class="memdesc:ac625b3f1acf8df354a50464e210300dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the polygon type. (See: <a class="el" href="DetourNavMesh_8h.html#a19937b4ff098f7c52ee08af1b5f39c98" title="Flags representing the type of a navigation mesh polygon.">dtPolyTypes</a>.)  <br /></td></tr>
 <tr class="separator:ac625b3f1acf8df354a50464e210300dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5e97720847977aa7a4caf8c75e73792" id="r_ab5e97720847977aa7a4caf8c75e73792"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdtPoly.html#ab5e97720847977aa7a4caf8c75e73792">getArea</a> () const</td></tr>
@@ -209,7 +209,7 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void dtPoly::setArea </td>
+          <td class="memname"><a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a> dtPoly::setArea </td>
           <td>(</td>
           <td class="paramtype">unsigned char&#160;</td>
           <td class="paramname"><em>a</em></td><td>)</td>
@@ -237,7 +237,7 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void dtPoly::setType </td>
+          <td class="memname"><a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a> dtPoly::setType </td>
           <td>(</td>
           <td class="paramtype">unsigned char&#160;</td>
           <td class="paramname"><em>t</em></td><td>)</td>
@@ -321,12 +321,13 @@ Public Attributes</h2></td></tr>
 <dl class="section user"><dt></dt><dd></dd></dl>
 <p>Each entry represents data for the edge starting at the vertex of the same index. E.g. The entry at index n represents the edge data for vertex[n] to vertex[n+1].</p>
 <p>A value of zero indicates the edge has no polygon connection. (It makes up the border of the navigation mesh.)</p>
-<p>The information can be extracted as follows: </p><div class="fragment"><div class="line">neighborRef = <a class="code hl_variable" href="structdtPoly.html#ac4f5aa32df32aa5b1385f76f697376af">neis</a>[n] &amp; 0xff; <span class="comment">// Get the neighbor polygon reference.</span></div>
+<p>The information can be extracted as follows: </p><div class="fragment"><div class="line">neighborRef = <a class="code hl_variable" href="structdtPoly.html#ac4f5aa32df32aa5b1385f76f697376af">neis</a>[<a class="code hl_typedef" href="SDL__opengl__glext_8h.html#ac0a41baf8b02de6cb4211d7f15f4872e">n</a>] &amp; 0xff; <span class="comment">// Get the neighbor polygon reference.</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordflow">if</span> (<a class="code hl_variable" href="structdtPoly.html#ac4f5aa32df32aa5b1385f76f697376af">neis</a>[n] &amp; #DT_EX_LINK)</div>
+<div class="line"><span class="keywordflow">if</span> (<a class="code hl_variable" href="structdtPoly.html#ac4f5aa32df32aa5b1385f76f697376af">neis</a>[<a class="code hl_typedef" href="SDL__opengl__glext_8h.html#ac0a41baf8b02de6cb4211d7f15f4872e">n</a>] &amp; #DT_EX_LINK)</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// The edge is an external (portal) edge.</span></div>
 <div class="line">}</div>
+<div class="ttc" id="aSDL__opengl__glext_8h_html_ac0a41baf8b02de6cb4211d7f15f4872e"><div class="ttname"><a href="SDL__opengl__glext_8h.html#ac0a41baf8b02de6cb4211d7f15f4872e">n</a></div><div class="ttdeci">GLdouble n</div><div class="ttdef"><b>Definition</b> SDL_opengl_glext.h:2226</div></div>
 <div class="ttc" id="astructdtPoly_html_ac4f5aa32df32aa5b1385f76f697376af"><div class="ttname"><a href="structdtPoly.html#ac4f5aa32df32aa5b1385f76f697376af">dtPoly::neis</a></div><div class="ttdeci">unsigned short neis[DT_VERTS_PER_POLYGON]</div><div class="ttdoc">Packed data representing neighbor polygons references and flags for each edge.</div><div class="ttdef"><b>Definition</b> DetourNavMesh.h:165</div></div>
 </div><!-- fragment --> 
 </div>

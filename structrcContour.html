@@ -237,22 +237,23 @@ Public Attributes</h2></td></tr>
 <p>The simplified contour is a version of the raw contour with all 'unnecessary' vertices removed. Whether a vertex is considered unnecessary depends on the contour build process.</p>
 <p>The data format is as follows: (x, y, z, r) * <a class="el" href="structrcContour.html#afcf77c01352f2c46172fdfabd2f9b9f6" title="The number of vertices in the simplified contour.">nverts</a></p>
 <p>A contour edge is formed by the current and next vertex. The r-value represents region and connection information for the edge. For example:</p>
-<div class="fragment"><div class="line"><span class="keywordtype">int</span> r = <a class="code hl_variable" href="structrcContour.html#a71a33a9ba0930586b0c8ba595267d9da">verts</a>[i*4+3];</div>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> <a class="code hl_typedef" href="SDL__opengl_8h.html#abe08814c2f72843fde4d8df41440d5a0">r</a> = <a class="code hl_variable" href="structrcContour.html#a71a33a9ba0930586b0c8ba595267d9da">verts</a>[i*4+3];</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> regionId = r &amp; <a class="code hl_variable" href="Recast_8h.html#a86c6c9df2df0402a9d026fb9603fb02b">RC_CONTOUR_REG_MASK</a>;</div>
+<div class="line"><span class="keywordtype">int</span> regionId = <a class="code hl_typedef" href="SDL__opengl_8h.html#abe08814c2f72843fde4d8df41440d5a0">r</a> &amp; <a class="code hl_variable" href="Recast_8h.html#a86c6c9df2df0402a9d026fb9603fb02b">RC_CONTOUR_REG_MASK</a>;</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordflow">if</span> (r &amp; <a class="code hl_variable" href="Recast_8h.html#a8b57de86c98abbad39cce7df7c0aa1f8">RC_BORDER_VERTEX</a>)</div>
+<div class="line"><span class="keywordflow">if</span> (<a class="code hl_typedef" href="SDL__opengl_8h.html#abe08814c2f72843fde4d8df41440d5a0">r</a> &amp; <a class="code hl_variable" href="Recast_8h.html#a8b57de86c98abbad39cce7df7c0aa1f8">RC_BORDER_VERTEX</a>)</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// The edge represents a solid border.</span></div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordflow">if</span> (r &amp; <a class="code hl_variable" href="Recast_8h.html#a55bb146cbd1c0ec0e06ca8e90dd5b7bc">RC_AREA_BORDER</a>)</div>
+<div class="line"><span class="keywordflow">if</span> (<a class="code hl_typedef" href="SDL__opengl_8h.html#abe08814c2f72843fde4d8df41440d5a0">r</a> &amp; <a class="code hl_variable" href="Recast_8h.html#a55bb146cbd1c0ec0e06ca8e90dd5b7bc">RC_AREA_BORDER</a>)</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// The edge represents a transition between different areas.</span></div>
 <div class="line">}</div>
 <div class="ttc" id="aRecast_8h_html_a55bb146cbd1c0ec0e06ca8e90dd5b7bc"><div class="ttname"><a href="Recast_8h.html#a55bb146cbd1c0ec0e06ca8e90dd5b7bc">RC_AREA_BORDER</a></div><div class="ttdeci">static const int RC_AREA_BORDER</div><div class="ttdoc">Area border flag.</div><div class="ttdef"><b>Definition</b> Recast.h:611</div></div>
 <div class="ttc" id="aRecast_8h_html_a86c6c9df2df0402a9d026fb9603fb02b"><div class="ttname"><a href="Recast_8h.html#a86c6c9df2df0402a9d026fb9603fb02b">RC_CONTOUR_REG_MASK</a></div><div class="ttdeci">static const int RC_CONTOUR_REG_MASK</div><div class="ttdoc">Applied to the region id field of contour vertices in order to extract the region id.</div><div class="ttdef"><b>Definition</b> Recast.h:625</div></div>
 <div class="ttc" id="aRecast_8h_html_a8b57de86c98abbad39cce7df7c0aa1f8"><div class="ttname"><a href="Recast_8h.html#a8b57de86c98abbad39cce7df7c0aa1f8">RC_BORDER_VERTEX</a></div><div class="ttdeci">static const int RC_BORDER_VERTEX</div><div class="ttdoc">Border vertex flag.</div><div class="ttdef"><b>Definition</b> Recast.h:604</div></div>
+<div class="ttc" id="aSDL__opengl_8h_html_abe08814c2f72843fde4d8df41440d5a0"><div class="ttname"><a href="SDL__opengl_8h.html#abe08814c2f72843fde4d8df41440d5a0">r</a></div><div class="ttdeci">GLdouble GLdouble GLdouble r</div><div class="ttdef"><b>Definition</b> SDL_opengl.h:2073</div></div>
 <div class="ttc" id="astructrcContour_html_a71a33a9ba0930586b0c8ba595267d9da"><div class="ttname"><a href="structrcContour.html#a71a33a9ba0930586b0c8ba595267d9da">rcContour::verts</a></div><div class="ttdeci">int * verts</div><div class="ttdoc">Simplified contour vertex and connection data. [Size: 4 * nverts].</div><div class="ttdef"><b>Definition</b> Recast.h:422</div></div>
 </div><!-- fragment --> 
 </div>

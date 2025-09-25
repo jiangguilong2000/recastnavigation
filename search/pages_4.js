@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['guidelines_0',['Contribution Guidelines',['../md_CONTRIBUTING.html',1,'']]]
+  ['bsd_0',['KMSDRM on *BSD',['../kmsdrm-on-bsd.html',1,'']]],
+  ['building_20integrating_1',['Building &amp; Integrating',['../md_Docs_2__2__BuildingAndIntegrating.html',1,'']]]
 ];

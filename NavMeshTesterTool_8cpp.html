@@ -103,12 +103,12 @@ $(document).ready(function(){initNavTree('NavMeshTesterTool_8cpp.html',''); init
 <code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
-<code>#include &quot;SDL.h&quot;</code><br />
-<code>#include &quot;SDL_opengl.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="SDL_8h_source.html">SDL.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="SDL__opengl_8h_source.html">SDL_opengl.h</a>&quot;</code><br />
 <code>#include &lt;GL/glu.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="imgui_8h_source.html">imgui.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="NavMeshTesterTool_8h_source.html">NavMeshTesterTool.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="Sample_8h_source.html">Sample.h</a>&quot;</code><br />
+<code>#include &quot;imgui.h&quot;</code><br />
+<code>#include &quot;NavMeshTesterTool.h&quot;</code><br />
+<code>#include &quot;Sample.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="Recast_8h_source.html">Recast.h</a>&quot;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;sstream&gt;</code><br />
@@ -129,13 +129,13 @@ Macros</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:ac8e3cc6c626394b36e557edb46eb23c5" id="r_ac8e3cc6c626394b36e557edb46eb23c5"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NavMeshTesterTool_8cpp.html#ac8e3cc6c626394b36e557edb46eb23c5">frand</a> ()</td></tr>
 <tr class="separator:ac8e3cc6c626394b36e557edb46eb23c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b7b330e2de37289d8ae69f304d334a9" id="r_a5b7b330e2de37289d8ae69f304d334a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NavMeshTesterTool_8cpp.html#a5b7b330e2de37289d8ae69f304d334a9">inRange</a> (const float *v1, const float *v2, const float r, const float h)</td></tr>
+<tr class="memitem:a5b7b330e2de37289d8ae69f304d334a9" id="r_a5b7b330e2de37289d8ae69f304d334a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NavMeshTesterTool_8cpp.html#a5b7b330e2de37289d8ae69f304d334a9">inRange</a> (const float *<a class="el" href="SDL__opengl__glext_8h.html#aabdd9aabede45fcf97cea04f88d2ad60">v1</a>, const float *<a class="el" href="SDL__opengl__glext_8h.html#ae35401c8c2fcdcc48c20ba325ee473ea">v2</a>, const float <a class="el" href="SDL__opengl_8h.html#abe08814c2f72843fde4d8df41440d5a0">r</a>, const float <a class="el" href="SDL__opengl__glext_8h.html#afa0fb1b5e976920c0abeff2dca3ed774">h</a>)</td></tr>
 <tr class="separator:a5b7b330e2de37289d8ae69f304d334a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdd1fc4764fb0feadc7f2ae478064b69" id="r_afdd1fc4764fb0feadc7f2ae478064b69"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NavMeshTesterTool_8cpp.html#afdd1fc4764fb0feadc7f2ae478064b69">fixupShortcuts</a> (<a class="el" href="group__detour.html#gab4e0b2257a670c1a800057999612b466">dtPolyRef</a> *path, int npath, <a class="el" href="classdtNavMeshQuery.html">dtNavMeshQuery</a> *navQuery)</td></tr>
+<tr class="memitem:afdd1fc4764fb0feadc7f2ae478064b69" id="r_afdd1fc4764fb0feadc7f2ae478064b69"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NavMeshTesterTool_8cpp.html#afdd1fc4764fb0feadc7f2ae478064b69">fixupShortcuts</a> (<a class="el" href="group__detour.html#gab4e0b2257a670c1a800057999612b466">dtPolyRef</a> *<a class="el" href="SDL__opengl__glext_8h.html#ab25d8cd967ccbd19b630d7100ff8f67e">path</a>, int npath, <a class="el" href="classdtNavMeshQuery.html">dtNavMeshQuery</a> *navQuery)</td></tr>
 <tr class="separator:afdd1fc4764fb0feadc7f2ae478064b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab556b9cab58165a7bb55dc0eefe89fb9" id="r_ab556b9cab58165a7bb55dc0eefe89fb9"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NavMeshTesterTool_8cpp.html#ab556b9cab58165a7bb55dc0eefe89fb9">getSteerTarget</a> (<a class="el" href="classdtNavMeshQuery.html">dtNavMeshQuery</a> *navQuery, const float *startPos, const float *endPos, const float minTargetDist, const <a class="el" href="group__detour.html#gab4e0b2257a670c1a800057999612b466">dtPolyRef</a> *path, const int pathSize, float *steerPos, unsigned char &amp;steerPosFlag, <a class="el" href="group__detour.html#gab4e0b2257a670c1a800057999612b466">dtPolyRef</a> &amp;steerPosRef, float *outPoints=0, int *outPointCount=0)</td></tr>
+<tr class="memitem:ab556b9cab58165a7bb55dc0eefe89fb9" id="r_ab556b9cab58165a7bb55dc0eefe89fb9"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NavMeshTesterTool_8cpp.html#ab556b9cab58165a7bb55dc0eefe89fb9">getSteerTarget</a> (<a class="el" href="classdtNavMeshQuery.html">dtNavMeshQuery</a> *navQuery, const float *startPos, const float *endPos, const float minTargetDist, const <a class="el" href="group__detour.html#gab4e0b2257a670c1a800057999612b466">dtPolyRef</a> *<a class="el" href="SDL__opengl__glext_8h.html#ab25d8cd967ccbd19b630d7100ff8f67e">path</a>, const int pathSize, float *steerPos, unsigned char &amp;steerPosFlag, <a class="el" href="group__detour.html#gab4e0b2257a670c1a800057999612b466">dtPolyRef</a> &amp;steerPosRef, float *outPoints=0, int *outPointCount=0)</td></tr>
 <tr class="separator:ab556b9cab58165a7bb55dc0eefe89fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a813b28088279288c343afbad843ada3a" id="r_a813b28088279288c343afbad843ada3a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NavMeshTesterTool_8cpp.html#a813b28088279288c343afbad843ada3a">getPolyCenter</a> (<a class="el" href="classdtNavMesh.html">dtNavMesh</a> *navMesh, <a class="el" href="group__detour.html#gab4e0b2257a670c1a800057999612b466">dtPolyRef</a> ref, float *center)</td></tr>
+<tr class="memitem:a813b28088279288c343afbad843ada3a" id="r_a813b28088279288c343afbad843ada3a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NavMeshTesterTool_8cpp.html#a813b28088279288c343afbad843ada3a">getPolyCenter</a> (<a class="el" href="classdtNavMesh.html">dtNavMesh</a> *navMesh, <a class="el" href="group__detour.html#gab4e0b2257a670c1a800057999612b466">dtPolyRef</a> <a class="el" href="SDL__opengl__glext_8h.html#a2cdcddbeb843fdac6e4b7faa72f7852a">ref</a>, float *center)</td></tr>
 <tr class="separator:a813b28088279288c343afbad843ada3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -231,7 +231,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void getPolyCenter </td>
+          <td class="memname">static <a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a> getPolyCenter </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdtNavMesh.html">dtNavMesh</a> *&#160;</td>
           <td class="paramname"><em>navMesh</em>, </td>

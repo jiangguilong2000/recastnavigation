@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['changelog_0',['Changelog',['../md_CHANGELOG.html',1,'']]],
-  ['code_20of_20conduct_1',['Code of Conduct',['../md_CODE__OF__CONDUCT.html',1,'']]],
-  ['conduct_2',['Code of Conduct',['../md_CODE__OF__CONDUCT.html',1,'']]],
-  ['contribution_20guidelines_3',['Contribution Guidelines',['../md_CONTRIBUTING.html',1,'']]]
+  ['2_200_0',['Simple DirectMedia Layer (SDL) Version 2.0',['../md_RecastCmd_2Contrib_2SDL_2README.html',1,'']]],
+  ['2_20for_20os_202_20ecomstation_1',['Simple DirectMedia Layer 2 for OS/2 &amp; eComStation',['../simple-directmedia-layer-2-for-os2--ecomstation.html',1,'']]]
 ];

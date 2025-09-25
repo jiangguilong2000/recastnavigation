@@ -1,6 +1,7 @@
 var structGuiState =
 [
     [ "GuiState", "structGuiState.html#a1159b7a2b218c020875b65881ebfd4cb", null ],
+    [ "GuiState", "structGuiState.html#a1159b7a2b218c020875b65881ebfd4cb", null ],
     [ "active", "structGuiState.html#a8182ed7ea717727bd7ae4b6bd906f89d", null ],
     [ "areaId", "structGuiState.html#a335822c00941a3b0ac836338fdad5af5", null ],
     [ "dragOrig", "structGuiState.html#ac1eb0dfc263debeea082f2bebec4a10a", null ],

@@ -237,17 +237,17 @@ Public Attributes</h2></td></tr>
 <p>The bounding volume quantization factor. </p>
 <dl class="section user"><dt></dt><dd></dd></dl>
 <p>This value is used for converting between world and bounding volume coordinates. For example: </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">float</span> cs = 1.0f / tile-&gt;header-&gt;bvQuantFactor;</div>
-<div class="line"><span class="keyword">const</span> <a class="code hl_struct" href="structdtBVNode.html">dtBVNode</a>* n = &amp;tile-&gt;bvTree[i];</div>
-<div class="line"><span class="keywordflow">if</span> (n-&gt;<a class="code hl_variable" href="structdtBVNode.html#aa7de4b9e1151b9f4bf02154cfb24a45a">i</a> &gt;= 0)</div>
+<div class="line"><span class="keyword">const</span> <a class="code hl_struct" href="structdtBVNode.html">dtBVNode</a>* <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#ac0a41baf8b02de6cb4211d7f15f4872e">n</a> = &amp;tile-&gt;bvTree[i];</div>
+<div class="line"><span class="keywordflow">if</span> (<a class="code hl_typedef" href="SDL__opengl__glext_8h.html#ac0a41baf8b02de6cb4211d7f15f4872e">n</a>-&gt;i &gt;= 0)</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// This is a leaf node.</span></div>
-<div class="line">    <span class="keywordtype">float</span> worldMinX = tile-&gt;header-&gt;<a class="code hl_variable" href="structdtBVNode.html#a4f03eda2f4ae838eed627db41ebea292">bmin</a>[0] + n-&gt;<a class="code hl_variable" href="structdtBVNode.html#a4f03eda2f4ae838eed627db41ebea292">bmin</a>[0]*cs;</div>
-<div class="line">    <span class="keywordtype">float</span> worldMinY = tile-&gt;header-&gt;bmin[0] + n-&gt;<a class="code hl_variable" href="structdtBVNode.html#a4f03eda2f4ae838eed627db41ebea292">bmin</a>[1]*cs;</div>
+<div class="line">    <span class="keywordtype">float</span> worldMinX = tile-&gt;header-&gt;<a class="code hl_variable" href="structdtBVNode.html#a4f03eda2f4ae838eed627db41ebea292">bmin</a>[0] + <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#ac0a41baf8b02de6cb4211d7f15f4872e">n</a>-&gt;bmin[0]*cs;</div>
+<div class="line">    <span class="keywordtype">float</span> worldMinY = tile-&gt;header-&gt;bmin[0] + <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#ac0a41baf8b02de6cb4211d7f15f4872e">n</a>-&gt;bmin[1]*cs;</div>
 <div class="line">    <span class="comment">// Etc...</span></div>
 <div class="line">}</div>
+<div class="ttc" id="aSDL__opengl__glext_8h_html_ac0a41baf8b02de6cb4211d7f15f4872e"><div class="ttname"><a href="SDL__opengl__glext_8h.html#ac0a41baf8b02de6cb4211d7f15f4872e">n</a></div><div class="ttdeci">GLdouble n</div><div class="ttdef"><b>Definition</b> SDL_opengl_glext.h:2226</div></div>
 <div class="ttc" id="astructdtBVNode_html"><div class="ttname"><a href="structdtBVNode.html">dtBVNode</a></div><div class="ttdoc">Bounding volume node.</div><div class="ttdef"><b>Definition</b> DetourNavMesh.h:216</div></div>
 <div class="ttc" id="astructdtBVNode_html_a4f03eda2f4ae838eed627db41ebea292"><div class="ttname"><a href="structdtBVNode.html#a4f03eda2f4ae838eed627db41ebea292">dtBVNode::bmin</a></div><div class="ttdeci">unsigned short bmin[3]</div><div class="ttdoc">Minimum bounds of the node's AABB. [(x, y, z)].</div><div class="ttdef"><b>Definition</b> DetourNavMesh.h:217</div></div>
-<div class="ttc" id="astructdtBVNode_html_aa7de4b9e1151b9f4bf02154cfb24a45a"><div class="ttname"><a href="structdtBVNode.html#aa7de4b9e1151b9f4bf02154cfb24a45a">dtBVNode::i</a></div><div class="ttdeci">int i</div><div class="ttdoc">The node's index. (Negative for escape sequence.)</div><div class="ttdef"><b>Definition</b> DetourNavMesh.h:219</div></div>
 </div><!-- fragment --> 
 </div>
 </div>

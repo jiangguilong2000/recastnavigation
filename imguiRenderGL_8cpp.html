@@ -102,52 +102,52 @@ $(document).ready(function(){initNavTree('imguiRenderGL_8cpp.html',''); initResi
 <div class="contents">
 <div class="textblock"><code>#include &lt;cmath&gt;</code><br />
 <code>#include &lt;cstdio&gt;</code><br />
-<code>#include &quot;<a class="el" href="imgui_8h_source.html">imgui.h</a>&quot;</code><br />
-<code>#include &quot;SDL.h&quot;</code><br />
-<code>#include &quot;SDL_opengl.h&quot;</code><br />
+<code>#include &quot;imgui.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="SDL_8h_source.html">SDL.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="SDL__opengl_8h_source.html">SDL_opengl.h</a>&quot;</code><br />
 <code>#include &quot;stb_truetype.h&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:afe7147641c31bc94935e5711c81087d0" id="r_afe7147641c31bc94935e5711c81087d0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#afe7147641c31bc94935e5711c81087d0">STBTT_malloc</a>(x,  y)&#160;&#160;&#160;<a class="el" href="imguiRenderGL_8cpp.html#a7b5a4a87dc42e0c5df76f683dfd784e4">imguimalloc</a>(x,y)</td></tr>
+<tr class="memitem:afe7147641c31bc94935e5711c81087d0" id="r_afe7147641c31bc94935e5711c81087d0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#afe7147641c31bc94935e5711c81087d0">STBTT_malloc</a>(<a class="el" href="SDL__opengl_8h.html#abe1577120f1766eff913e9a74879f373">x</a>,  <a class="el" href="SDL__opengl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>)&#160;&#160;&#160;<a class="el" href="imguiRenderGL_8cpp.html#a7b5a4a87dc42e0c5df76f683dfd784e4">imguimalloc</a>(<a class="el" href="SDL__opengl_8h.html#abe1577120f1766eff913e9a74879f373">x</a>,<a class="el" href="SDL__opengl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>)</td></tr>
 <tr class="separator:afe7147641c31bc94935e5711c81087d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2d83c500a591ce9b5ff9ca5681caa59" id="r_ac2d83c500a591ce9b5ff9ca5681caa59"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#ac2d83c500a591ce9b5ff9ca5681caa59">STBTT_free</a>(x,  y)&#160;&#160;&#160;<a class="el" href="imguiRenderGL_8cpp.html#a2a8b3b95948bc4017c04c7454cb5d473">imguifree</a>(x,y)</td></tr>
+<tr class="memitem:ac2d83c500a591ce9b5ff9ca5681caa59" id="r_ac2d83c500a591ce9b5ff9ca5681caa59"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#ac2d83c500a591ce9b5ff9ca5681caa59">STBTT_free</a>(<a class="el" href="SDL__opengl_8h.html#abe1577120f1766eff913e9a74879f373">x</a>,  <a class="el" href="SDL__opengl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>)&#160;&#160;&#160;<a class="el" href="imguiRenderGL_8cpp.html#a2a8b3b95948bc4017c04c7454cb5d473">imguifree</a>(<a class="el" href="SDL__opengl_8h.html#abe1577120f1766eff913e9a74879f373">x</a>,<a class="el" href="SDL__opengl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>)</td></tr>
 <tr class="separator:ac2d83c500a591ce9b5ff9ca5681caa59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afaa2f2d0d9d6726cfae6da070e736347" id="r_afaa2f2d0d9d6726cfae6da070e736347"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#afaa2f2d0d9d6726cfae6da070e736347">STB_TRUETYPE_IMPLEMENTATION</a></td></tr>
 <tr class="separator:afaa2f2d0d9d6726cfae6da070e736347"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a2a8b3b95948bc4017c04c7454cb5d473" id="r_a2a8b3b95948bc4017c04c7454cb5d473"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#a2a8b3b95948bc4017c04c7454cb5d473">imguifree</a> (void *ptr, void *userptr)</td></tr>
+<tr class="memitem:a2a8b3b95948bc4017c04c7454cb5d473" id="r_a2a8b3b95948bc4017c04c7454cb5d473"><td class="memItemLeft" align="right" valign="top"><a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#a2a8b3b95948bc4017c04c7454cb5d473">imguifree</a> (<a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a> *ptr, <a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a> *userptr)</td></tr>
 <tr class="separator:a2a8b3b95948bc4017c04c7454cb5d473"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b5a4a87dc42e0c5df76f683dfd784e4" id="r_a7b5a4a87dc42e0c5df76f683dfd784e4"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#a7b5a4a87dc42e0c5df76f683dfd784e4">imguimalloc</a> (size_t size, void *userptr)</td></tr>
+<tr class="memitem:a7b5a4a87dc42e0c5df76f683dfd784e4" id="r_a7b5a4a87dc42e0c5df76f683dfd784e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#a7b5a4a87dc42e0c5df76f683dfd784e4">imguimalloc</a> (size_t <a class="el" href="SDL__opengl__glext_8h.html#a9f139c614d49f2a707b6037305b0fec0">size</a>, <a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a> *userptr)</td></tr>
 <tr class="separator:a7b5a4a87dc42e0c5df76f683dfd784e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a413aaddb1ddea117f86218f2ca0234fe" id="r_a413aaddb1ddea117f86218f2ca0234fe"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#a413aaddb1ddea117f86218f2ca0234fe">RGBA</a> (unsigned char r, unsigned char g, unsigned char b, unsigned char a)</td></tr>
+<tr class="memitem:a413aaddb1ddea117f86218f2ca0234fe" id="r_a413aaddb1ddea117f86218f2ca0234fe"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#a413aaddb1ddea117f86218f2ca0234fe">RGBA</a> (unsigned char <a class="el" href="SDL__opengl_8h.html#abe08814c2f72843fde4d8df41440d5a0">r</a>, unsigned char <a class="el" href="SDL__opengl__glext_8h.html#a9cd653b1648845554169fbc3a3f6d37a">g</a>, unsigned char <a class="el" href="SDL__opengl__glext_8h.html#a6eba317e3cf44d6d26c04a5a8f197dcb">b</a>, unsigned char <a class="el" href="SDL__opengl__glext_8h.html#ac8729153468b5dcf13f971b21d84d4e5">a</a>)</td></tr>
 <tr class="separator:a413aaddb1ddea117f86218f2ca0234fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac942be741579139e88992ba1d5037480" id="r_ac942be741579139e88992ba1d5037480"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#ac942be741579139e88992ba1d5037480">drawPolygon</a> (const float *coords, unsigned numCoords, float r, unsigned int col)</td></tr>
+<tr class="memitem:ac942be741579139e88992ba1d5037480" id="r_ac942be741579139e88992ba1d5037480"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#ac942be741579139e88992ba1d5037480">drawPolygon</a> (const float *<a class="el" href="SDL__opengl__glext_8h.html#a51ad4a4fa15f0e7cc596768fb1e6af50">coords</a>, unsigned <a class="el" href="SDL__opengl__glext_8h.html#a9e9293ea14c48e030e2fb44e1303d9b1">numCoords</a>, float <a class="el" href="SDL__opengl_8h.html#abe08814c2f72843fde4d8df41440d5a0">r</a>, unsigned int col)</td></tr>
 <tr class="separator:ac942be741579139e88992ba1d5037480"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a436da38db73ddd2a5ceb6e440d5b4e" id="r_a5a436da38db73ddd2a5ceb6e440d5b4e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#a5a436da38db73ddd2a5ceb6e440d5b4e">drawRect</a> (float x, float y, float w, float h, float fth, unsigned int col)</td></tr>
+<tr class="memitem:a5a436da38db73ddd2a5ceb6e440d5b4e" id="r_a5a436da38db73ddd2a5ceb6e440d5b4e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#a5a436da38db73ddd2a5ceb6e440d5b4e">drawRect</a> (float <a class="el" href="SDL__opengl_8h.html#abe1577120f1766eff913e9a74879f373">x</a>, float <a class="el" href="SDL__opengl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>, float <a class="el" href="SDL__opengl__glext_8h.html#afb1b07e1b25035d41d60fb2c03d507e6">w</a>, float <a class="el" href="SDL__opengl__glext_8h.html#afa0fb1b5e976920c0abeff2dca3ed774">h</a>, float fth, unsigned int col)</td></tr>
 <tr class="separator:a5a436da38db73ddd2a5ceb6e440d5b4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac510a2126cccc18d9b72a46b22e41140" id="r_ac510a2126cccc18d9b72a46b22e41140"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#ac510a2126cccc18d9b72a46b22e41140">drawRoundedRect</a> (float x, float y, float w, float h, float r, float fth, unsigned int col)</td></tr>
+<tr class="memitem:ac510a2126cccc18d9b72a46b22e41140" id="r_ac510a2126cccc18d9b72a46b22e41140"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#ac510a2126cccc18d9b72a46b22e41140">drawRoundedRect</a> (float <a class="el" href="SDL__opengl_8h.html#abe1577120f1766eff913e9a74879f373">x</a>, float <a class="el" href="SDL__opengl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>, float <a class="el" href="SDL__opengl__glext_8h.html#afb1b07e1b25035d41d60fb2c03d507e6">w</a>, float <a class="el" href="SDL__opengl__glext_8h.html#afa0fb1b5e976920c0abeff2dca3ed774">h</a>, float <a class="el" href="SDL__opengl_8h.html#abe08814c2f72843fde4d8df41440d5a0">r</a>, float fth, unsigned int col)</td></tr>
 <tr class="separator:ac510a2126cccc18d9b72a46b22e41140"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c56d5717a692e41cf3f66a459ef589a" id="r_a0c56d5717a692e41cf3f66a459ef589a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#a0c56d5717a692e41cf3f66a459ef589a">drawLine</a> (float x0, float y0, float x1, float y1, float r, float fth, unsigned int col)</td></tr>
+<tr class="memitem:a0c56d5717a692e41cf3f66a459ef589a" id="r_a0c56d5717a692e41cf3f66a459ef589a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#a0c56d5717a692e41cf3f66a459ef589a">drawLine</a> (float <a class="el" href="SDL__opengl__glext_8h.html#a98ac434677655cc8438bb72de2719f39">x0</a>, float <a class="el" href="SDL__opengl__glext_8h.html#ae7f97ed6c9c8e502fcbc44c7cb8a8312">y0</a>, float <a class="el" href="SDL__opengl__glext_8h.html#a49825216c96caaeb09237b36651181c5">x1</a>, float <a class="el" href="SDL__opengl__glext_8h.html#a3af6c78fcdfccea028a5878bc747ef39">y1</a>, float <a class="el" href="SDL__opengl_8h.html#abe08814c2f72843fde4d8df41440d5a0">r</a>, float fth, unsigned int col)</td></tr>
 <tr class="separator:a0c56d5717a692e41cf3f66a459ef589a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a516f5ccccb1ddc6bcea43fba89f1fd57" id="r_a516f5ccccb1ddc6bcea43fba89f1fd57"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#a516f5ccccb1ddc6bcea43fba89f1fd57">imguiRenderGLInit</a> (const char *fontpath)</td></tr>
 <tr class="separator:a516f5ccccb1ddc6bcea43fba89f1fd57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa62b85e5def48a3e96598436d1895ebf" id="r_aa62b85e5def48a3e96598436d1895ebf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#aa62b85e5def48a3e96598436d1895ebf">imguiRenderGLDestroy</a> ()</td></tr>
+<tr class="memitem:aa62b85e5def48a3e96598436d1895ebf" id="r_aa62b85e5def48a3e96598436d1895ebf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#aa62b85e5def48a3e96598436d1895ebf">imguiRenderGLDestroy</a> ()</td></tr>
 <tr class="separator:aa62b85e5def48a3e96598436d1895ebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0edb56b070edf4da63eb716e7c32bc6" id="r_aa0edb56b070edf4da63eb716e7c32bc6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#aa0edb56b070edf4da63eb716e7c32bc6">getBakedQuad</a> (stbtt_bakedchar *chardata, int pw, int ph, int char_index, float *xpos, float *ypos, stbtt_aligned_quad *q)</td></tr>
+<tr class="memitem:aa0edb56b070edf4da63eb716e7c32bc6" id="r_aa0edb56b070edf4da63eb716e7c32bc6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#aa0edb56b070edf4da63eb716e7c32bc6">getBakedQuad</a> (stbtt_bakedchar *chardata, int pw, int ph, int char_index, float *xpos, float *ypos, stbtt_aligned_quad *<a class="el" href="SDL__opengl_8h.html#a8fc1e7b9baaae687804c7eed46ca09c6">q</a>)</td></tr>
 <tr class="separator:aa0edb56b070edf4da63eb716e7c32bc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0f324fe5e1454b8bdcdb05e2eb17762" id="r_ae0f324fe5e1454b8bdcdb05e2eb17762"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#ae0f324fe5e1454b8bdcdb05e2eb17762">getTextLength</a> (stbtt_bakedchar *chardata, const char *text)</td></tr>
 <tr class="separator:ae0f324fe5e1454b8bdcdb05e2eb17762"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06ae1ffc6ae4adb308416ab8480327a9" id="r_a06ae1ffc6ae4adb308416ab8480327a9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#a06ae1ffc6ae4adb308416ab8480327a9">drawText</a> (float x, float y, const char *text, int align, unsigned int col)</td></tr>
+<tr class="memitem:a06ae1ffc6ae4adb308416ab8480327a9" id="r_a06ae1ffc6ae4adb308416ab8480327a9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#a06ae1ffc6ae4adb308416ab8480327a9">drawText</a> (float <a class="el" href="SDL__opengl_8h.html#abe1577120f1766eff913e9a74879f373">x</a>, float <a class="el" href="SDL__opengl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>, const char *text, int align, unsigned int col)</td></tr>
 <tr class="separator:a06ae1ffc6ae4adb308416ab8480327a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c498095a81d3da8fb16a39d5584f184" id="r_a3c498095a81d3da8fb16a39d5584f184"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#a3c498095a81d3da8fb16a39d5584f184">imguiRenderGLDraw</a> ()</td></tr>
+<tr class="memitem:a3c498095a81d3da8fb16a39d5584f184" id="r_a3c498095a81d3da8fb16a39d5584f184"><td class="memItemLeft" align="right" valign="top"><a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#a3c498095a81d3da8fb16a39d5584f184">imguiRenderGLDraw</a> ()</td></tr>
 <tr class="separator:a3c498095a81d3da8fb16a39d5584f184"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:aa08a577393243b86dfd2a97e61443673" id="r_aa08a577393243b86dfd2a97e61443673"><td class="memItemLeft" align="right" valign="top">static const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#aa08a577393243b86dfd2a97e61443673">PI</a> = 3.14159265f</td></tr>
+<tr class="memitem:aa08a577393243b86dfd2a97e61443673" id="r_aa08a577393243b86dfd2a97e61443673"><td class="memItemLeft" align="right" valign="top">static const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#aa08a577393243b86dfd2a97e61443673">PI</a> = 3.14159265<a class="el" href="SDL__opengl__glext_8h.html#a7a611b28eaed9ea8dda79c38887b3f0e">f</a></td></tr>
 <tr class="separator:aa08a577393243b86dfd2a97e61443673"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae718683d9ce63c75123ec0c2305c006b" id="r_ae718683d9ce63c75123ec0c2305c006b"><td class="memItemLeft" align="right" valign="top">static const unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#ae718683d9ce63c75123ec0c2305c006b">TEMP_COORD_COUNT</a> = 100</td></tr>
 <tr class="separator:ae718683d9ce63c75123ec0c2305c006b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,7 +161,7 @@ Variables</h2></td></tr>
 <tr class="separator:a829fc56af6c08c9170e8f42a4551bfe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63d7bf2519c08a3169707cec1cbab429" id="r_a63d7bf2519c08a3169707cec1cbab429"><td class="memItemLeft" align="right" valign="top">static stbtt_bakedchar&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#a63d7bf2519c08a3169707cec1cbab429">g_cdata</a> [96]</td></tr>
 <tr class="separator:a63d7bf2519c08a3169707cec1cbab429"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35e41818e96c0e65083e53b0757c046d" id="r_a35e41818e96c0e65083e53b0757c046d"><td class="memItemLeft" align="right" valign="top">static GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#a35e41818e96c0e65083e53b0757c046d">g_ftex</a> = 0</td></tr>
+<tr class="memitem:a35e41818e96c0e65083e53b0757c046d" id="r_a35e41818e96c0e65083e53b0757c046d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="SDL__opengl_8h.html#a68c4714e43d8e827d80759f9cb864f3c">GLuint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#a35e41818e96c0e65083e53b0757c046d">g_ftex</a> = 0</td></tr>
 <tr class="separator:a35e41818e96c0e65083e53b0757c046d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c37700196ed88412783b7c1f7d307fb" id="r_a8c37700196ed88412783b7c1f7d307fb"><td class="memItemLeft" align="right" valign="top">static const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imguiRenderGL_8cpp.html#a8c37700196ed88412783b7c1f7d307fb">g_tabStops</a> [4] = {150, 210, 270, 330}</td></tr>
 <tr class="separator:a8c37700196ed88412783b7c1f7d307fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -191,18 +191,18 @@ Variables</h2></td></tr>
           <td class="memname">#define STBTT_free</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">x, </td>
+          <td class="paramname"><a class="el" href="SDL__opengl_8h.html#abe1577120f1766eff913e9a74879f373">x</a>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">y&#160;</td>
+          <td class="paramname"><a class="el" href="SDL__opengl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;<a class="el" href="imguiRenderGL_8cpp.html#a2a8b3b95948bc4017c04c7454cb5d473">imguifree</a>(x,y)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="imguiRenderGL_8cpp.html#a2a8b3b95948bc4017c04c7454cb5d473">imguifree</a>(<a class="el" href="SDL__opengl_8h.html#abe1577120f1766eff913e9a74879f373">x</a>,<a class="el" href="SDL__opengl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -219,18 +219,18 @@ Variables</h2></td></tr>
           <td class="memname">#define STBTT_malloc</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">x, </td>
+          <td class="paramname"><a class="el" href="SDL__opengl_8h.html#abe1577120f1766eff913e9a74879f373">x</a>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">y&#160;</td>
+          <td class="paramname"><a class="el" href="SDL__opengl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;<a class="el" href="imguiRenderGL_8cpp.html#a7b5a4a87dc42e0c5df76f683dfd784e4">imguimalloc</a>(x,y)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="imguiRenderGL_8cpp.html#a7b5a4a87dc42e0c5df76f683dfd784e4">imguimalloc</a>(<a class="el" href="SDL__opengl_8h.html#abe1577120f1766eff913e9a74879f373">x</a>,<a class="el" href="SDL__opengl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -248,7 +248,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void drawLine </td>
+          <td class="memname">static <a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a> drawLine </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>x0</em>, </td>
@@ -314,7 +314,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void drawPolygon </td>
+          <td class="memname">static <a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a> drawPolygon </td>
           <td>(</td>
           <td class="paramtype">const float *&#160;</td>
           <td class="paramname"><em>coords</em>, </td>
@@ -362,7 +362,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void drawRect </td>
+          <td class="memname">static <a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a> drawRect </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>x</em>, </td>
@@ -422,7 +422,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void drawRoundedRect </td>
+          <td class="memname">static <a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a> drawRoundedRect </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>x</em>, </td>
@@ -488,7 +488,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void drawText </td>
+          <td class="memname">static <a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a> drawText </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>x</em>, </td>
@@ -542,7 +542,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void getBakedQuad </td>
+          <td class="memname">static <a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a> getBakedQuad </td>
           <td>(</td>
           <td class="paramtype">stbtt_bakedchar *&#160;</td>
           <td class="paramname"><em>chardata</em>, </td>
@@ -641,15 +641,15 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void imguifree </td>
+          <td class="memname"><a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a> imguifree </td>
           <td>(</td>
-          <td class="paramtype">void *&#160;</td>
+          <td class="paramtype"><a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a> *&#160;</td>
           <td class="paramname"><em>ptr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void *&#160;</td>
+          <td class="paramtype"><a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a> *&#160;</td>
           <td class="paramname"><em>userptr</em>&#160;</td>
         </tr>
         <tr>
@@ -669,7 +669,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void * imguimalloc </td>
+          <td class="memname"><a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a> * imguimalloc </td>
           <td>(</td>
           <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>size</em>, </td>
@@ -677,7 +677,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void *&#160;</td>
+          <td class="paramtype"><a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a> *&#160;</td>
           <td class="paramname"><em>userptr</em>&#160;</td>
         </tr>
         <tr>
@@ -697,7 +697,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void imguiRenderGLDestroy </td>
+          <td class="memname"><a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a> imguiRenderGLDestroy </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -714,7 +714,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void imguiRenderGLDraw </td>
+          <td class="memname"><a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a> imguiRenderGLDraw </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -867,7 +867,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">GLuint g_ftex = 0</td>
+          <td class="memname"><a class="el" href="SDL__opengl_8h.html#a68c4714e43d8e827d80759f9cb864f3c">GLuint</a> g_ftex = 0</td>
         </tr>
       </table>
   </td>
@@ -955,7 +955,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const float PI = 3.14159265f</td>
+          <td class="memname">const float PI = 3.14159265<a class="el" href="SDL__opengl__glext_8h.html#a7a611b28eaed9ea8dda79c38887b3f0e">f</a></td>
         </tr>
       </table>
   </td>

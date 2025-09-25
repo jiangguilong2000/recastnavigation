@@ -176,16 +176,16 @@ Public Attributes</h2></td></tr>
 <div class="line"> </div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; mesh.npolys; ++i)</div>
 <div class="line">{</div>
-<div class="line">   <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span>* p = &amp;mesh.polys[i*<a class="code hl_variable" href="structrcPolyMesh.html#ab0c55272b556ffc9db9e643b463cb66a">nvp</a>*2];</div>
+<div class="line">   <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span>* <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a> = &amp;mesh.polys[i*<a class="code hl_variable" href="structrcPolyMesh.html#ab0c55272b556ffc9db9e643b463cb66a">nvp</a>*2];</div>
 <div class="line">   </div>
 <div class="line">    <span class="comment">// Iterate the vertices.</span></div>
 <div class="line">   <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> vi[3];  <span class="comment">// The vertex indices.</span></div>
 <div class="line">   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="structrcPolyMesh.html#ab0c55272b556ffc9db9e643b463cb66a">nvp</a>; ++j)</div>
 <div class="line">   {</div>
-<div class="line">      <span class="keywordflow">if</span> (p[j] == <a class="code hl_variable" href="Recast_8h.html#a66e1b0e59a450182b5551eb12e68fcfe">RC_MESH_NULL_IDX</a>) </div>
+<div class="line">      <span class="keywordflow">if</span> (<a class="code hl_typedef" href="SDL__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>[j] == <a class="code hl_variable" href="Recast_8h.html#a66e1b0e59a450182b5551eb12e68fcfe">RC_MESH_NULL_IDX</a>) </div>
 <div class="line">            <span class="keywordflow">break</span>; <span class="comment">// End of vertices.</span></div>
 <div class="line"> </div>
-<div class="line">        <span class="keywordflow">if</span> (p[j + <a class="code hl_variable" href="structrcPolyMesh.html#ab0c55272b556ffc9db9e643b463cb66a">nvp</a>] == <a class="code hl_variable" href="Recast_8h.html#a66e1b0e59a450182b5551eb12e68fcfe">RC_MESH_NULL_IDX</a>)</div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code hl_typedef" href="SDL__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>[j + <a class="code hl_variable" href="structrcPolyMesh.html#ab0c55272b556ffc9db9e643b463cb66a">nvp</a>] == <a class="code hl_variable" href="Recast_8h.html#a66e1b0e59a450182b5551eb12e68fcfe">RC_MESH_NULL_IDX</a>)</div>
 <div class="line">        {</div>
 <div class="line">            <span class="comment">// The edge beginning with this vertex is a solid border.</span></div>
 <div class="line">        }</div>
@@ -196,14 +196,19 @@ Public Attributes</h2></td></tr>
 <div class="line">        }</div>
 <div class="line">        </div>
 <div class="line">        <span class="comment">// Convert to world space.</span></div>
-<div class="line">       <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span>* v = &amp;mesh.verts[p[j]*3];</div>
-<div class="line">      <span class="keyword">const</span> <span class="keywordtype">float</span> x = orig[0] + v[0]*<a class="code hl_variable" href="structrcPolyMesh.html#a4c3ca520c55f96037cffcf6a92809563">cs</a>;</div>
-<div class="line">      <span class="keyword">const</span> <span class="keywordtype">float</span> y = orig[1] + v[1]*<a class="code hl_variable" href="structrcPolyMesh.html#aa1ba795ddbb893da041b2a5273716ac5">ch</a>;</div>
-<div class="line">      <span class="keyword">const</span> <span class="keywordtype">float</span> z = orig[2] + v[2]*<a class="code hl_variable" href="structrcPolyMesh.html#a4c3ca520c55f96037cffcf6a92809563">cs</a>;</div>
+<div class="line">       <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span>* <a class="code hl_typedef" href="SDL__opengl_8h.html#a55f85da29bf761fde63cc95d26300230">v</a> = &amp;mesh.verts[<a class="code hl_typedef" href="SDL__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>[j]*3];</div>
+<div class="line">      <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code hl_typedef" href="SDL__opengl_8h.html#abe1577120f1766eff913e9a74879f373">x</a> = orig[0] + <a class="code hl_typedef" href="SDL__opengl_8h.html#a55f85da29bf761fde63cc95d26300230">v</a>[0]*<a class="code hl_variable" href="structrcPolyMesh.html#a4c3ca520c55f96037cffcf6a92809563">cs</a>;</div>
+<div class="line">      <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code hl_typedef" href="SDL__opengl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a> = orig[1] + <a class="code hl_typedef" href="SDL__opengl_8h.html#a55f85da29bf761fde63cc95d26300230">v</a>[1]*<a class="code hl_variable" href="structrcPolyMesh.html#aa1ba795ddbb893da041b2a5273716ac5">ch</a>;</div>
+<div class="line">      <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a1c599441d9dece861ee2cd70e31ce120">z</a> = orig[2] + <a class="code hl_typedef" href="SDL__opengl_8h.html#a55f85da29bf761fde63cc95d26300230">v</a>[2]*<a class="code hl_variable" href="structrcPolyMesh.html#a4c3ca520c55f96037cffcf6a92809563">cs</a>;</div>
 <div class="line">      <span class="comment">// Do something with the vertices.</span></div>
 <div class="line">   }</div>
 <div class="line">}</div>
 <div class="ttc" id="aRecast_8h_html_a66e1b0e59a450182b5551eb12e68fcfe"><div class="ttname"><a href="Recast_8h.html#a66e1b0e59a450182b5551eb12e68fcfe">RC_MESH_NULL_IDX</a></div><div class="ttdeci">static const unsigned short RC_MESH_NULL_IDX</div><div class="ttdoc">An value which indicates an invalid index within a mesh.</div><div class="ttdef"><b>Definition</b> Recast.h:630</div></div>
+<div class="ttc" id="aSDL__opengl_8h_html_a1675d9d7bb68e1657ff028643b4037e3"><div class="ttname"><a href="SDL__opengl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a></div><div class="ttdeci">GLint GLint GLint GLint GLint GLint y</div><div class="ttdef"><b>Definition</b> SDL_opengl.h:1568</div></div>
+<div class="ttc" id="aSDL__opengl_8h_html_a55f85da29bf761fde63cc95d26300230"><div class="ttname"><a href="SDL__opengl_8h.html#a55f85da29bf761fde63cc95d26300230">v</a></div><div class="ttdeci">const GLdouble * v</div><div class="ttdef"><b>Definition</b> SDL_opengl.h:2058</div></div>
+<div class="ttc" id="aSDL__opengl_8h_html_abe1577120f1766eff913e9a74879f373"><div class="ttname"><a href="SDL__opengl_8h.html#abe1577120f1766eff913e9a74879f373">x</a></div><div class="ttdeci">GLint GLint GLint GLint GLint x</div><div class="ttdef"><b>Definition</b> SDL_opengl.h:1568</div></div>
+<div class="ttc" id="aSDL__opengl__glext_8h_html_a1c599441d9dece861ee2cd70e31ce120"><div class="ttname"><a href="SDL__opengl__glext_8h.html#a1c599441d9dece861ee2cd70e31ce120">z</a></div><div class="ttdeci">GLdouble GLdouble z</div><div class="ttdef"><b>Definition</b> SDL_opengl_glext.h:702</div></div>
+<div class="ttc" id="aSDL__opengl__glext_8h_html_aa5367c14d90f462230c2611b81b41d23"><div class="ttname"><a href="SDL__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a></div><div class="ttdeci">GLfloat GLfloat p</div><div class="ttdef"><b>Definition</b> SDL_opengl_glext.h:13126</div></div>
 <div class="ttc" id="astructrcPolyMesh_html_a4c3ca520c55f96037cffcf6a92809563"><div class="ttname"><a href="structrcPolyMesh.html#a4c3ca520c55f96037cffcf6a92809563">rcPolyMesh::cs</a></div><div class="ttdeci">float cs</div><div class="ttdoc">The size of each cell. (On the xz-plane.)</div><div class="ttdef"><b>Definition</b> Recast.h:472</div></div>
 <div class="ttc" id="astructrcPolyMesh_html_aa1ba795ddbb893da041b2a5273716ac5"><div class="ttname"><a href="structrcPolyMesh.html#aa1ba795ddbb893da041b2a5273716ac5">rcPolyMesh::ch</a></div><div class="ttdeci">float ch</div><div class="ttdoc">The height of each cell. (The minimum increment along the y-axis.)</div><div class="ttdef"><b>Definition</b> Recast.h:473</div></div>
 <div class="ttc" id="astructrcPolyMesh_html_ab0c55272b556ffc9db9e643b463cb66a"><div class="ttname"><a href="structrcPolyMesh.html#ab0c55272b556ffc9db9e643b463cb66a">rcPolyMesh::nvp</a></div><div class="ttdeci">int nvp</div><div class="ttdoc">The maximum number of vertices per polygon.</div><div class="ttdef"><b>Definition</b> Recast.h:469</div></div>

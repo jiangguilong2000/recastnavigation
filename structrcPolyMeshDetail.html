@@ -193,12 +193,15 @@ Public Attributes</h2></td></tr>
 <div class="line">    <span class="comment">// Iterate the sub-mesh&#39;s triangles.</span></div>
 <div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="structrcPolyMeshDetail.html#a80041af5ae32e618d4980cd81a08c9e3">ntris</a>; ++j)</div>
 <div class="line">    {</div>
-<div class="line">        <span class="keyword">const</span> <span class="keywordtype">float</span> x = <a class="code hl_variable" href="structrcPolyMeshDetail.html#a14af552d094aa71551d296f278861806">verts</a>[<a class="code hl_variable" href="structrcPolyMeshDetail.html#a05e186a92fad184179c726debb033979">tris</a>[j*4+0]*3];</div>
-<div class="line">        <span class="keyword">const</span> <span class="keywordtype">float</span> y = <a class="code hl_variable" href="structrcPolyMeshDetail.html#a14af552d094aa71551d296f278861806">verts</a>[<a class="code hl_variable" href="structrcPolyMeshDetail.html#a05e186a92fad184179c726debb033979">tris</a>[j*4+1]*3];</div>
-<div class="line">        <span class="keyword">const</span> <span class="keywordtype">float</span> z = <a class="code hl_variable" href="structrcPolyMeshDetail.html#a14af552d094aa71551d296f278861806">verts</a>[<a class="code hl_variable" href="structrcPolyMeshDetail.html#a05e186a92fad184179c726debb033979">tris</a>[j*4+2]*3];</div>
+<div class="line">        <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code hl_typedef" href="SDL__opengl_8h.html#abe1577120f1766eff913e9a74879f373">x</a> = <a class="code hl_variable" href="structrcPolyMeshDetail.html#a14af552d094aa71551d296f278861806">verts</a>[<a class="code hl_variable" href="structrcPolyMeshDetail.html#a05e186a92fad184179c726debb033979">tris</a>[j*4+0]*3];</div>
+<div class="line">        <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code hl_typedef" href="SDL__opengl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a> = <a class="code hl_variable" href="structrcPolyMeshDetail.html#a14af552d094aa71551d296f278861806">verts</a>[<a class="code hl_variable" href="structrcPolyMeshDetail.html#a05e186a92fad184179c726debb033979">tris</a>[j*4+1]*3];</div>
+<div class="line">        <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a1c599441d9dece861ee2cd70e31ce120">z</a> = <a class="code hl_variable" href="structrcPolyMeshDetail.html#a14af552d094aa71551d296f278861806">verts</a>[<a class="code hl_variable" href="structrcPolyMeshDetail.html#a05e186a92fad184179c726debb033979">tris</a>[j*4+2]*3];</div>
 <div class="line">        <span class="comment">// Do something with the vertex.</span></div>
 <div class="line">    }</div>
 <div class="line">}</div>
+<div class="ttc" id="aSDL__opengl_8h_html_a1675d9d7bb68e1657ff028643b4037e3"><div class="ttname"><a href="SDL__opengl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a></div><div class="ttdeci">GLint GLint GLint GLint GLint GLint y</div><div class="ttdef"><b>Definition</b> SDL_opengl.h:1568</div></div>
+<div class="ttc" id="aSDL__opengl_8h_html_abe1577120f1766eff913e9a74879f373"><div class="ttname"><a href="SDL__opengl_8h.html#abe1577120f1766eff913e9a74879f373">x</a></div><div class="ttdeci">GLint GLint GLint GLint GLint x</div><div class="ttdef"><b>Definition</b> SDL_opengl.h:1568</div></div>
+<div class="ttc" id="aSDL__opengl__glext_8h_html_a1c599441d9dece861ee2cd70e31ce120"><div class="ttname"><a href="SDL__opengl__glext_8h.html#a1c599441d9dece861ee2cd70e31ce120">z</a></div><div class="ttdeci">GLdouble GLdouble z</div><div class="ttdef"><b>Definition</b> SDL_opengl_glext.h:702</div></div>
 <div class="ttc" id="astructrcPolyMeshDetail_html_a05e186a92fad184179c726debb033979"><div class="ttname"><a href="structrcPolyMeshDetail.html#a05e186a92fad184179c726debb033979">rcPolyMeshDetail::tris</a></div><div class="ttdeci">unsigned char * tris</div><div class="ttdoc">The mesh triangles. [Size: 4*ntris].</div><div class="ttdef"><b>Definition</b> Recast.h:492</div></div>
 <div class="ttc" id="astructrcPolyMeshDetail_html_a14af552d094aa71551d296f278861806"><div class="ttname"><a href="structrcPolyMeshDetail.html#a14af552d094aa71551d296f278861806">rcPolyMeshDetail::verts</a></div><div class="ttdeci">float * verts</div><div class="ttdoc">The mesh vertices. [Size: 3*nverts].</div><div class="ttdef"><b>Definition</b> Recast.h:491</div></div>
 <div class="ttc" id="astructrcPolyMeshDetail_html_a80041af5ae32e618d4980cd81a08c9e3"><div class="ttname"><a href="structrcPolyMeshDetail.html#a80041af5ae32e618d4980cd81a08c9e3">rcPolyMeshDetail::ntris</a></div><div class="ttdeci">int ntris</div><div class="ttdoc">The number of triangles in tris.</div><div class="ttdef"><b>Definition</b> Recast.h:495</div></div>
@@ -281,10 +284,11 @@ Public Attributes</h2></td></tr>
  Position 4: Unused<br  />
  </code></p>
 <p>Testing can be performed as follows:</p>
-<div class="fragment"><div class="line"><span class="keywordflow">if</span> (((flags &gt;&gt; 2) &amp; 0x3) != 0)</div>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span> (((<a class="code hl_typedef" href="SDL__opengl__glext_8h.html#aa9459b47e7388437191d2d9a69c10d98">flags</a> &gt;&gt; 2) &amp; 0x3) != 0)</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// Edge BC is an external edge.</span></div>
 <div class="line">}</div>
+<div class="ttc" id="aSDL__opengl__glext_8h_html_aa9459b47e7388437191d2d9a69c10d98"><div class="ttname"><a href="SDL__opengl__glext_8h.html#aa9459b47e7388437191d2d9a69c10d98">flags</a></div><div class="ttdeci">GLbitfield flags</div><div class="ttdef"><b>Definition</b> SDL_opengl_glext.h:1754</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
