@@ -259,7 +259,7 @@ $(document).ready(function(){initNavTree('cmdline_8h_source.html',''); initResiz
 <div class="foldopen" id="foldopen00128" data-start="{" data-end="}">
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="namespacecmdline_1_1detail.html#a0d8a8c2598d920091d2c1055516f8005">  128</a></span>        std::string <a class="code hl_function" href="namespacecmdline_1_1detail.html#a0d8a8c2598d920091d2c1055516f8005">default_value</a>(T def)</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        {</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="namespacecmdline_1_1detail.html#a5cd4d0bedba599ae78fc3b477d5b89fa">detail::lexical_cast&lt;std::string&gt;</a>(def);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            <span class="keywordflow">return</span> detail::lexical_cast&lt;std::string&gt;(def);</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        }</div>
 </div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
@@ -292,7 +292,7 @@ $(document).ready(function(){initNavTree('cmdline_8h_source.html',''); initResiz
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="structcmdline_1_1default__reader.html">  153</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structcmdline_1_1default__reader.html">default_reader</a> {</div>
 <div class="foldopen" id="foldopen00154" data-start="{" data-end="}">
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="structcmdline_1_1default__reader.html#a71f97c64added8d907fb95c0e5fe1f6f">  154</a></span>        T <a class="code hl_function" href="structcmdline_1_1default__reader.html#a71f97c64added8d907fb95c0e5fe1f6f">operator()</a>(<span class="keyword">const</span> std::string&amp; str) {</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="namespacecmdline_1_1detail.html#a5cd4d0bedba599ae78fc3b477d5b89fa">detail::lexical_cast&lt;T&gt;</a>(str);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            <span class="keywordflow">return</span> detail::lexical_cast&lt;T&gt;(str);</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        }</div>
 </div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    };</div>
@@ -971,14 +971,14 @@ $(document).ready(function(){initNavTree('cmdline_8h_source.html',''); initResiz
 <div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>            }</div>
 <div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span> </div>
 <div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span>            std::string short_description()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;--&quot;</span> + nam + <span class="stringliteral">&quot;=&quot;</span> + <a class="code hl_function" href="namespacecmdline_1_1detail.html#a5cd4d0bedba599ae78fc3b477d5b89fa">detail::readable_typename&lt;T&gt;</a>();</div>
+<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;--&quot;</span> + nam + <span class="stringliteral">&quot;=&quot;</span> + detail::readable_typename&lt;T&gt;();</div>
 <div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>            }</div>
 <div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span> </div>
 <div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>        <span class="keyword">protected</span>:</div>
 <div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span>            std::string full_description(<span class="keyword">const</span> std::string&amp; desc) {</div>
 <div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>                <span class="keywordflow">return</span></div>
-<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>                    desc + <span class="stringliteral">&quot; (&quot;</span> + <a class="code hl_function" href="namespacecmdline_1_1detail.html#a5cd4d0bedba599ae78fc3b477d5b89fa">detail::readable_typename&lt;T&gt;</a>() +</div>
-<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>                    (need ? <span class="stringliteral">&quot;&quot;</span> : <span class="stringliteral">&quot; [=&quot;</span> + <a class="code hl_function" href="namespacecmdline_1_1detail.html#a5cd4d0bedba599ae78fc3b477d5b89fa">detail::default_value&lt;T&gt;</a>(def) + <span class="stringliteral">&quot;]&quot;</span>)</div>
+<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>                    desc + <span class="stringliteral">&quot; (&quot;</span> + detail::readable_typename&lt;T&gt;() +</div>
+<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>                    (need ? <span class="stringliteral">&quot;&quot;</span> : <span class="stringliteral">&quot; [=&quot;</span> + detail::default_value&lt;T&gt;(def) + <span class="stringliteral">&quot;]&quot;</span>)</div>
 <div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>                    + <span class="stringliteral">&quot;)&quot;</span>;</div>
 <div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span>            }</div>
 <div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span> </div>

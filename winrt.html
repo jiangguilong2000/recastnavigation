@@ -133,7 +133,7 @@ Status</h1>
 </li>
 <li>What partially works:<ul>
 <li>keyboard input. Most of WinRT's documented virtual keys are supported, as well as many keys with documented hardware scancodes. Converting SDL_Scancodes to or from SDL_Keycodes may not work, due to missing APIs (MapVirtualKey()) in Microsoft's Windows Store / UWP APIs.</li>
-<li>SDLmain. WinRT uses a different signature for each app's <a class="el" href="RecastCmd_2Source_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main()</a> function. SDL-based apps that use this port must compile in SDL_winrt_main_NonXAML.cpp (in <code>SDL\src\main\winrt\</code>) directly in order for their C-style <a class="el" href="RecastCmd_2Source_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main()</a> functions to be called.</li>
+<li>SDLmain. WinRT uses a different signature for each app's <a class="el" href="RecastCmd_2Source_2main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0">main()</a> function. SDL-based apps that use this port must compile in SDL_winrt_main_NonXAML.cpp (in <code>SDL\src\main\winrt\</code>) directly in order for their C-style <a class="el" href="RecastCmd_2Source_2main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0">main()</a> functions to be called.</li>
 </ul>
 </li>
 <li>What doesn't work:<ul>
@@ -237,7 +237,7 @@ Setup, Detailed Steps</h1>
 <h2><a class="anchor" id="autotoc_md5-add-a-winrt-appropriate-main-function-and-a-blank-cursor-image-to-the-app"></a>
 5. Add a WinRT-appropriate main function, and a blank-cursor image, to the app.</h2>
 <p>A few files should be included directly in your app's MSVC project, specifically:</p><ol type="1">
-<li>a WinRT-appropriate main function (which is different than <a class="el" href="RecastCmd_2Source_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main()</a> functions on other platforms)</li>
+<li>a WinRT-appropriate main function (which is different than <a class="el" href="RecastCmd_2Source_2main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0">main()</a> functions on other platforms)</li>
 <li>a Win32-style cursor resource, used by <a class="el" href="SDL__mouse_8h.html#a00286ec15cd56dee1fd71ed4e6e7a585" title="Toggle whether or not the cursor is shown.">SDL_ShowCursor()</a> to hide the mouse cursor (if and when the app needs to do so). <em>If this cursor resource is not included, mouse-position reporting may fail if and when the cursor is hidden, due to possible bugs/design-oddities in Windows itself.</em></li>
 </ol>
 <p>To include these files for C/C++ projects:</p>
@@ -275,7 +275,7 @@ Setup, Detailed Steps</h1>
 </ol>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="SDL_8h.html">SDL.h</a>&gt;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="RecastCmd_2Source_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> **argv)</div>
+<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="RecastCmd_2Source_2main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> **argv)</div>
 <div class="line">{</div>
 <div class="line">    <a class="code hl_struct" href="structSDL__DisplayMode.html">SDL_DisplayMode</a> <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a1e71d9c196e4683cc06c4b54d53f7ef5">mode</a>;</div>
 <div class="line">    <a class="code hl_typedef" href="SDL__video_8h.html#a55a196c7d3b8497538632c79ae1e6392">SDL_Window</a> * window = <a class="code hl_define" href="begin__code_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
@@ -306,7 +306,7 @@ Setup, Detailed Steps</h1>
 <div class="line">    <a class="code hl_function" href="SDL_8h.html#afdabaf714781099083592051f2d9ac11">SDL_Quit</a>();</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aRecastCmd_2Source_2main_8cpp_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="RecastCmd_2Source_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition</b> RecastCmd/Source/main.cpp:5</div></div>
+<div class="ttc" id="aRecastCmd_2Source_2main_8cpp_html_a2c3f6775325c30275d11c6abee2db6a0"><div class="ttname"><a href="RecastCmd_2Source_2main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0">main</a></div><div class="ttdeci">int main(int, char **)</div><div class="ttdef"><b>Definition</b> RecastCmd/Source/main.cpp:71</div></div>
 <div class="ttc" id="aSDL_8h_html"><div class="ttname"><a href="SDL_8h.html">SDL.h</a></div><div class="ttdoc">Main include header for the SDL library.</div></div>
 <div class="ttc" id="aSDL_8h_html_a8fc8d35348d7c74bad8392d776c937b8"><div class="ttname"><a href="SDL_8h.html#a8fc8d35348d7c74bad8392d776c937b8">SDL_Init</a></div><div class="ttdeci">DECLSPEC int SDLCALL SDL_Init(Uint32 flags)</div><div class="ttdoc">Initialize the SDL library.</div></div>
 <div class="ttc" id="aSDL_8h_html_afc988e510ed522628ffeb7c76f80c233"><div class="ttname"><a href="SDL_8h.html#afc988e510ed522628ffeb7c76f80c233">SDL_INIT_VIDEO</a></div><div class="ttdeci">#define SDL_INIT_VIDEO</div><div class="ttdoc">SDL_INIT_VIDEO implies SDL_INIT_EVENTS.</div><div class="ttdef"><b>Definition</b> SDL.h:85</div></div>

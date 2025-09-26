@@ -121,9 +121,9 @@ Porting your app to Emscripten</h1>
 <div class="line"><span class="preprocessor">#endif</span></div>
 </div><!-- fragment --><p>Second: assembly language code has to go. Replace it with C. You can even use <a href="https://emscripten.org/docs/porting/simd.html">x86 SIMD intrinsic functions in Emscripten</a>!</p>
 <p>Third: Middleware has to go. If you have a third-party library you link against, you either need an Emscripten port of it, or the source code to it to compile yourself, or you need to remove it.</p>
-<p>Fourth: You still start in a function called <a class="el" href="RecastCmd_2Source_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main()</a>, but you need to get out of it and into a function that gets called repeatedly, and returns quickly, called a mainloop.</p>
+<p>Fourth: You still start in a function called <a class="el" href="RecastCmd_2Source_2main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0">main()</a>, but you need to get out of it and into a function that gets called repeatedly, and returns quickly, called a mainloop.</p>
 <p>Somewhere in your program, you probably have something that looks like a more complicated version of this:</p>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="RecastCmd_2Source_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(<span class="keywordtype">void</span>)</div>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="RecastCmd_2Source_2main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0">main</a>(<span class="keywordtype">void</span>)</div>
 <div class="line">{</div>
 <div class="line">    initialize_the_game();</div>
 <div class="line">    <span class="keywordflow">while</span> (game_is_still_running) {</div>
@@ -133,7 +133,7 @@ Porting your app to Emscripten</h1>
 <div class="line">    }</div>
 <div class="line">    deinitialize_the_game();</div>
 <div class="line">}</div>
-<div class="ttc" id="aRecastCmd_2Source_2main_8cpp_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="RecastCmd_2Source_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition</b> RecastCmd/Source/main.cpp:5</div></div>
+<div class="ttc" id="aRecastCmd_2Source_2main_8cpp_html_a2c3f6775325c30275d11c6abee2db6a0"><div class="ttname"><a href="RecastCmd_2Source_2main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0">main</a></div><div class="ttdeci">int main(int, char **)</div><div class="ttdef"><b>Definition</b> RecastCmd/Source/main.cpp:71</div></div>
 </div><!-- fragment --><p>This will not work on Emscripten, because the main thread needs to be free to do stuff and can't sit in this loop forever. So Emscripten lets you set up a <a href="https://emscripten.org/docs/porting/emscripten-runtime-environment.html#browser-main-loop">mainloop</a>.</p>
 <div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> mainloop(<span class="keywordtype">void</span>)   <span class="comment">/* this will run often, possibly at the monitor&#39;s refresh rate */</span></div>
 <div class="line">{</div>
@@ -151,7 +151,7 @@ Porting your app to Emscripten</h1>
 <div class="line">    draw_the_next_frame();</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="RecastCmd_2Source_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="RecastCmd_2Source_2main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0">main</a>(<span class="keywordtype">void</span>)</div>
 <div class="line">{</div>
 <div class="line">    initialize_the_game();</div>
 <div class="line"><span class="preprocessor">    #ifdef __EMSCRIPTEN__</span></div>
@@ -161,7 +161,7 @@ Porting your app to Emscripten</h1>
 <div class="line"><span class="preprocessor">    #endif</span></div>
 <div class="line">}</div>
 </div><!-- fragment --><p>Basically, <code>emscripten_set_main_loop(mainloop, 0, 1);</code> says "run
-`mainloop` over and over until I end the program." The function will run, and return, freeing the main thread for other tasks, and then run again when it's time. The <code>1</code> parameter does some magic to make your <a class="el" href="RecastCmd_2Source_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main()</a> function end immediately; this is useful because you don't want any shutdown code that might be sitting below this code to actually run if <a class="el" href="RecastCmd_2Source_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main()</a> were to continue on, since we're just getting started.</p>
+`mainloop` over and over until I end the program." The function will run, and return, freeing the main thread for other tasks, and then run again when it's time. The <code>1</code> parameter does some magic to make your <a class="el" href="RecastCmd_2Source_2main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0">main()</a> function end immediately; this is useful because you don't want any shutdown code that might be sitting below this code to actually run if <a class="el" href="RecastCmd_2Source_2main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0">main()</a> were to continue on, since we're just getting started.</p>
 <p>There's a lot of little details that are beyond the scope of this document, but that's the biggest intial set of hurdles to porting your app to the web.</p>
 <h1><a class="anchor" id="do-you-need-threads"></a>
 Do you need threads?</h1>
@@ -179,7 +179,7 @@ Audio</h1>
 <p>Modern web browsers will not permit web pages to produce sound before the user has interacted with them (clicked or tapped on them, usually); this is for several reasons, not the least of which being that no one likes when a random browser tab suddenly starts making noise and the user has to scramble to figure out which and silence it.</p>
 <p>SDL will allow you to open the audio device for playback in this circumstance, and your audio callback will fire, but SDL will throw the audio data away until the user interacts with the page. This helps apps that depend on the audio callback to make progress, and also keeps audio playback in sync once the app is finally allowed to make noise.</p>
 <p>There are two reasonable ways to deal with the silence at the app level: if you are writing some sort of media player thing, where the user expects there to be a volume control when you mouseover the canvas, just default that control to a muted state; if the user clicks on the control to unmute it, on this first click, open the audio device. This allows the media to play at start, and the user can reasonably opt-in to listening.</p>
-<p>Many games do not have this sort of UI, and are more rigid about starting audio along with everything else at the start of the process. For these, your best bet is to write a little Javascript that puts up a "Click here to play!" UI, and upon the user clicking, remove that UI and then call the Emscripten app's <a class="el" href="RecastCmd_2Source_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main()</a> function. As far as the application knows, the audio device was available to be opened as soon as the program started, and since this magic happens in a little Javascript, you don't have to change your C/C++ code at all to make it happen.</p>
+<p>Many games do not have this sort of UI, and are more rigid about starting audio along with everything else at the start of the process. For these, your best bet is to write a little Javascript that puts up a "Click here to play!" UI, and upon the user clicking, remove that UI and then call the Emscripten app's <a class="el" href="RecastCmd_2Source_2main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0">main()</a> function. As far as the application knows, the audio device was available to be opened as soon as the program started, and since this magic happens in a little Javascript, you don't have to change your C/C++ code at all to make it happen.</p>
 <p>Please see the discussion at <a href="https://github.com/libsdl-org/SDL/issues/6385">https://github.com/libsdl-org/SDL/issues/6385</a> for some Javascript code to steal for this approach.</p>
 <h1><a class="anchor" id="rendering"></a>
 Rendering</h1>
@@ -229,7 +229,7 @@ Data files</h1>
 <p>By default, you probably have a "MEMFS" filesystem (all files are stored in memory, but access to them is immediate and doesn't need to block). There are other options, like "IDBFS" (files are stored in a local database, so they don't need to be in RAM all the time and they can persist between runs of the program, but access is not synchronous). You can mix and match these file systems, mounting a MEMFS filesystem at one place and idbfs elsewhere, etc, but that's beyond the scope of this document. Please refer to Emscripten's <a href="https://emscripten.org/docs/porting/files/file_systems_overview.html">page on the topic</a> for more info.</p>
 <p>The <em>easiest</em> (but not the best) way to get at your data files is to embed them in the app itself. Emscripten's linker has support for automating this.</p>
 <div class="fragment"><div class="line">emcc -o index.html loopwave.c --embed-file=../test/sample.wav@/sounds/sample.wav</div>
-</div><!-- fragment --><p>This will pack ../test/sample.wav in your app, and make it available at "/sounds/sample.wav" at runtime. Emscripten makes sure this data is available before your <a class="el" href="RecastCmd_2Source_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main()</a> function runs, and since it's in MEMFS, you can just read it like you do on other platforms. <code>--embed-file</code> can also accept a directory to pack an entire tree, and you can specify the argument multiple times to pack unrelated things into the final installation.</p>
+</div><!-- fragment --><p>This will pack ../test/sample.wav in your app, and make it available at "/sounds/sample.wav" at runtime. Emscripten makes sure this data is available before your <a class="el" href="RecastCmd_2Source_2main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0">main()</a> function runs, and since it's in MEMFS, you can just read it like you do on other platforms. <code>--embed-file</code> can also accept a directory to pack an entire tree, and you can specify the argument multiple times to pack unrelated things into the final installation.</p>
 <p>Note that this is absolutely the best approach if you have a few small files to include and shouldn't worry about the issue further. However, if you have hundreds of megabytes and/or thousands of files, this is not so great, since the user will download it all every time they load your page, and it all has to live in memory at runtime.</p>
 <p><a href="https://emscripten.org/docs/porting/files/packaging_files.html">Emscripten's documentation on the matter</a> gives other options and details, and is worth a read.</p>
 <h1><a class="anchor" id="debugging"></a>

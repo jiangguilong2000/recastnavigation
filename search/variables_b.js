@@ -27,9 +27,10 @@ var searchData=
   ['linksfreelist_24',['linksFreeList',['../structdtMeshTile.html#ad010d9daba37865a4065248745e0b4a0',1,'dtMeshTile']]],
   ['list_5fblitmap_25',['list_blitmap',['../structSDL__Surface.html#a17294cb1ec1ef7f77f75cdad26ac795f',1,'SDL_Surface']]],
   ['lmesh_26',['lmesh',['../structNavMeshTileBuildContext.html#a66224ae3010c2f8e7c9d7ab2df32e995',1,'NavMeshTileBuildContext']]],
-  ['locked_27',['locked',['../structSDL__Surface.html#a5022edaeea1c0a055fa5d6dccba41de2',1,'SDL_Surface']]],
-  ['logical_5fh_28',['logical_h',['../structSDLTest__CommonState.html#af2ba89b260406782607ad1dd22676a5b',1,'SDLTest_CommonState']]],
-  ['logical_5fw_29',['logical_w',['../structSDLTest__CommonState.html#a8a90266f8d6dc7846fbd3368426caec1',1,'SDLTest_CommonState']]],
-  ['low_5ffrequency_5frumble_30',['low_frequency_rumble',['../structSDL__VirtualJoystickDesc.html#a9c6c227ce7de6b31d556a85b26425f09',1,'SDL_VirtualJoystickDesc']]],
-  ['lset_31',['lset',['../structRasterizationContext.html#ae8ab461bba69577efde5b1bbc9af3bab',1,'RasterizationContext']]]
+  ['loca_27',['loca',['../structstbtt__fontinfo.html#a15344195b181b50bde4f59ae7ca248c0',1,'stbtt_fontinfo']]],
+  ['locked_28',['locked',['../structSDL__Surface.html#a5022edaeea1c0a055fa5d6dccba41de2',1,'SDL_Surface']]],
+  ['logical_5fh_29',['logical_h',['../structSDLTest__CommonState.html#af2ba89b260406782607ad1dd22676a5b',1,'SDLTest_CommonState']]],
+  ['logical_5fw_30',['logical_w',['../structSDLTest__CommonState.html#a8a90266f8d6dc7846fbd3368426caec1',1,'SDLTest_CommonState']]],
+  ['low_5ffrequency_5frumble_31',['low_frequency_rumble',['../structSDL__VirtualJoystickDesc.html#a9c6c227ce7de6b31d556a85b26425f09',1,'SDL_VirtualJoystickDesc']]],
+  ['lset_32',['lset',['../structRasterizationContext.html#acf18d5f0cda4894c2dd9f953f2a98a90',1,'RasterizationContext']]]
 ];

@@ -87,5 +87,13 @@ var searchData=
   ['sdltest_5fsurfaceimage_5fs_84',['SDLTest_SurfaceImage_s',['../structSDLTest__SurfaceImage__s.html',1,'']]],
   ['sdltest_5ftestcasereference_85',['SDLTest_TestCaseReference',['../structSDLTest__TestCaseReference.html',1,'']]],
   ['sdltest_5ftestsuitereference_86',['SDLTest_TestSuiteReference',['../structSDLTest__TestSuiteReference.html',1,'']]],
-  ['sdltest_5ftextwindow_87',['SDLTest_TextWindow',['../structSDLTest__TextWindow.html',1,'']]]
+  ['sdltest_5ftextwindow_87',['SDLTest_TextWindow',['../structSDLTest__TextWindow.html',1,'']]],
+  ['stbtt_5f_5fbitmap_88',['stbtt__bitmap',['../structstbtt____bitmap.html',1,'']]],
+  ['stbtt_5faligned_5fquad_89',['stbtt_aligned_quad',['../structstbtt__aligned__quad.html',1,'']]],
+  ['stbtt_5fbakedchar_90',['stbtt_bakedchar',['../structstbtt__bakedchar.html',1,'']]],
+  ['stbtt_5ffontinfo_91',['stbtt_fontinfo',['../structstbtt__fontinfo.html',1,'']]],
+  ['stbtt_5fpack_5fcontext_92',['stbtt_pack_context',['../structstbtt__pack__context.html',1,'']]],
+  ['stbtt_5fpack_5frange_93',['stbtt_pack_range',['../structstbtt__pack__range.html',1,'']]],
+  ['stbtt_5fpackedchar_94',['stbtt_packedchar',['../structstbtt__packedchar.html',1,'']]],
+  ['stbtt_5fvertex_95',['stbtt_vertex',['../structstbtt__vertex.html',1,'']]]
 ];

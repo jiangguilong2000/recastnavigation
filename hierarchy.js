@@ -54,9 +54,11 @@ var hierarchy =
     [ "dtTempContour", "structdtTempContour.html", null ],
     [ "dtTileCache", "classdtTileCache.html", null ],
     [ "dtTileCacheAlloc", "structdtTileCacheAlloc.html", [
+      [ "LinearAllocator", "structLinearAllocator.html", null ],
       [ "LinearAllocator", "structLinearAllocator.html", null ]
     ] ],
     [ "dtTileCacheCompressor", "structdtTileCacheCompressor.html", [
+      [ "FastLZCompressor", "structFastLZCompressor.html", null ],
       [ "FastLZCompressor", "structFastLZCompressor.html", null ]
     ] ],
     [ "dtTileCacheContour", "structdtTileCacheContour.html", null ],
@@ -64,6 +66,7 @@ var hierarchy =
     [ "dtTileCacheLayer", "structdtTileCacheLayer.html", null ],
     [ "dtTileCacheLayerHeader", "structdtTileCacheLayerHeader.html", null ],
     [ "dtTileCacheMeshProcess", "structdtTileCacheMeshProcess.html", [
+      [ "MeshProcess", "structMeshProcess.html", null ],
       [ "MeshProcess", "structMeshProcess.html", null ]
     ] ],
     [ "dtTileCacheObstacle", "structdtTileCacheObstacle.html", null ],
@@ -72,8 +75,10 @@ var hierarchy =
     [ "dtTileState", "structdtTileState.html", null ],
     [ "duDebugDraw", "structduDebugDraw.html", [
       [ "DebugDrawGL", "classDebugDrawGL.html", [
+        [ "SampleDebugDraw", "classSampleDebugDraw.html", null ],
         [ "SampleDebugDraw", "classSampleDebugDraw.html", null ]
       ] ],
+      [ "DebugDrawGL", "classDebugDrawGL.html", null ],
       [ "duDisplayList", "classduDisplayList.html", null ]
     ] ],
     [ "duFileIO", "structduFileIO.html", [
@@ -151,9 +156,12 @@ var hierarchy =
     ] ],
     [ "Sample", "classSample.html", [
       [ "Sample_Debug", "classSample__Debug.html", null ],
+      [ "Sample_Debug", "classSample__Debug.html", null ],
       [ "Sample_SoloMesh", "classSample__SoloMesh.html", null ],
       [ "Sample_SoloMesh", "classSample__SoloMesh.html", null ],
       [ "Sample_TempObstacles", "classSample__TempObstacles.html", null ],
+      [ "Sample_TempObstacles", "classSample__TempObstacles.html", null ],
+      [ "Sample_TileMesh", "classSample__TileMesh.html", null ],
       [ "Sample_TileMesh", "classSample__TileMesh.html", null ]
     ] ],
     [ "SampleItem", "structSampleItem.html", null ],
@@ -161,16 +169,22 @@ var hierarchy =
       [ "ConvexVolumeTool", "classConvexVolumeTool.html", null ],
       [ "ConvexVolumeTool", "classConvexVolumeTool.html", null ],
       [ "CrowdTool", "classCrowdTool.html", null ],
+      [ "CrowdTool", "classCrowdTool.html", null ],
       [ "NavMeshPruneTool", "classNavMeshPruneTool.html", null ],
       [ "NavMeshPruneTool", "classNavMeshPruneTool.html", null ],
       [ "NavMeshTesterTool", "classNavMeshTesterTool.html", null ],
       [ "NavMeshTesterTool", "classNavMeshTesterTool.html", null ],
       [ "NavMeshTileTool", "classNavMeshTileTool.html", null ],
+      [ "NavMeshTileTool", "classNavMeshTileTool.html", null ],
+      [ "OffMeshConnectionTool", "classOffMeshConnectionTool.html", null ],
       [ "OffMeshConnectionTool", "classOffMeshConnectionTool.html", null ],
       [ "TempObstacleCreateTool", "classTempObstacleCreateTool.html", null ],
+      [ "TempObstacleCreateTool", "classTempObstacleCreateTool.html", null ],
+      [ "TempObstacleHilightTool", "classTempObstacleHilightTool.html", null ],
       [ "TempObstacleHilightTool", "classTempObstacleHilightTool.html", null ]
     ] ],
     [ "SampleToolState", "structSampleToolState.html", [
+      [ "CrowdToolState", "classCrowdToolState.html", null ],
       [ "CrowdToolState", "classCrowdToolState.html", null ]
     ] ],
     [ "SDL_AssertData", "structSDL__AssertData.html", null ],
@@ -252,6 +266,14 @@ var hierarchy =
     [ "SDLTest_TestCaseReference", "structSDLTest__TestCaseReference.html", null ],
     [ "SDLTest_TestSuiteReference", "structSDLTest__TestSuiteReference.html", null ],
     [ "SDLTest_TextWindow", "structSDLTest__TextWindow.html", null ],
+    [ "stbtt__bitmap", "structstbtt____bitmap.html", null ],
+    [ "stbtt_aligned_quad", "structstbtt__aligned__quad.html", null ],
+    [ "stbtt_bakedchar", "structstbtt__bakedchar.html", null ],
+    [ "stbtt_fontinfo", "structstbtt__fontinfo.html", null ],
+    [ "stbtt_pack_context", "structstbtt__pack__context.html", null ],
+    [ "stbtt_pack_range", "structstbtt__pack__range.html", null ],
+    [ "stbtt_packedchar", "structstbtt__packedchar.html", null ],
+    [ "stbtt_vertex", "structstbtt__vertex.html", null ],
     [ "TestCase", "classTestCase.html", null ],
     [ "TileCacheData", "structTileCacheData.html", null ],
     [ "TileCacheSetHeader", "structTileCacheSetHeader.html", null ],

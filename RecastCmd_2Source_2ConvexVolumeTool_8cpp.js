@@ -1,6 +1,5 @@
 var RecastCmd_2Source_2ConvexVolumeTool_8cpp =
 [
-    [ "_USE_MATH_DEFINES", "RecastCmd_2Source_2ConvexVolumeTool_8cpp.html#a525335710b53cb064ca56b936120431e", null ],
     [ "cmppt", "RecastCmd_2Source_2ConvexVolumeTool_8cpp.html#a9c7eafbf2dc4bd6e44f709540181f6fe", null ],
     [ "convexhull", "RecastCmd_2Source_2ConvexVolumeTool_8cpp.html#a8c5d9876cd6cec34ee07abb195539ac9", null ],
     [ "left", "RecastCmd_2Source_2ConvexVolumeTool_8cpp.html#aa70398cc4b7ef22352199dca700b3990", null ],

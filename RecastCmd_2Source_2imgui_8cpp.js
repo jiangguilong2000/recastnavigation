@@ -1,7 +1,6 @@
 var RecastCmd_2Source_2imgui_8cpp =
 [
     [ "GuiState", "structGuiState.html", "structGuiState" ],
-    [ "_USE_MATH_DEFINES", "RecastCmd_2Source_2imgui_8cpp.html#a525335710b53cb064ca56b936120431e", null ],
     [ "addGfxCmdLine", "RecastCmd_2Source_2imgui_8cpp.html#a7b983f52f1ccf9ca4783c08d6c1a8493", null ],
     [ "addGfxCmdRect", "RecastCmd_2Source_2imgui_8cpp.html#a7ba380198ec6ab2a5e8eb7ca82b391e6", null ],
     [ "addGfxCmdRoundedRect", "RecastCmd_2Source_2imgui_8cpp.html#a7e0d57d6085430adc31d7a573b3f323a", null ],
