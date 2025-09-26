@@ -16,41 +16,48 @@
 // 3. This notice may not be removed or altered from any source distribution.
 //
 
-#ifndef MESHLOADER_OBJ
-#define MESHLOADER_OBJ
+#ifndef RECASTSAMPLEDEBUG_H
+#define RECASTSAMPLEDEBUG_H
 
-#include <string>
+#include "Sample.h"
+#include "DetourNavMesh.h"
+#include "Recast.h"
 
-class rcMeshLoaderObj
+/// Sample used for random debugging.
+class Sample_Debug : public Sample
 {
-public:
-	rcMeshLoaderObj();
-	~rcMeshLoaderObj();
-	
-	bool load(const std::string& fileName);
+protected:
+	rcCompactHeightfield* m_chf;
+	rcContourSet* m_cset;
+	rcPolyMesh* m_pmesh;
 
-	const float* getVerts() const { return m_verts; }
-	const float* getNormals() const { return m_normals; }
-	const int* getTris() const { return m_tris; }
-	int getVertCount() const { return m_vertCount; }
-	int getTriCount() const { return m_triCount; }
-	const std::string& getFileName() const { return m_filename; }
+	float m_halfExtents[3];
+	float m_center[3];
+	float m_bmin[3], m_bmax[3];
+	dtPolyRef m_ref;
+	
+public:
+	Sample_Debug();
+	virtual ~Sample_Debug();
+	
+	virtual void handleSettings();
+	virtual void handleTools();
+	virtual void handleDebugMode();
+	virtual void handleClick(const float* s, const float* p, bool shift);
+	virtual void handleToggle();
+	virtual void handleRender();
+	virtual void handleRenderOverlay(double* proj, double* model, int* view);
+	virtual void handleMeshChanged(class InputGeom* geom);
+	virtual bool handleBuild();
+
+	virtual const float* getBoundsMin();
+	virtual const float* getBoundsMax();
 
 private:
 	// Explicitly disabled copy constructor and copy assignment operator.
-	rcMeshLoaderObj(const rcMeshLoaderObj&);
-	rcMeshLoaderObj& operator=(const rcMeshLoaderObj&);
-	
-	void addVertex(float x, float y, float z, int& cap);
-	void addTriangle(int a, int b, int c, int& cap);
-	
-	std::string m_filename;
-	float m_scale;	
-	float* m_verts;
-	int* m_tris;
-	float* m_normals;
-	int m_vertCount;
-	int m_triCount;
+	Sample_Debug(const Sample_Debug&);
+	Sample_Debug& operator=(const Sample_Debug&);
 };
 
-#endif // MESHLOADER_OBJ
+
+#endif // RECASTSAMPLE_H

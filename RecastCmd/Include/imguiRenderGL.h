@@ -16,18 +16,12 @@
 // 3. This notice may not be removed or altered from any source distribution.
 //
 
-#ifndef PERFTIMER_H
-#define PERFTIMER_H
+#ifndef IMGUI_RENDER_GL_H
+#define IMGUI_RENDER_GL_H
 
-#ifdef __GNUC__
-#include <stdint.h>
-typedef int64_t TimeVal;
-#else
-typedef __int64 TimeVal;
-#endif
+bool imguiRenderGLInit(const char* fontpath);
+void imguiRenderGLDestroy();
+void imguiRenderGLDraw();
 
-TimeVal getPerfTime();
-int getPerfTimeUsec(const TimeVal duration);
-
-#endif // PERFTIMER_H
+#endif // IMGUI_RENDER_GL_H
 

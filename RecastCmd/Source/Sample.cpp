@@ -1,5 +1,3 @@
-#pragma warning( disable : 4996)
-
 //
 // Copyright (c) 2009-2010 Mikko Mononen memon@inside.org
 //
@@ -18,10 +16,8 @@
 // 3. This notice may not be removed or altered from any source distribution.
 //
 
-#define _USE_MATH_DEFINES
 #include <math.h>
 #include <stdio.h>
-#include <cstring>
 #include "Sample.h"
 #include "InputGeom.h"
 #include "Recast.h"
@@ -37,6 +33,37 @@
 #ifdef WIN32
 #	define snprintf _snprintf
 #endif
+
+SampleTool::~SampleTool()
+{
+	// Defined out of line to fix the weak v-tables warning
+}
+
+SampleToolState::~SampleToolState()
+{
+	// Defined out of line to fix the weak v-tables warning
+}
+
+unsigned int SampleDebugDraw::areaToCol(unsigned int area)
+{
+	switch(area)
+	{
+	// Ground (0) : light blue
+	case SAMPLE_POLYAREA_GROUND: return duRGBA(0, 192, 255, 255);
+	// Water : blue
+	case SAMPLE_POLYAREA_WATER: return duRGBA(0, 0, 255, 255);
+	// Road : brown
+	case SAMPLE_POLYAREA_ROAD: return duRGBA(50, 20, 12, 255);
+	// Door : cyan
+	case SAMPLE_POLYAREA_DOOR: return duRGBA(0, 255, 255, 255);
+	// Grass : green
+	case SAMPLE_POLYAREA_GRASS: return duRGBA(0, 255, 0, 255);
+	// Jump : yellow
+	case SAMPLE_POLYAREA_JUMP: return duRGBA(255, 255, 0, 255);
+	// Unexpected : red
+	default: return duRGBA(255, 0, 0, 255);
+	}
+}
 
 Sample::Sample() :
 	m_geom(0),
@@ -68,6 +95,14 @@ Sample::~Sample()
 		delete m_toolStates[i];
 }
 
+void Sample::setTool(SampleTool* tool)
+{
+	delete m_tool;
+	m_tool = tool;
+	if (tool)
+		m_tool->init(this);
+}
+
 void Sample::handleSettings()
 {
 }
@@ -82,6 +117,16 @@ void Sample::handleDebugMode()
 
 void Sample::handleRender()
 {
+	if (!m_geom)
+		return;
+	
+	// Draw mesh
+	duDebugDrawTriMesh(&m_dd, m_geom->getMesh()->getVerts(), m_geom->getMesh()->getVertCount(),
+					   m_geom->getMesh()->getTris(), m_geom->getMesh()->getNormals(), m_geom->getMesh()->getTriCount(), 0, 1.0f);
+	// Draw bounds
+	const float* bmin = m_geom->getMeshBoundsMin();
+	const float* bmax = m_geom->getMeshBoundsMax();
+	duDebugDrawBoxWire(&m_dd, bmin[0],bmin[1],bmin[2], bmax[0],bmax[1],bmax[2], duRGBA(255,255,255,128), 1.0f);
 }
 
 void Sample::handleRenderOverlay(double* /*proj*/, double* /*model*/, int* /*view*/)
@@ -136,7 +181,7 @@ void Sample::resetCommonSettings()
 	m_cellSize = 0.3f;
 	m_cellHeight = 0.2f;
 	m_agentHeight = 2.0f;
-	m_agentRadius = 3.0f;
+	m_agentRadius = 1.0f;
 	m_agentMaxClimb = 0.9f;
 	m_agentMaxSlope = 45.0f;
 	m_regionMinSize = 8;
@@ -147,23 +192,6 @@ void Sample::resetCommonSettings()
 	m_detailSampleDist = 6.0f;
 	m_detailSampleMaxError = 1.0f;
 	m_partitionType = SAMPLE_PARTITION_WATERSHED;
-}
-
-void Sample::setGeomSet(const BuildSettings* settings) {
-	m_cellSize = settings->cellSize;
-	m_cellHeight = settings->cellHeight;
-	m_agentHeight=settings->agentHeight;
-	m_agentRadius=settings->agentRadius;
-	m_agentMaxClimb = settings->agentMaxClimb;
-	m_agentMaxSlope= settings->agentMaxSlope;
-	m_regionMinSize= settings->regionMinSize;
-	m_regionMergeSize= settings->regionMergeSize;
-	m_edgeMaxLen= settings->edgeMaxLen;
-	m_edgeMaxError= settings->edgeMaxError;
-	m_vertsPerPoly= settings->vertsPerPoly;
-	m_detailSampleDist= settings->detailSampleDist;
-	m_detailSampleMaxError= settings->detailSampleMaxError;
-	m_partitionType= settings->partitionType;
 }
 
 void Sample::handleCommonSettings()
@@ -181,20 +209,12 @@ void Sample::handleCommonSettings()
 		char text[64];
 		snprintf(text, 64, "Voxels  %d x %d", gw, gh);
 		imguiValue(text);
-
-		char minText[32];
-		snprintf(minText, 32, "min:%f", bmin[0]);
-		imguiValue(minText);
-
-		char maxTest[32];
-		snprintf(maxTest, 32, "max:%f", bmax[0]);
-		imguiValue(maxTest);
 	}
 	
 	imguiSeparator();
 	imguiLabel("Agent");
 	imguiSlider("Height", &m_agentHeight, 0.1f, 5.0f, 0.1f);
-	imguiSlider("Radius", &m_agentRadius, 2.0f, 10.0f, 0.1f);
+	imguiSlider("Radius", &m_agentRadius, 0.0f, 5.0f, 0.1f);
 	imguiSlider("Max Climb", &m_agentMaxClimb, 0.1f, 5.0f, 0.1f);
 	imguiSlider("Max Slope", &m_agentMaxSlope, 0.0f, 90.0f, 1.0f);
 	

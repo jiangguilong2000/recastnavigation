@@ -19,6 +19,7 @@
 #ifndef SAMPLEINTERFACES_H
 #define SAMPLEINTERFACES_H
 
+#include "DebugDraw.h"
 #include "Recast.h"
 #include "RecastDump.h"
 #include "PerfTimer.h"
@@ -58,6 +59,20 @@ protected:
 	virtual void doStopTimer(const rcTimerLabel label);
 	virtual int doGetAccumulatedTime(const rcTimerLabel label) const;
 	///@}
+};
+
+/// OpenGL debug draw implementation.
+class DebugDrawGL : public duDebugDraw
+{
+public:
+	virtual void depthMask(bool state);
+	virtual void texture(bool state);
+	virtual void begin(duDebugDrawPrimitives prim, float size = 1.0f);
+	virtual void vertex(const float* pos, unsigned int color);
+	virtual void vertex(const float x, const float y, const float z, unsigned int color);
+	virtual void vertex(const float* pos, unsigned int color, const float* uv);
+	virtual void vertex(const float x, const float y, const float z, unsigned int color, const float u, const float v);
+	virtual void end();
 };
 
 /// stdio file implementation.

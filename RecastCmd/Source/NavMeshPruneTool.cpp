@@ -16,7 +16,6 @@
 // 3. This notice may not be removed or altered from any source distribution.
 //
 
-#define _USE_MATH_DEFINES
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
@@ -147,7 +146,7 @@ static void floodNavmesh(dtNavMesh* nav, NavmeshFlags* flags, dtPolyRef start, u
 		openList.pop_back();
 
 		// Get current poly and tile.
-		// The API input has been cheked already, skip checking internal data.
+		// The API input has been checked already, skip checking internal data.
 		const dtMeshTile* tile = 0;
 		const dtPoly* poly = 0;
 		nav->getTileAndPolyByRefUnsafe(ref, &tile, &poly);
@@ -274,6 +273,40 @@ void NavMeshPruneTool::handleUpdate(const float /*dt*/)
 
 void NavMeshPruneTool::handleRender()
 {
+	duDebugDraw& dd = m_sample->getDebugDraw();
+
+	if (m_hitPosSet)
+	{
+		const float s = m_sample->getAgentRadius();
+		const unsigned int col = duRGBA(255,255,255,255);
+		dd.begin(DU_DRAW_LINES);
+		dd.vertex(m_hitPos[0]-s,m_hitPos[1],m_hitPos[2], col);
+		dd.vertex(m_hitPos[0]+s,m_hitPos[1],m_hitPos[2], col);
+		dd.vertex(m_hitPos[0],m_hitPos[1]-s,m_hitPos[2], col);
+		dd.vertex(m_hitPos[0],m_hitPos[1]+s,m_hitPos[2], col);
+		dd.vertex(m_hitPos[0],m_hitPos[1],m_hitPos[2]-s, col);
+		dd.vertex(m_hitPos[0],m_hitPos[1],m_hitPos[2]+s, col);
+		dd.end();
+	}
+
+	const dtNavMesh* nav = m_sample->getNavMesh();
+	if (m_flags && nav)
+	{
+		for (int i = 0; i < nav->getMaxTiles(); ++i)
+		{
+			const dtMeshTile* tile = nav->getTile(i);
+			if (!tile->header) continue;
+			const dtPolyRef base = nav->getPolyRefBase(tile);
+			for (int j = 0; j < tile->header->polyCount; ++j)
+			{
+				const dtPolyRef ref = base | (unsigned int)j;
+				if (m_flags->getFlags(ref))
+				{
+					duDebugDrawNavMeshPoly(&dd, *nav, ref, duRGBA(255,255,255,128));
+				}
+			}
+		}
+	}
 
 }
 

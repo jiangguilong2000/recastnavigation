@@ -1,5 +1,3 @@
-#pragma warning( disable : 4996)
-
 #include "ValueHistory.h"
 #include "imgui.h"
 #include <string.h>

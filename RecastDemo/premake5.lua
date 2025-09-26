@@ -314,3 +314,84 @@ project "Tests"
 		links {
 			"Cocoa.framework",
 		}
+
+project "RecastCmd"
+	language "C++"
+	kind "ConsoleApp"
+	cppdialect "C++14" -- Catch requires newer C++ features
+
+	-- Catch requires RTTI and exceptions
+	exceptionhandling "On"
+	rtti "On"
+
+	includedirs { 
+		"../RecastCmd/Contrib",
+		"../RecastCmd/Contrib/fastlz",
+		"../RecastCmd/Include",
+		"../DebugUtils/Include",
+		"../Detour/Include",
+		"../DetourCrowd/Include",
+		"../DetourTileCache/Include",
+		"../Recast/Include"
+	}
+	files { 
+		"../RecastCmd/*.h",
+		"../RecastCmd/Include/*.h",
+		"../RecastCmd/Source/*.cpp",
+		"../RecastCmd/Contrib/fastlz/*.h",
+		"../RecastCmd/Contrib/fastlz/*.c"
+	}
+
+	-- project dependencies
+	links { 
+		"DebugUtils",
+		"DetourCrowd",
+		"Detour",
+		"DetourTileCache",
+		"Recast",
+	}
+
+	-- distribute executable in RecastDemo/Bin directory
+	targetdir "Bin"
+
+	-- enable ubsan and asan when compiling with clang
+	filter "toolset:clang"
+		-- Disable `-Wnan-infinity-disabled` because Catch uses functions like std::isnan() that
+		-- generate warnings when compiled with -ffast-math.
+		buildoptions { "-Wno-nan-infinity-disabled" }
+		buildoptions { "-fsanitize=undefined", "-fsanitize=address" } -- , "-fsanitize=memory" }
+		linkoptions { "-fsanitize=undefined", "-fsanitize=address" } --, "-fsanitize=memory" }
+
+	-- linux library cflags and libs
+	filter "system:linux"
+		buildoptions {
+			"`pkg-config --cflags sdl2`",
+			"`pkg-config --cflags gl`",
+			"`pkg-config --cflags glu`",
+			"-Wno-parentheses" -- Disable parentheses warning for the Tests target, as Catch's macros generate this everywhere.
+		}
+		linkoptions { 
+			"`pkg-config --libs sdl2`",
+			"`pkg-config --libs gl`",
+			"`pkg-config --libs glu`",
+			"-lpthread"
+		}
+
+	-- windows library cflags and libs
+	filter "system:windows"
+		includedirs { "../RecastCmd/Contrib/SDL/include" }
+		libdirs { "../RecastCmd/Contrib/SDL/lib/%{cfg.architecture:gsub('x86_64', 'x64')}" }
+		debugdir "../RecastCmd/Bin/"
+		links { 
+			"glu32",
+			"opengl32",
+			"SDL2",
+			"SDL2main",
+		}
+
+	-- mac includes and libs
+	filter "system:macosx"
+		kind "ConsoleApp"
+		links {
+			"Cocoa.framework",
+		}

@@ -16,41 +16,35 @@
 // 3. This notice may not be removed or altered from any source distribution.
 //
 
-#ifndef MESHLOADER_OBJ
-#define MESHLOADER_OBJ
+#ifndef OFFMESHCONNECTIONTOOL_H
+#define OFFMESHCONNECTIONTOOL_H
 
-#include <string>
+#include "Sample.h"
 
-class rcMeshLoaderObj
+// Tool to create off-mesh connection for InputGeom
+
+class OffMeshConnectionTool : public SampleTool
 {
+	Sample* m_sample;
+	float m_hitPos[3];
+	bool m_hitPosSet;
+	bool m_bidir;
+	unsigned char m_oldFlags;
+	
 public:
-	rcMeshLoaderObj();
-	~rcMeshLoaderObj();
+	OffMeshConnectionTool();
+	~OffMeshConnectionTool();
 	
-	bool load(const std::string& fileName);
-
-	const float* getVerts() const { return m_verts; }
-	const float* getNormals() const { return m_normals; }
-	const int* getTris() const { return m_tris; }
-	int getVertCount() const { return m_vertCount; }
-	int getTriCount() const { return m_triCount; }
-	const std::string& getFileName() const { return m_filename; }
-
-private:
-	// Explicitly disabled copy constructor and copy assignment operator.
-	rcMeshLoaderObj(const rcMeshLoaderObj&);
-	rcMeshLoaderObj& operator=(const rcMeshLoaderObj&);
-	
-	void addVertex(float x, float y, float z, int& cap);
-	void addTriangle(int a, int b, int c, int& cap);
-	
-	std::string m_filename;
-	float m_scale;	
-	float* m_verts;
-	int* m_tris;
-	float* m_normals;
-	int m_vertCount;
-	int m_triCount;
+	virtual int type() { return TOOL_OFFMESH_CONNECTION; }
+	virtual void init(Sample* sample);
+	virtual void reset();
+	virtual void handleMenu();
+	virtual void handleClick(const float* s, const float* p, bool shift);
+	virtual void handleToggle();
+	virtual void handleStep();
+	virtual void handleUpdate(const float dt);
+	virtual void handleRender();
+	virtual void handleRenderOverlay(double* proj, double* model, int* view);
 };
 
-#endif // MESHLOADER_OBJ
+#endif // OFFMESHCONNECTIONTOOL_H

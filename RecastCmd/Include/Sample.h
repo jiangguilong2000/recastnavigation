@@ -47,7 +47,7 @@ enum SamplePolyAreas
 	SAMPLE_POLYAREA_ROAD,
 	SAMPLE_POLYAREA_DOOR,
 	SAMPLE_POLYAREA_GRASS,
-	SAMPLE_POLYAREA_JUMP,
+	SAMPLE_POLYAREA_JUMP
 };
 enum SamplePolyFlags
 {
@@ -59,16 +59,22 @@ enum SamplePolyFlags
 	SAMPLE_POLYFLAGS_ALL		= 0xffff	// All abilities.
 };
 
+class SampleDebugDraw : public DebugDrawGL
+{
+public:
+	virtual unsigned int areaToCol(unsigned int area);
+};
+
 enum SamplePartitionType
 {
 	SAMPLE_PARTITION_WATERSHED,
 	SAMPLE_PARTITION_MONOTONE,
-	SAMPLE_PARTITION_LAYERS,
+	SAMPLE_PARTITION_LAYERS
 };
 
 struct SampleTool
 {
-	virtual ~SampleTool() {}
+	virtual ~SampleTool();
 	virtual int type() = 0;
 	virtual void init(class Sample* sample) = 0;
 	virtual void reset() = 0;
@@ -82,7 +88,7 @@ struct SampleTool
 };
 
 struct SampleToolState {
-	virtual ~SampleToolState() {}
+	virtual ~SampleToolState();
 	virtual void init(class Sample* sample) = 0;
 	virtual void reset() = 0;
 	virtual void handleRender() = 0;
@@ -123,18 +129,27 @@ protected:
 	SampleToolState* m_toolStates[MAX_TOOLS];
 	
 	BuildContext* m_ctx;
+
+	SampleDebugDraw m_dd;
 	
 	dtNavMesh* loadAll(const char* path);
-	
+	void saveAll(const char* path, const dtNavMesh* mesh);
+
 public:
 	Sample();
 	virtual ~Sample();
 	
 	void setContext(BuildContext* ctx) { m_ctx = ctx; }
+
+	BuildContext* getContext() {
+		return m_ctx;
+	}
 	
 	void setTool(SampleTool* tool);
 	SampleToolState* getToolState(int type) { return m_toolStates[type]; }
 	void setToolState(int type, SampleToolState* s) { m_toolStates[type] = s; }
+
+	SampleDebugDraw& getDebugDraw() { return m_dd; }
 
 	virtual void handleSettings();
 	virtual void handleTools();
@@ -159,7 +174,6 @@ public:
 	
 	unsigned char getNavMeshDrawFlags() const { return m_navMeshDrawFlags; }
 	void setNavMeshDrawFlags(unsigned char flags) { m_navMeshDrawFlags = flags; }
-	void setGeomSet(const BuildSettings* settings);
 
 	void updateToolStates(const float dt);
 	void initToolStates(Sample* sample);
@@ -169,7 +183,6 @@ public:
 
 	void resetCommonSettings();
 	void handleCommonSettings();
-	void saveAll(const char* path, const dtNavMesh* mesh);
 
 private:
 	// Explicitly disabled copy constructor and copy assignment operator.

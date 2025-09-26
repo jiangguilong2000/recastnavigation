@@ -16,26 +16,31 @@
 // 3. This notice may not be removed or altered from any source distribution.
 //
 
-#ifndef RECASTSAMPLESOLOMESH_H
-#define RECASTSAMPLESOLOMESH_H
+#ifndef RECASTSAMPLETEMPOBSTACLE_H
+#define RECASTSAMPLETEMPOBSTACLE_H
 
 #include "Sample.h"
 #include "DetourNavMesh.h"
 #include "Recast.h"
+#include "ChunkyTriMesh.h"
 
-class Sample_SoloMesh : public Sample
+
+class Sample_TempObstacles : public Sample
 {
 protected:
 	bool m_keepInterResults;
-	float m_totalBuildTimeMs;
 
-	unsigned char* m_triareas;
-	rcHeightfield* m_solid;
-	rcCompactHeightfield* m_chf;
-	rcContourSet* m_cset;
-	rcPolyMesh* m_pmesh;
-	rcConfig m_cfg;	
-	rcPolyMeshDetail* m_dmesh;
+	struct LinearAllocator* m_talloc;
+	struct FastLZCompressor* m_tcomp;
+	struct MeshProcess* m_tmproc;
+
+	class dtTileCache* m_tileCache;
+	
+	float m_cacheBuildTimeMs;
+	int m_cacheCompressedSize;
+	int m_cacheRawSize;
+	int m_cacheLayerCount;
+	unsigned int m_cacheBuildMemUsage;
 	
 	enum DrawMode
 	{
@@ -43,44 +48,51 @@ protected:
 		DRAWMODE_NAVMESH_TRANS,
 		DRAWMODE_NAVMESH_BVTREE,
 		DRAWMODE_NAVMESH_NODES,
+		DRAWMODE_NAVMESH_PORTALS,
 		DRAWMODE_NAVMESH_INVIS,
 		DRAWMODE_MESH,
-		DRAWMODE_VOXELS,
-		DRAWMODE_VOXELS_WALKABLE,
-		DRAWMODE_COMPACT,
-		DRAWMODE_COMPACT_DISTANCE,
-		DRAWMODE_COMPACT_REGIONS,
-		DRAWMODE_REGION_CONNECTIONS,
-		DRAWMODE_RAW_CONTOURS,
-		DRAWMODE_BOTH_CONTOURS,
-		DRAWMODE_CONTOURS,
-		DRAWMODE_POLYMESH,
-		DRAWMODE_POLYMESH_DETAIL,
+		DRAWMODE_CACHE_BOUNDS,
 		MAX_DRAWMODE
 	};
 	
 	DrawMode m_drawMode;
 	
-	void cleanup();
-
+	int m_maxTiles;
+	int m_maxPolysPerTile;
+	float m_tileSize;
+	
 public:
-	Sample_SoloMesh();
-	virtual ~Sample_SoloMesh();
+	Sample_TempObstacles();
+	virtual ~Sample_TempObstacles();
 	
 	virtual void handleSettings();
 	virtual void handleTools();
 	virtual void handleDebugMode();
-	
 	virtual void handleRender();
 	virtual void handleRenderOverlay(double* proj, double* model, int* view);
 	virtual void handleMeshChanged(class InputGeom* geom);
 	virtual bool handleBuild();
+	virtual void handleUpdate(const float dt);
+
+	void getTilePos(const float* pos, int& tx, int& ty);
+	
+	void renderCachedTile(const int tx, const int ty, const int type);
+	void renderCachedTileOverlay(const int tx, const int ty, double* proj, double* model, int* view);
+
+	void addTempObstacle(const float* pos);
+	void removeTempObstacle(const float* sp, const float* sq);
+	void clearAllTempObstacles();
+
+	void saveAll(const char* path);
+	void loadAll(const char* path);
 
 private:
 	// Explicitly disabled copy constructor and copy assignment operator.
-	Sample_SoloMesh(const Sample_SoloMesh&);
-	Sample_SoloMesh& operator=(const Sample_SoloMesh&);
+	Sample_TempObstacles(const Sample_TempObstacles&);
+	Sample_TempObstacles& operator=(const Sample_TempObstacles&);
+
+	int rasterizeTileLayers(const int tx, const int ty, const rcConfig& cfg, struct TileCacheData* tiles, const int maxTiles);
 };
 
 
-#endif // RECASTSAMPLESOLOMESHSIMPLE_H
+#endif // RECASTSAMPLETEMPOBSTACLE_H
