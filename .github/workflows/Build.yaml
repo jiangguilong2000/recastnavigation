@@ -42,7 +42,7 @@ jobs:
 
     - name: Run premake
       working-directory: RecastDemo
-      run: ./premake5 xcode4
+      run: ./premake5.mac xcode4
 
     - name: Build With Xcode
       working-directory: RecastDemo/Build/xcode4/
