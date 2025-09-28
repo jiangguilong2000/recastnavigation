@@ -18,6 +18,12 @@ jobs:
     
     steps:
     - uses: actions/checkout@v3
+    
+    - name: Set up JDK
+      uses: actions/setup-java@v4
+      with:
+        java-version: '21'
+        distribution: 'zulu'
 
     - name: Download & install SDL
       run: |
@@ -87,9 +93,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    
+    - name: Set up JDK
+      uses: actions/setup-java@v4
+      with:
+        java-version: '21'
+        distribution: 'zulu'
 
     - name: Install opengl and SDL
       run: |
+        echo "JAVA_HOME = $JAVA_HOME"
         sudo apt-get update
         sudo apt-get install -y libgl1-mesa-dev libglu1-mesa-dev libsdl2-dev clang gcc
         clang --version
@@ -150,6 +163,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    
+    - name: Set up JDK
+      uses: actions/setup-java@v4
+      with:
+        java-version: '21'
+        distribution: 'zulu'
 
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v1.1
