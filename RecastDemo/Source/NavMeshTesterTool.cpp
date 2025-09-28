@@ -429,6 +429,7 @@ void NavMeshTesterTool::handleMenu()
 	//拷贝
 	if (imguiButton("Copy Log"))
 	{
+#ifdef WIN32
 		HGLOBAL hGlobal;
 		string allLog = "";
 		string prefix = "total point";
@@ -469,8 +470,11 @@ void NavMeshTesterTool::handleMenu()
 		EmptyClipboard();
 		SetClipboardData(CF_UNICODETEXT, hGlobal); // UnicodeCF_UNICODETEXT
 		CloseClipboard();
-
-
+#else
+		// 非Windows平台可以提供替代实现或留空
+		// 例如输出到stdout或文件
+		printf("Clipboard functionality only available on Windows\n");
+#endif
 		recalc();
 	}
 	
