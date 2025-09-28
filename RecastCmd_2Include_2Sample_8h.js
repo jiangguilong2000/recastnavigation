@@ -1,6 +1,5 @@
 var RecastCmd_2Include_2Sample_8h =
 [
-    [ "SampleDebugDraw", "classSampleDebugDraw.html", "classSampleDebugDraw" ],
     [ "SampleTool", "structSampleTool.html", "structSampleTool" ],
     [ "SampleToolState", "structSampleToolState.html", "structSampleToolState" ],
     [ "Sample", "classSample.html", "classSample" ],

@@ -72,10 +72,8 @@ var hierarchy =
     [ "dtTileState", "structdtTileState.html", null ],
     [ "duDebugDraw", "structduDebugDraw.html", [
       [ "DebugDrawGL", "classDebugDrawGL.html", [
-        [ "SampleDebugDraw", "classSampleDebugDraw.html", null ],
         [ "SampleDebugDraw", "classSampleDebugDraw.html", null ]
       ] ],
-      [ "DebugDrawGL", "classDebugDrawGL.html", null ],
       [ "duDisplayList", "classduDisplayList.html", null ]
     ] ],
     [ "duFileIO", "structduFileIO.html", [

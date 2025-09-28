@@ -108,7 +108,7 @@ var searchData=
   ['maxnum_105',['maxnum',['../structSDL__RWops.html#a7786282ec28451085908f70048ee32c8',1,'SDL_RWops']]],
   ['maxobstacles_106',['maxObstacles',['../structdtTileCacheParams.html#a30fb34944589db46ad6262748d3f4c0c',1,'dtTileCacheParams']]],
   ['maxpath_107',['maxPath',['../structdtRaycastHit.html#a62b75cb350d9ace5e47887c7c1add9b3',1,'dtRaycastHit']]],
-  ['maxpolys_108',['maxpolys',['../structrcPolyMesh.html#afc6261e7cee3e3ff2a83b6ee8baf14a9',1,'rcPolyMesh::maxpolys'],['../structdtNavMeshParams.html#a4f44babd04fff4f8300ecd15d4237375',1,'dtNavMeshParams::maxPolys']]],
+  ['maxpolys_108',['maxpolys',['../structdtNavMeshParams.html#a4f44babd04fff4f8300ecd15d4237375',1,'dtNavMeshParams::maxPolys'],['../structrcPolyMesh.html#afc6261e7cee3e3ff2a83b6ee8baf14a9',1,'rcPolyMesh::maxpolys']]],
   ['maxregions_109',['maxRegions',['../structrcCompactHeightfield.html#a6bfb7a2fdb06a64b03f0fffa885edd94',1,'rcCompactHeightfield']]],
   ['maxsimplificationerror_110',['maxsimplificationerror',['../structdtTileCacheParams.html#a426e4e8fbaea199ecc4714ba01aa8ef2',1,'dtTileCacheParams::maxSimplificationError'],['../structrcConfig.html#a3421826332c0acfbbdfa34ee6c7183d1',1,'rcConfig::maxSimplificationError']]],
   ['maxspeed_111',['maxSpeed',['../structdtCrowdAgentParams.html#a2a023328c7266577eedeba25e480479f',1,'dtCrowdAgentParams']]],

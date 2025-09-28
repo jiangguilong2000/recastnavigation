@@ -462,17 +462,17 @@ var NAVTREEINDEX =
 "SDL__surface_8h.html#a95570c617879f45bf7e2e4d330534f6b",
 "SDL__version_8h.html#a4204ecbb600f51ee50515979e60bf8f3",
 "SDL__vulkan_8h.html#a170ea51b623cbda9f945b37c037d7974",
-"classNavMesh.html#a9a5830c2e8134510aea1494434fe3927",
-"classSample__SoloMesh.html#a0b9495bb7c375195b704b91cdf9fd66da63d78bda5b6fc72895c2edd6db6f48c0",
-"classcmdline_1_1parser.html#a9bcaaea243a949bf30a40d938480d303",
-"dir_1103d4975f5090865f21f06eb0a41e57.html",
-"globals_x.html",
-"raspberry-pi.html#neon",
-"structSDLTest__CommonState.html#a9357085bdb80f4d9452b73d8f5cebc47",
-"structSDL__HapticPeriodic.html#abc7aa9e9c0d546cb54189a7812fbe554",
-"structSDL__TextEditingExtEvent.html#ab8ab98c13bf8e4528f6734d5db37731a",
-"structdtPolyDetail.html#ae3f408c9c8974ccd058a98f781c58801",
-"structstbtt____bitmap.html#a2afc802e26e9f1dda897ac16ecfff10e"
+"classNavMeshContex.html#aae0d6135ff84c26c728de355d69d39c0",
+"classSample__SoloMesh.html#aeb52c7800e16699f467377fa38357d28",
+"classdtObstacleAvoidanceDebugData.html#a57737b7b4d07179326e69c70032a9f71",
+"functions_func_i.html",
+"linux-1.html#build-dependencies",
+"stb__truetype_8h.html#adba6ae7b9f05604eb366a828836b62a9",
+"structSDL__AudioCVT.html#ac600a035a48df05e14d3712fd6953ad4",
+"structSDL__KeyboardEvent.html#ae270122f757f76171318294afd2c95e6",
+"structSDL__WindowShapeMode.html#a2f79bb294034156207fa6d88d3a8c819",
+"structdtTileCacheObstacle.html#ac644e6dc7525b0157f10f3dc6abd1416",
+"touch.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

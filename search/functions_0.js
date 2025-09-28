@@ -20,7 +20,7 @@ var searchData=
   ['addsegment_17',['addSegment',['../classdtObstacleAvoidanceQuery.html#ab0abab88b2cba7747e6ed38470ca6eff',1,'dtObstacleAvoidanceQuery']]],
   ['addspan_18',['addSpan',['../RecastRasterization_8cpp.html#aa4ff34a2ddb3783399f347167e294fb3',1,'RecastRasterization.cpp']]],
   ['addtempobstacle_19',['addTempObstacle',['../classSample__TempObstacles.html#aaac948b9a430a591600c007e6b255aac',1,'Sample_TempObstacles']]],
-  ['addtile_20',['addtile',['../classdtNavMesh.html#a5b5a7c4fa72c08d9a6d4cc4d8cd3bb89',1,'dtNavMesh::addTile()'],['../classdtTileCache.html#ace9cbc6f688769c9314d453f5cac2432',1,'dtTileCache::addTile()']]],
+  ['addtile_20',['addtile',['../classdtTileCache.html#ace9cbc6f688769c9314d453f5cac2432',1,'dtTileCache::addTile()'],['../classdtNavMesh.html#a5b5a7c4fa72c08d9a6d4cc4d8cd3bb89',1,'dtNavMesh::addTile()']]],
   ['addtooptqueue_21',['addToOptQueue',['../DetourCrowd_8cpp.html#a260333ea7db3d2f49d9fdfd9ed4d078c',1,'DetourCrowd.cpp']]],
   ['addtopathqueue_22',['addToPathQueue',['../DetourCrowd_8cpp.html#ad6e17a3fb0a88bbdb9f36d4d1eb483e8',1,'DetourCrowd.cpp']]],
   ['addunique_23',['addUnique',['../RecastLayers_8cpp.html#adc2593ebcf70cf17029ab4a28013c29b',1,'RecastLayers.cpp']]],
@@ -37,6 +37,6 @@ var searchData=
   ['appendstacks_34',['appendStacks',['../RecastRegion_8cpp.html#acae78c0a97b367d4ace3294d6dcb8216',1,'RecastRegion.cpp']]],
   ['appendvertex_35',['appendVertex',['../DetourTileCacheBuilder_8cpp.html#a7b70b108373f83e39073cd995c83342e',1,'DetourTileCacheBuilder.cpp']]],
   ['area2_36',['area2',['../RecastMesh_8cpp.html#a09ae1f04327bcd46a12ace0769a8f266',1,'area2(const int *a, const int *b, const int *c):&#160;RecastMesh.cpp'],['../RecastContour_8cpp.html#a09ae1f04327bcd46a12ace0769a8f266',1,'area2(const int *a, const int *b, const int *c):&#160;RecastContour.cpp'],['../DetourTileCacheBuilder_8cpp.html#a4026446823c064e1eee76b85985e82cd',1,'area2(const unsigned char *a, const unsigned char *b, const unsigned char *c):&#160;DetourTileCacheBuilder.cpp']]],
-  ['areatocol_37',['areatocol',['../structduDebugDraw.html#aabdd9cd0f4381c686c3e0beaf50d3d13',1,'duDebugDraw::areaToCol()'],['../classSampleDebugDraw.html#ae30775c5bef8b739d5c25a10e3603571',1,'SampleDebugDraw::areaToCol(unsigned int area)'],['../classSampleDebugDraw.html#ac21aad6af5c472b4ea709c7f87b0dbe5',1,'SampleDebugDraw::areaToCol(unsigned int area)']]],
+  ['areatocol_37',['areatocol',['../structduDebugDraw.html#aabdd9cd0f4381c686c3e0beaf50d3d13',1,'duDebugDraw::areaToCol()'],['../classSampleDebugDraw.html#ae30775c5bef8b739d5c25a10e3603571',1,'SampleDebugDraw::areaToCol()']]],
   ['assign_38',['assign',['../classrcVectorBase.html#af2d02ea6aea5354a3954a5902527a7ab',1,'rcVectorBase::assign(rcSizeType count, const T &amp;value)'],['../classrcVectorBase.html#a55225c4d52eda5e77c10b41c34deab95',1,'rcVectorBase::assign(const T *begin, const T *end)']]]
 ];
