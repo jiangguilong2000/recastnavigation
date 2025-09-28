@@ -24,6 +24,7 @@ jobs:
       with:
         java-version: '21'
         distribution: 'zulu'
+        cache: 'gradle' 
 
     - name: Download & install SDL
       run: |
@@ -99,6 +100,7 @@ jobs:
       with:
         java-version: '21'
         distribution: 'zulu'
+        cache: 'gradle' 
 
     - name: Install opengl and SDL
       run: |
@@ -169,6 +171,7 @@ jobs:
       with:
         java-version: '21'
         distribution: 'zulu'
+        cache: 'gradle' 
 
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v1.1
