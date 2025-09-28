@@ -24,7 +24,7 @@ workspace "recastnavigation"
 	exceptionhandling "Off"
 	rtti "Off"
 	symbols "On"
-	fatalwarnings { "All" }
+	warnings "High"
 	cppdialect "C++98"
 
 	-- debug configs
@@ -39,7 +39,7 @@ workspace "recastnavigation"
 		targetdir ( todir .. "/lib/Release" )
 
 	filter "system:not windows"
-		warnings "Extra"
+		warnings "High"
 
 	-- windows specific
 	filter "system:windows"
