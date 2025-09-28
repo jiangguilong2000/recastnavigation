@@ -1,10 +1,5 @@
 var NAVTREEINDEX68 =
 {
-"structSDL__DollarGestureEvent.html#a293b2303acc1cfc63c167c5525e6eab5":[43,0,149,7],
-"structSDL__DollarGestureEvent.html#a30aaa8fe0df93615e6692aa20e9c13eb":[43,0,149,0],
-"structSDL__DollarGestureEvent.html#a3bccd8ebdf30b79c0f4074f6471ec583":[43,0,149,3],
-"structSDL__DollarGestureEvent.html#a40402f6911ed0dba48e6b23aa02bd83d":[43,0,149,4],
-"structSDL__DollarGestureEvent.html#a68968438eae9e58208b14e8c954dec31":[43,0,149,1],
 "structSDL__DollarGestureEvent.html#a9888449bd8842ed96494b4db16a6097b":[43,0,149,6],
 "structSDL__DollarGestureEvent.html#ac7f6948754a1b2eb36edde043bf75ce9":[43,0,149,5],
 "structSDL__DropEvent.html":[43,0,150],
@@ -249,5 +244,10 @@ var NAVTREEINDEX68 =
 "structSDL__PixelFormat.html#a4212574b67529628d8822ed4eb109754":[43,0,184,6],
 "structSDL__PixelFormat.html#a44045e1da843f3d1fad3a608e16af712":[43,0,184,8],
 "structSDL__PixelFormat.html#a6045012f994c02a86bdc4a91b28d2a3c":[43,0,184,11],
-"structSDL__PixelFormat.html#a660e95097874088292f1289a458efaa2":[43,0,184,0]
+"structSDL__PixelFormat.html#a660e95097874088292f1289a458efaa2":[43,0,184,0],
+"structSDL__PixelFormat.html#a6cdaf31f6cb153fefda47fa6b8368c0e":[43,0,184,1],
+"structSDL__PixelFormat.html#a6fec9e1809cc3da458d58b8cccd058f2":[43,0,184,7],
+"structSDL__PixelFormat.html#a94469768d8436e631a13d68623ff663f":[43,0,184,9],
+"structSDL__PixelFormat.html#a9994b4ed87a2551253aebfa191db8424":[43,0,184,16],
+"structSDL__PixelFormat.html#aac533fae3043ef44df01108248e111d8":[43,0,184,3]
 };

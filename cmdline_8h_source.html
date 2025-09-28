@@ -742,290 +742,291 @@ $(document).ready(function(){initNavTree('cmdline_8h_source.html',''); initResiz
 <div class="line"><a id="l00540" name="l00540"></a><span class="lineno"><a class="line" href="classcmdline_1_1parser.html#a0829039262c93910a9fee8c80f3edb64">  540</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classcmdline_1_1parser.html#a0829039262c93910a9fee8c80f3edb64">parse_check</a>(<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; args) {</div>
 <div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>            <span class="keywordflow">if</span> (!options.count(<span class="stringliteral">&quot;help&quot;</span>))</div>
 <div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>                <a class="code hl_function" href="classcmdline_1_1parser.html#a122aab1fb389f16170397971be1e75b6">add</a>(<span class="stringliteral">&quot;help&quot;</span>, <span class="charliteral">&#39;?&#39;</span>, <span class="stringliteral">&quot;print this message&quot;</span>);</div>
-<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>            check(args.size(), <a class="code hl_function" href="classcmdline_1_1parser.html#ab8ca75cca3abf36b9474edcf0ce21ca6">parse</a>(args));</div>
-<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>        }</div>
+<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>            <span class="keywordtype">int</span> argc = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(args.size());</div>
+<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>            check(argc, <a class="code hl_function" href="classcmdline_1_1parser.html#ab8ca75cca3abf36b9474edcf0ce21ca6">parse</a>(args));</div>
+<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>        }</div>
 </div>
-<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span> </div>
-<div class="foldopen" id="foldopen00546" data-start="{" data-end="}">
-<div class="line"><a id="l00546" name="l00546"></a><span class="lineno"><a class="line" href="classcmdline_1_1parser.html#a9c1aebc54c4bc0387c884888185b4941">  546</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classcmdline_1_1parser.html#a9c1aebc54c4bc0387c884888185b4941">parse_check</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]) {</div>
-<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>            <span class="keywordflow">if</span> (!options.count(<span class="stringliteral">&quot;help&quot;</span>))</div>
-<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>                <a class="code hl_function" href="classcmdline_1_1parser.html#a122aab1fb389f16170397971be1e75b6">add</a>(<span class="stringliteral">&quot;help&quot;</span>, <span class="charliteral">&#39;?&#39;</span>, <span class="stringliteral">&quot;print this message&quot;</span>);</div>
-<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>            check(argc, <a class="code hl_function" href="classcmdline_1_1parser.html#ab8ca75cca3abf36b9474edcf0ce21ca6">parse</a>(argc, argv));</div>
-<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>        }</div>
+<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span> </div>
+<div class="foldopen" id="foldopen00547" data-start="{" data-end="}">
+<div class="line"><a id="l00547" name="l00547"></a><span class="lineno"><a class="line" href="classcmdline_1_1parser.html#a9c1aebc54c4bc0387c884888185b4941">  547</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classcmdline_1_1parser.html#a9c1aebc54c4bc0387c884888185b4941">parse_check</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]) {</div>
+<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>            <span class="keywordflow">if</span> (!options.count(<span class="stringliteral">&quot;help&quot;</span>))</div>
+<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>                <a class="code hl_function" href="classcmdline_1_1parser.html#a122aab1fb389f16170397971be1e75b6">add</a>(<span class="stringliteral">&quot;help&quot;</span>, <span class="charliteral">&#39;?&#39;</span>, <span class="stringliteral">&quot;print this message&quot;</span>);</div>
+<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>            check(argc, <a class="code hl_function" href="classcmdline_1_1parser.html#ab8ca75cca3abf36b9474edcf0ce21ca6">parse</a>(argc, argv));</div>
+<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>        }</div>
 </div>
-<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span> </div>
-<div class="foldopen" id="foldopen00552" data-start="{" data-end="}">
-<div class="line"><a id="l00552" name="l00552"></a><span class="lineno"><a class="line" href="classcmdline_1_1parser.html#a9bcaaea243a949bf30a40d938480d303">  552</a></span>        std::string <a class="code hl_function" href="classcmdline_1_1parser.html#a9bcaaea243a949bf30a40d938480d303">error</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>            <span class="keywordflow">return</span> errors.size() &gt; 0 ? errors[0] : <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>        }</div>
+<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span> </div>
+<div class="foldopen" id="foldopen00553" data-start="{" data-end="}">
+<div class="line"><a id="l00553" name="l00553"></a><span class="lineno"><a class="line" href="classcmdline_1_1parser.html#a9bcaaea243a949bf30a40d938480d303">  553</a></span>        std::string <a class="code hl_function" href="classcmdline_1_1parser.html#a9bcaaea243a949bf30a40d938480d303">error</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>            <span class="keywordflow">return</span> errors.size() &gt; 0 ? errors[0] : <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>        }</div>
 </div>
-<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span> </div>
-<div class="foldopen" id="foldopen00556" data-start="{" data-end="}">
-<div class="line"><a id="l00556" name="l00556"></a><span class="lineno"><a class="line" href="classcmdline_1_1parser.html#a0267b636f34a788f57d5eeffcc5daf44">  556</a></span>        std::string <a class="code hl_function" href="classcmdline_1_1parser.html#a0267b636f34a788f57d5eeffcc5daf44">error_full</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>            std::ostringstream oss;</div>
-<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; errors.size(); i++)</div>
-<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>                oss &lt;&lt; errors[i] &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>            <span class="keywordflow">return</span> oss.str();</div>
-<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>        }</div>
+<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span> </div>
+<div class="foldopen" id="foldopen00557" data-start="{" data-end="}">
+<div class="line"><a id="l00557" name="l00557"></a><span class="lineno"><a class="line" href="classcmdline_1_1parser.html#a0267b636f34a788f57d5eeffcc5daf44">  557</a></span>        std::string <a class="code hl_function" href="classcmdline_1_1parser.html#a0267b636f34a788f57d5eeffcc5daf44">error_full</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>            std::ostringstream oss;</div>
+<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; errors.size(); i++)</div>
+<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>                oss &lt;&lt; errors[i] &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>            <span class="keywordflow">return</span> oss.str();</div>
+<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>        }</div>
 </div>
-<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span> </div>
-<div class="foldopen" id="foldopen00563" data-start="{" data-end="}">
-<div class="line"><a id="l00563" name="l00563"></a><span class="lineno"><a class="line" href="classcmdline_1_1parser.html#a50b57c8179fe1b0dd8f5d2b8e8f3261b">  563</a></span>        std::string <a class="code hl_function" href="classcmdline_1_1parser.html#a50b57c8179fe1b0dd8f5d2b8e8f3261b">usage</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>            std::ostringstream oss;</div>
-<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>            oss &lt;&lt; <span class="stringliteral">&quot;usage: &quot;</span> &lt;&lt; prog_name &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; ordered.size(); i++) {</div>
-<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>                <span class="keywordflow">if</span> (ordered[i]-&gt;must())</div>
-<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>                    oss &lt;&lt; ordered[i]-&gt;short_description() &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>            }</div>
-<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span> </div>
-<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>            oss &lt;&lt; <span class="stringliteral">&quot;[options] ... &quot;</span> &lt;&lt; ftr &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>            oss &lt;&lt; <span class="stringliteral">&quot;options:&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span> </div>
-<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>            <span class="keywordtype">size_t</span> max_width = 0;</div>
-<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; ordered.size(); i++) {</div>
-<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>                max_width = std::max(max_width, ordered[i]-&gt;<a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>().<a class="code hl_typedef" href="SDL__opengl__glext_8h.html#ab9c919755bde3b34349e23a32b4e0fa7">length</a>());</div>
-<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>            }</div>
-<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; ordered.size(); i++) {</div>
-<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>                <span class="keywordflow">if</span> (ordered[i]-&gt;short_name()) {</div>
-<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>                    oss &lt;&lt; <span class="stringliteral">&quot;  -&quot;</span> &lt;&lt; ordered[i]-&gt;short_name() &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
-<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span>                }</div>
-<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>                <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>                    oss &lt;&lt; <span class="stringliteral">&quot;      &quot;</span>;</div>
-<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>                }</div>
-<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span> </div>
-<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>                oss &lt;&lt; <span class="stringliteral">&quot;--&quot;</span> &lt;&lt; ordered[i]-&gt;name();</div>
-<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>                <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = ordered[i]-&gt;<a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>().<a class="code hl_typedef" href="SDL__opengl__glext_8h.html#ab9c919755bde3b34349e23a32b4e0fa7">length</a>(); j &lt; max_width + 4; j++)</div>
-<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>                    oss &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>                oss &lt;&lt; ordered[i]-&gt;description() &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>            }</div>
-<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>            <span class="keywordflow">return</span> oss.str();</div>
-<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>        }</div>
+<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span> </div>
+<div class="foldopen" id="foldopen00564" data-start="{" data-end="}">
+<div class="line"><a id="l00564" name="l00564"></a><span class="lineno"><a class="line" href="classcmdline_1_1parser.html#a50b57c8179fe1b0dd8f5d2b8e8f3261b">  564</a></span>        std::string <a class="code hl_function" href="classcmdline_1_1parser.html#a50b57c8179fe1b0dd8f5d2b8e8f3261b">usage</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>            std::ostringstream oss;</div>
+<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>            oss &lt;&lt; <span class="stringliteral">&quot;usage: &quot;</span> &lt;&lt; prog_name &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; ordered.size(); i++) {</div>
+<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>                <span class="keywordflow">if</span> (ordered[i]-&gt;must())</div>
+<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>                    oss &lt;&lt; ordered[i]-&gt;short_description() &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>            }</div>
+<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span> </div>
+<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>            oss &lt;&lt; <span class="stringliteral">&quot;[options] ... &quot;</span> &lt;&lt; ftr &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>            oss &lt;&lt; <span class="stringliteral">&quot;options:&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span> </div>
+<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>            <span class="keywordtype">size_t</span> max_width = 0;</div>
+<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; ordered.size(); i++) {</div>
+<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>                max_width = std::max(max_width, ordered[i]-&gt;<a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>().<a class="code hl_typedef" href="SDL__opengl__glext_8h.html#ab9c919755bde3b34349e23a32b4e0fa7">length</a>());</div>
+<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>            }</div>
+<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; ordered.size(); i++) {</div>
+<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>                <span class="keywordflow">if</span> (ordered[i]-&gt;short_name()) {</div>
+<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span>                    oss &lt;&lt; <span class="stringliteral">&quot;  -&quot;</span> &lt;&lt; ordered[i]-&gt;short_name() &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
+<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>                }</div>
+<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>                <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>                    oss &lt;&lt; <span class="stringliteral">&quot;      &quot;</span>;</div>
+<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>                }</div>
+<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span> </div>
+<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>                oss &lt;&lt; <span class="stringliteral">&quot;--&quot;</span> &lt;&lt; ordered[i]-&gt;name();</div>
+<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>                <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = ordered[i]-&gt;<a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>().<a class="code hl_typedef" href="SDL__opengl__glext_8h.html#ab9c919755bde3b34349e23a32b4e0fa7">length</a>(); j &lt; max_width + 4; j++)</div>
+<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>                    oss &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>                oss &lt;&lt; ordered[i]-&gt;description() &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>            }</div>
+<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>            <span class="keywordflow">return</span> oss.str();</div>
+<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>        }</div>
 </div>
-<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span> </div>
-<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span> </div>
-<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span>        <span class="keywordtype">void</span> check(<span class="keywordtype">int</span> argc, <span class="keywordtype">bool</span> ok) {</div>
-<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span>            <span class="keywordflow">if</span> ((argc == 1 &amp;&amp; !ok) || <a class="code hl_function" href="classcmdline_1_1parser.html#abe6c9ad7c3991062076917de0514376c">exist</a>(<span class="stringliteral">&quot;help&quot;</span>)) {</div>
-<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span>                std::cerr &lt;&lt; <a class="code hl_function" href="classcmdline_1_1parser.html#a50b57c8179fe1b0dd8f5d2b8e8f3261b">usage</a>();</div>
-<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>                exit(0);</div>
-<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>            }</div>
-<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span> </div>
-<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>            <span class="keywordflow">if</span> (!ok) {</div>
-<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>                std::cerr &lt;&lt; <a class="code hl_function" href="classcmdline_1_1parser.html#a9bcaaea243a949bf30a40d938480d303">error</a>() &lt;&lt; std::endl &lt;&lt; <a class="code hl_function" href="classcmdline_1_1parser.html#a50b57c8179fe1b0dd8f5d2b8e8f3261b">usage</a>();</div>
-<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>                exit(1);</div>
-<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>            }</div>
-<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>        }</div>
-<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span> </div>
-<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>        <span class="keywordtype">void</span> set_option(<span class="keyword">const</span> std::string&amp; <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>) {</div>
-<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>            <span class="keywordflow">if</span> (options.count(<a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>) == 0) {</div>
-<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>                errors.push_back(<span class="stringliteral">&quot;undefined option: --&quot;</span> + <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>);</div>
-<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>            }</div>
-<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>            <span class="keywordflow">if</span> (!options[<a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>]-&gt;set()) {</div>
-<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span>                errors.push_back(<span class="stringliteral">&quot;option needs value: --&quot;</span> + <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>);</div>
-<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>            }</div>
-<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>        }</div>
-<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span> </div>
-<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>        <span class="keywordtype">void</span> set_option(<span class="keyword">const</span> std::string&amp; <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>, <span class="keyword">const</span> std::string&amp; <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#ac783c2a5a0d42f36a33959f6a34ae0ba">value</a>) {</div>
-<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>            <span class="keywordflow">if</span> (options.count(<a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>) == 0) {</div>
-<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>                errors.push_back(<span class="stringliteral">&quot;undefined option: --&quot;</span> + <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>);</div>
-<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span>            }</div>
-<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>            <span class="keywordflow">if</span> (!options[<a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>]-&gt;set(<a class="code hl_typedef" href="SDL__opengl__glext_8h.html#ac783c2a5a0d42f36a33959f6a34ae0ba">value</a>)) {</div>
-<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span>                errors.push_back(<span class="stringliteral">&quot;option value is invalid: --&quot;</span> + <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a> + <span class="stringliteral">&quot;=&quot;</span> + <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#ac783c2a5a0d42f36a33959f6a34ae0ba">value</a>);</div>
-<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span>            }</div>
-<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>        }</div>
-<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span> </div>
-<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span>        <span class="keyword">class </span>option_base {</div>
-<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span>        <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span>            <span class="keyword">virtual</span> ~option_base() {}</div>
-<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span> </div>
-<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span>            <span class="keyword">virtual</span> <span class="keywordtype">bool</span> has_value() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span>            <span class="keyword">virtual</span> <span class="keywordtype">bool</span> set() = 0;</div>
-<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>            <span class="keyword">virtual</span> <span class="keywordtype">bool</span> set(<span class="keyword">const</span> std::string&amp; <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#ac783c2a5a0d42f36a33959f6a34ae0ba">value</a>) = 0;</div>
-<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span>            <span class="keyword">virtual</span> <span class="keywordtype">bool</span> has_set() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span>            <span class="keyword">virtual</span> <span class="keywordtype">bool</span> valid() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span>            <span class="keyword">virtual</span> <span class="keywordtype">bool</span> must() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span> </div>
-<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span>            <span class="keyword">virtual</span> <span class="keyword">const</span> std::string&amp; <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span>            <span class="keyword">virtual</span> <span class="keywordtype">char</span> short_name() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span>            <span class="keyword">virtual</span> <span class="keyword">const</span> std::string&amp; description() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span>            <span class="keyword">virtual</span> std::string short_description() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span>        };</div>
-<div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span> </div>
-<div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span>        <span class="keyword">class </span>option_without_value : <span class="keyword">public</span> option_base {</div>
-<div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span>        <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span>            option_without_value(<span class="keyword">const</span> std::string&amp; <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>,</div>
-<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>                <span class="keywordtype">char</span> short_name,</div>
-<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>                <span class="keyword">const</span> std::string&amp; desc)</div>
-<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>                :nam(<a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>), snam(short_name), desc(desc), has(false) {</div>
-<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span>            }</div>
-<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>            ~option_without_value() {}</div>
-<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span> </div>
-<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span>            <span class="keywordtype">bool</span> has_value()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
-<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span> </div>
-<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span>            <span class="keywordtype">bool</span> set() {</div>
-<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>                has = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span>            }</div>
-<div class="line"><a id="l00662" name="l00662"></a><span class="lineno">  662</span> </div>
-<div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span>            <span class="keywordtype">bool</span> set(<span class="keyword">const</span> std::string&amp;) {</div>
-<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>            }</div>
-<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span> </div>
-<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>            <span class="keywordtype">bool</span> has_set()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>                <span class="keywordflow">return</span> has;</div>
-<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>            }</div>
-<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span> </div>
-<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span>            <span class="keywordtype">bool</span> valid()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>            }</div>
-<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span> </div>
-<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span>            <span class="keywordtype">bool</span> must()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span>            }</div>
-<div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span> </div>
-<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span>            <span class="keyword">const</span> std::string&amp; <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span>                <span class="keywordflow">return</span> nam;</div>
-<div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span>            }</div>
-<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span> </div>
-<div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span>            <span class="keywordtype">char</span> short_name()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>                <span class="keywordflow">return</span> snam;</div>
-<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>            }</div>
-<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span> </div>
-<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>            <span class="keyword">const</span> std::string&amp; description()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>                <span class="keywordflow">return</span> desc;</div>
-<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>            }</div>
-<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span> </div>
-<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>            std::string short_description()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;--&quot;</span> + nam;</div>
-<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>            }</div>
-<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span> </div>
-<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>        <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span>            std::string nam;</div>
-<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>            <span class="keywordtype">char</span> snam;</div>
-<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>            std::string desc;</div>
-<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>            <span class="keywordtype">bool</span> has;</div>
-<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span>        };</div>
-<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span> </div>
-<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>        <span class="keyword">class </span>option_with_value : <span class="keyword">public</span> option_base {</div>
-<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>        <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>            option_with_value(<span class="keyword">const</span> std::string&amp; <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>,</div>
-<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>                <span class="keywordtype">char</span> short_name,</div>
-<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span>                <span class="keywordtype">bool</span> need,</div>
-<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span>                <span class="keyword">const</span> T&amp; def,</div>
-<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span>                <span class="keyword">const</span> std::string&amp; desc)</div>
-<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span>                : nam(<a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>), snam(short_name), need(need), has(false)</div>
-<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span>                , def(def), actual(def) {</div>
-<div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span>                this-&gt;desc = full_description(desc);</div>
-<div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span>            }</div>
-<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span>            ~option_with_value() {}</div>
-<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span> </div>
-<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span>            <span class="keyword">const</span> T&amp; get()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00717" name="l00717"></a><span class="lineno">  717</span>                <span class="keywordflow">return</span> actual;</div>
-<div class="line"><a id="l00718" name="l00718"></a><span class="lineno">  718</span>            }</div>
-<div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span> </div>
-<div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span>            <span class="keywordtype">bool</span> has_value()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
-<div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span> </div>
-<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span>            <span class="keywordtype">bool</span> set() {</div>
-<div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>            }</div>
-<div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span> </div>
-<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span>            <span class="keywordtype">bool</span> set(<span class="keyword">const</span> std::string&amp; <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#ac783c2a5a0d42f36a33959f6a34ae0ba">value</a>) {</div>
-<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span>                <span class="keywordflow">try</span> {</div>
-<div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span>                    actual = read(<a class="code hl_typedef" href="SDL__opengl__glext_8h.html#ac783c2a5a0d42f36a33959f6a34ae0ba">value</a>);</div>
-<div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span>                    has = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00730" name="l00730"></a><span class="lineno">  730</span>                }</div>
-<div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span>                <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception&amp;) {</div>
-<div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>                }</div>
-<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>            }</div>
-<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span> </div>
-<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>            <span class="keywordtype">bool</span> has_set()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>                <span class="keywordflow">return</span> has;</div>
-<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span>            }</div>
-<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span> </div>
-<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>            <span class="keywordtype">bool</span> valid()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>                <span class="keywordflow">if</span> (need &amp;&amp; !has) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span>            }</div>
-<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span> </div>
-<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span>            <span class="keywordtype">bool</span> must()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>                <span class="keywordflow">return</span> need;</div>
-<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>            }</div>
-<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span> </div>
-<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>            <span class="keyword">const</span> std::string&amp; <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>                <span class="keywordflow">return</span> nam;</div>
-<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>            }</div>
-<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span> </div>
-<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>            <span class="keywordtype">char</span> short_name()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span>                <span class="keywordflow">return</span> snam;</div>
-<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span>            }</div>
-<div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span> </div>
-<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span>            <span class="keyword">const</span> std::string&amp; description()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span>                <span class="keywordflow">return</span> desc;</div>
-<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>            }</div>
-<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span> </div>
-<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span>            std::string short_description()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;--&quot;</span> + nam + <span class="stringliteral">&quot;=&quot;</span> + detail::readable_typename&lt;T&gt;();</div>
-<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>            }</div>
-<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span> </div>
-<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>        <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span>            std::string full_description(<span class="keyword">const</span> std::string&amp; desc) {</div>
-<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>                <span class="keywordflow">return</span></div>
-<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>                    desc + <span class="stringliteral">&quot; (&quot;</span> + detail::readable_typename&lt;T&gt;() +</div>
-<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>                    (need ? <span class="stringliteral">&quot;&quot;</span> : <span class="stringliteral">&quot; [=&quot;</span> + detail::default_value&lt;T&gt;(def) + <span class="stringliteral">&quot;]&quot;</span>)</div>
-<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>                    + <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span>            }</div>
-<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span> </div>
-<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span>            <span class="keyword">virtual</span> T read(<span class="keyword">const</span> std::string&amp; <a class="code hl_typedef" href="SDL__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>) = 0;</div>
-<div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span> </div>
-<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span>            std::string nam;</div>
-<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span>            <span class="keywordtype">char</span> snam;</div>
-<div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span>            <span class="keywordtype">bool</span> need;</div>
-<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span>            std::string desc;</div>
-<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span> </div>
-<div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span>            <span class="keywordtype">bool</span> has;</div>
-<div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span>            T def;</div>
-<div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span>            T actual;</div>
-<div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span>        };</div>
-<div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span> </div>
-<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T, <span class="keyword">class</span> F&gt;</div>
-<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span>        <span class="keyword">class </span>option_with_value_with_reader : <span class="keyword">public</span> option_with_value&lt;T&gt; {</div>
-<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span>        <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>            option_with_value_with_reader(<span class="keyword">const</span> std::string&amp; <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>,</div>
-<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>                <span class="keywordtype">char</span> short_name,</div>
-<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>                <span class="keywordtype">bool</span> need,</div>
-<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>                <span class="keyword">const</span> T def,</div>
-<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>                <span class="keyword">const</span> std::string&amp; desc,</div>
-<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>                F reader)</div>
-<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>                : option_with_value&lt;T&gt;(<a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>, short_name, need, def, desc), reader(reader) {</div>
-<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>            }</div>
-<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span> </div>
-<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>        <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>            T read(<span class="keyword">const</span> std::string&amp; <a class="code hl_typedef" href="SDL__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>) {</div>
-<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>                <span class="keywordflow">return</span> reader(<a class="code hl_typedef" href="SDL__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>);</div>
-<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>            }</div>
-<div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span> </div>
-<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>            F reader;</div>
-<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>        };</div>
-<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span> </div>
-<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>        std::map&lt;std::string, option_base*&gt; options;</div>
-<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span>        std::vector&lt;option_base*&gt; ordered;</div>
-<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span>        std::string ftr;</div>
-<div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span> </div>
-<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span>        std::string prog_name;</div>
-<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>        std::vector&lt;std::string&gt; others;</div>
-<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span> </div>
-<div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span>        std::vector&lt;std::string&gt; errors;</div>
-<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>    };</div>
+<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span> </div>
+<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span> </div>
+<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span>        <span class="keywordtype">void</span> check(<span class="keywordtype">int</span> argc, <span class="keywordtype">bool</span> ok) {</div>
+<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span>            <span class="keywordflow">if</span> ((argc == 1 &amp;&amp; !ok) || <a class="code hl_function" href="classcmdline_1_1parser.html#abe6c9ad7c3991062076917de0514376c">exist</a>(<span class="stringliteral">&quot;help&quot;</span>)) {</div>
+<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>                std::cerr &lt;&lt; <a class="code hl_function" href="classcmdline_1_1parser.html#a50b57c8179fe1b0dd8f5d2b8e8f3261b">usage</a>();</div>
+<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>                exit(0);</div>
+<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>            }</div>
+<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span> </div>
+<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>            <span class="keywordflow">if</span> (!ok) {</div>
+<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>                std::cerr &lt;&lt; <a class="code hl_function" href="classcmdline_1_1parser.html#a9bcaaea243a949bf30a40d938480d303">error</a>() &lt;&lt; std::endl &lt;&lt; <a class="code hl_function" href="classcmdline_1_1parser.html#a50b57c8179fe1b0dd8f5d2b8e8f3261b">usage</a>();</div>
+<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>                exit(1);</div>
+<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>            }</div>
+<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span>        }</div>
+<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span> </div>
+<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>        <span class="keywordtype">void</span> set_option(<span class="keyword">const</span> std::string&amp; <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>) {</div>
+<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>            <span class="keywordflow">if</span> (options.count(<a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>) == 0) {</div>
+<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>                errors.push_back(<span class="stringliteral">&quot;undefined option: --&quot;</span> + <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>);</div>
+<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>            }</div>
+<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span>            <span class="keywordflow">if</span> (!options[<a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>]-&gt;set()) {</div>
+<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>                errors.push_back(<span class="stringliteral">&quot;option needs value: --&quot;</span> + <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>);</div>
+<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>            }</div>
+<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>        }</div>
+<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span> </div>
+<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>        <span class="keywordtype">void</span> set_option(<span class="keyword">const</span> std::string&amp; <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>, <span class="keyword">const</span> std::string&amp; <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#ac783c2a5a0d42f36a33959f6a34ae0ba">value</a>) {</div>
+<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>            <span class="keywordflow">if</span> (options.count(<a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>) == 0) {</div>
+<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>                errors.push_back(<span class="stringliteral">&quot;undefined option: --&quot;</span> + <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>);</div>
+<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>            }</div>
+<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span>            <span class="keywordflow">if</span> (!options[<a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>]-&gt;set(<a class="code hl_typedef" href="SDL__opengl__glext_8h.html#ac783c2a5a0d42f36a33959f6a34ae0ba">value</a>)) {</div>
+<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span>                errors.push_back(<span class="stringliteral">&quot;option value is invalid: --&quot;</span> + <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a> + <span class="stringliteral">&quot;=&quot;</span> + <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#ac783c2a5a0d42f36a33959f6a34ae0ba">value</a>);</div>
+<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>            }</div>
+<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span>        }</div>
+<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span> </div>
+<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span>        <span class="keyword">class </span>option_base {</div>
+<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span>        <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span>            <span class="keyword">virtual</span> ~option_base() {}</div>
+<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span> </div>
+<div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span>            <span class="keyword">virtual</span> <span class="keywordtype">bool</span> has_value() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>            <span class="keyword">virtual</span> <span class="keywordtype">bool</span> set() = 0;</div>
+<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span>            <span class="keyword">virtual</span> <span class="keywordtype">bool</span> set(<span class="keyword">const</span> std::string&amp; <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#ac783c2a5a0d42f36a33959f6a34ae0ba">value</a>) = 0;</div>
+<div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span>            <span class="keyword">virtual</span> <span class="keywordtype">bool</span> has_set() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span>            <span class="keyword">virtual</span> <span class="keywordtype">bool</span> valid() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span>            <span class="keyword">virtual</span> <span class="keywordtype">bool</span> must() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span> </div>
+<div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span>            <span class="keyword">virtual</span> <span class="keyword">const</span> std::string&amp; <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span>            <span class="keyword">virtual</span> <span class="keywordtype">char</span> short_name() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span>            <span class="keyword">virtual</span> <span class="keyword">const</span> std::string&amp; description() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span>            <span class="keyword">virtual</span> std::string short_description() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span>        };</div>
+<div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span> </div>
+<div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span>        <span class="keyword">class </span>option_without_value : <span class="keyword">public</span> option_base {</div>
+<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span>        <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>            option_without_value(<span class="keyword">const</span> std::string&amp; <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>,</div>
+<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>                <span class="keywordtype">char</span> short_name,</div>
+<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>                <span class="keyword">const</span> std::string&amp; desc)</div>
+<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span>                :nam(<a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>), snam(short_name), desc(desc), has(false) {</div>
+<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>            }</div>
+<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span>            ~option_without_value() {}</div>
+<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span> </div>
+<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span>            <span class="keywordtype">bool</span> has_value()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span> </div>
+<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>            <span class="keywordtype">bool</span> set() {</div>
+<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span>                has = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00662" name="l00662"></a><span class="lineno">  662</span>            }</div>
+<div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span> </div>
+<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>            <span class="keywordtype">bool</span> set(<span class="keyword">const</span> std::string&amp;) {</div>
+<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span>            }</div>
+<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span> </div>
+<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>            <span class="keywordtype">bool</span> has_set()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>                <span class="keywordflow">return</span> has;</div>
+<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span>            }</div>
+<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span> </div>
+<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>            <span class="keywordtype">bool</span> valid()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span>            }</div>
+<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span> </div>
+<div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span>            <span class="keywordtype">bool</span> must()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span>            }</div>
+<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span> </div>
+<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span>            <span class="keyword">const</span> std::string&amp; <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span>                <span class="keywordflow">return</span> nam;</div>
+<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span>            }</div>
+<div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span> </div>
+<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>            <span class="keywordtype">char</span> short_name()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>                <span class="keywordflow">return</span> snam;</div>
+<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>            }</div>
+<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span> </div>
+<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>            <span class="keyword">const</span> std::string&amp; description()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>                <span class="keywordflow">return</span> desc;</div>
+<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>            }</div>
+<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span> </div>
+<div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>            std::string short_description()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;--&quot;</span> + nam;</div>
+<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>            }</div>
+<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span> </div>
+<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span>        <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>            std::string nam;</div>
+<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>            <span class="keywordtype">char</span> snam;</div>
+<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>            std::string desc;</div>
+<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span>            <span class="keywordtype">bool</span> has;</div>
+<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span>        };</div>
+<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span> </div>
+<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>        <span class="keyword">class </span>option_with_value : <span class="keyword">public</span> option_base {</div>
+<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>        <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>            option_with_value(<span class="keyword">const</span> std::string&amp; <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>,</div>
+<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span>                <span class="keywordtype">char</span> short_name,</div>
+<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span>                <span class="keywordtype">bool</span> need,</div>
+<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span>                <span class="keyword">const</span> T&amp; def,</div>
+<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span>                <span class="keyword">const</span> std::string&amp; desc)</div>
+<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span>                : nam(<a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>), snam(short_name), need(need), has(false)</div>
+<div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span>                , def(def), actual(def) {</div>
+<div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span>                this-&gt;desc = full_description(desc);</div>
+<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span>            }</div>
+<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span>            ~option_with_value() {}</div>
+<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span> </div>
+<div class="line"><a id="l00717" name="l00717"></a><span class="lineno">  717</span>            <span class="keyword">const</span> T&amp; get()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00718" name="l00718"></a><span class="lineno">  718</span>                <span class="keywordflow">return</span> actual;</div>
+<div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span>            }</div>
+<div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span> </div>
+<div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span>            <span class="keywordtype">bool</span> has_value()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
+<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span> </div>
+<div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span>            <span class="keywordtype">bool</span> set() {</div>
+<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span>            }</div>
+<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span> </div>
+<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span>            <span class="keywordtype">bool</span> set(<span class="keyword">const</span> std::string&amp; <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#ac783c2a5a0d42f36a33959f6a34ae0ba">value</a>) {</div>
+<div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span>                <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span>                    actual = read(<a class="code hl_typedef" href="SDL__opengl__glext_8h.html#ac783c2a5a0d42f36a33959f6a34ae0ba">value</a>);</div>
+<div class="line"><a id="l00730" name="l00730"></a><span class="lineno">  730</span>                    has = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span>                }</div>
+<div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span>                <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception&amp;) {</div>
+<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>                }</div>
+<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>            }</div>
+<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span> </div>
+<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>            <span class="keywordtype">bool</span> has_set()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span>                <span class="keywordflow">return</span> has;</div>
+<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span>            }</div>
+<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span> </div>
+<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>            <span class="keywordtype">bool</span> valid()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span>                <span class="keywordflow">if</span> (need &amp;&amp; !has) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span>            }</div>
+<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span> </div>
+<div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>            <span class="keywordtype">bool</span> must()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>                <span class="keywordflow">return</span> need;</div>
+<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>            }</div>
+<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span> </div>
+<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>            <span class="keyword">const</span> std::string&amp; <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>                <span class="keywordflow">return</span> nam;</div>
+<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>            }</div>
+<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span> </div>
+<div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span>            <span class="keywordtype">char</span> short_name()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span>                <span class="keywordflow">return</span> snam;</div>
+<div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span>            }</div>
+<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span> </div>
+<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span>            <span class="keyword">const</span> std::string&amp; description()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>                <span class="keywordflow">return</span> desc;</div>
+<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span>            }</div>
+<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span> </div>
+<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>            std::string short_description()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;--&quot;</span> + nam + <span class="stringliteral">&quot;=&quot;</span> + detail::readable_typename&lt;T&gt;();</div>
+<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span>            }</div>
+<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span> </div>
+<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span>        <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>            std::string full_description(<span class="keyword">const</span> std::string&amp; desc) {</div>
+<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>                <span class="keywordflow">return</span></div>
+<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>                    desc + <span class="stringliteral">&quot; (&quot;</span> + detail::readable_typename&lt;T&gt;() +</div>
+<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>                    (need ? <span class="stringliteral">&quot;&quot;</span> : <span class="stringliteral">&quot; [=&quot;</span> + detail::default_value&lt;T&gt;(def) + <span class="stringliteral">&quot;]&quot;</span>)</div>
+<div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span>                    + <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span>            }</div>
+<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span> </div>
+<div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span>            <span class="keyword">virtual</span> T read(<span class="keyword">const</span> std::string&amp; <a class="code hl_typedef" href="SDL__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>) = 0;</div>
+<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span> </div>
+<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span>            std::string nam;</div>
+<div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span>            <span class="keywordtype">char</span> snam;</div>
+<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span>            <span class="keywordtype">bool</span> need;</div>
+<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span>            std::string desc;</div>
+<div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span> </div>
+<div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span>            <span class="keywordtype">bool</span> has;</div>
+<div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span>            T def;</div>
+<div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span>            T actual;</div>
+<div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span>        };</div>
+<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span> </div>
+<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T, <span class="keyword">class</span> F&gt;</div>
+<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span>        <span class="keyword">class </span>option_with_value_with_reader : <span class="keyword">public</span> option_with_value&lt;T&gt; {</div>
+<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>        <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>            option_with_value_with_reader(<span class="keyword">const</span> std::string&amp; <a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>,</div>
+<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>                <span class="keywordtype">char</span> short_name,</div>
+<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>                <span class="keywordtype">bool</span> need,</div>
+<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>                <span class="keyword">const</span> T def,</div>
+<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>                <span class="keyword">const</span> std::string&amp; desc,</div>
+<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>                F reader)</div>
+<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>                : option_with_value&lt;T&gt;(<a class="code hl_typedef" href="SDL__opengl__glext_8h.html#a8e1a4ccadfc12dbf9a8e411d68adfe8e">name</a>, short_name, need, def, desc), reader(reader) {</div>
+<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>            }</div>
+<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span> </div>
+<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>        <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>            T read(<span class="keyword">const</span> std::string&amp; <a class="code hl_typedef" href="SDL__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>) {</div>
+<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>                <span class="keywordflow">return</span> reader(<a class="code hl_typedef" href="SDL__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>);</div>
+<div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span>            }</div>
+<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span> </div>
+<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>            F reader;</div>
+<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span>        };</div>
+<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span> </div>
+<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span>        std::map&lt;std::string, option_base*&gt; options;</div>
+<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span>        std::vector&lt;option_base*&gt; ordered;</div>
+<div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span>        std::string ftr;</div>
+<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span> </div>
+<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>        std::string prog_name;</div>
+<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>        std::vector&lt;std::string&gt; others;</div>
+<div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span> </div>
+<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>        std::vector&lt;std::string&gt; errors;</div>
+<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span>    };</div>
 </div>
-<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span> </div>
-<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span>} <span class="comment">// cmdline</span></div>
+<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span> </div>
+<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>} <span class="comment">// cmdline</span></div>
 </div>
 <div class="ttc" id="aSDL__opengl_8h_html_a4af680a6c683f88ed67b76f207f2e6e4"><div class="ttname"><a href="SDL__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a></div><div class="ttdeci">GLdouble s</div><div class="ttdef"><b>Definition</b> SDL_opengl.h:2057</div></div>
 <div class="ttc" id="aSDL__opengl_8h_html_a55f85da29bf761fde63cc95d26300230"><div class="ttname"><a href="SDL__opengl_8h.html#a55f85da29bf761fde63cc95d26300230">v</a></div><div class="ttdeci">const GLdouble * v</div><div class="ttdef"><b>Definition</b> SDL_opengl.h:2058</div></div>
@@ -1050,17 +1051,17 @@ $(document).ready(function(){initNavTree('cmdline_8h_source.html',''); initResiz
 <div class="ttc" id="aclasscmdline_1_1detail_1_1lexical__cast__t_html_a533dd7d81255f684abba07d6c1545b1b"><div class="ttname"><a href="classcmdline_1_1detail_1_1lexical__cast__t.html#a533dd7d81255f684abba07d6c1545b1b">cmdline::detail::lexical_cast_t::cast</a></div><div class="ttdeci">static Target cast(const Source &amp;arg)</div><div class="ttdef"><b>Definition</b> cmdline.h:50</div></div>
 <div class="ttc" id="aclasscmdline_1_1parser_html"><div class="ttname"><a href="classcmdline_1_1parser.html">cmdline::parser</a></div><div class="ttdef"><b>Definition</b> cmdline.h:317</div></div>
 <div class="ttc" id="aclasscmdline_1_1parser_html_a00f22e1d9ac1b8d73dfc990b4f87a598"><div class="ttname"><a href="classcmdline_1_1parser.html#a00f22e1d9ac1b8d73dfc990b4f87a598">cmdline::parser::footer</a></div><div class="ttdeci">void footer(const std::string &amp;f)</div><div class="ttdef"><b>Definition</b> cmdline.h:356</div></div>
-<div class="ttc" id="aclasscmdline_1_1parser_html_a0267b636f34a788f57d5eeffcc5daf44"><div class="ttname"><a href="classcmdline_1_1parser.html#a0267b636f34a788f57d5eeffcc5daf44">cmdline::parser::error_full</a></div><div class="ttdeci">std::string error_full() const</div><div class="ttdef"><b>Definition</b> cmdline.h:556</div></div>
+<div class="ttc" id="aclasscmdline_1_1parser_html_a0267b636f34a788f57d5eeffcc5daf44"><div class="ttname"><a href="classcmdline_1_1parser.html#a0267b636f34a788f57d5eeffcc5daf44">cmdline::parser::error_full</a></div><div class="ttdeci">std::string error_full() const</div><div class="ttdef"><b>Definition</b> cmdline.h:557</div></div>
 <div class="ttc" id="aclasscmdline_1_1parser_html_a0829039262c93910a9fee8c80f3edb64"><div class="ttname"><a href="classcmdline_1_1parser.html#a0829039262c93910a9fee8c80f3edb64">cmdline::parser::parse_check</a></div><div class="ttdeci">void parse_check(const std::vector&lt; std::string &gt; &amp;args)</div><div class="ttdef"><b>Definition</b> cmdline.h:540</div></div>
 <div class="ttc" id="aclasscmdline_1_1parser_html_a122aab1fb389f16170397971be1e75b6"><div class="ttname"><a href="classcmdline_1_1parser.html#a122aab1fb389f16170397971be1e75b6">cmdline::parser::add</a></div><div class="ttdeci">void add(const std::string &amp;name, char short_name=0, const std::string &amp;desc=&quot;&quot;)</div><div class="ttdef"><b>Definition</b> cmdline.h:327</div></div>
 <div class="ttc" id="aclasscmdline_1_1parser_html_a436c7cba6efd596729d18d58f1016cad"><div class="ttname"><a href="classcmdline_1_1parser.html#a436c7cba6efd596729d18d58f1016cad">cmdline::parser::parser</a></div><div class="ttdeci">parser()</div><div class="ttdef"><b>Definition</b> cmdline.h:319</div></div>
-<div class="ttc" id="aclasscmdline_1_1parser_html_a50b57c8179fe1b0dd8f5d2b8e8f3261b"><div class="ttname"><a href="classcmdline_1_1parser.html#a50b57c8179fe1b0dd8f5d2b8e8f3261b">cmdline::parser::usage</a></div><div class="ttdeci">std::string usage() const</div><div class="ttdef"><b>Definition</b> cmdline.h:563</div></div>
+<div class="ttc" id="aclasscmdline_1_1parser_html_a50b57c8179fe1b0dd8f5d2b8e8f3261b"><div class="ttname"><a href="classcmdline_1_1parser.html#a50b57c8179fe1b0dd8f5d2b8e8f3261b">cmdline::parser::usage</a></div><div class="ttdeci">std::string usage() const</div><div class="ttdef"><b>Definition</b> cmdline.h:564</div></div>
 <div class="ttc" id="aclasscmdline_1_1parser_html_a5a28fa4f122ee70230c291187196edac"><div class="ttname"><a href="classcmdline_1_1parser.html#a5a28fa4f122ee70230c291187196edac">cmdline::parser::get</a></div><div class="ttdeci">const T &amp; get(const std::string &amp;name) const</div><div class="ttdef"><b>Definition</b> cmdline.h:370</div></div>
 <div class="ttc" id="aclasscmdline_1_1parser_html_a745c9519abe50562987487b6bf794fd7"><div class="ttname"><a href="classcmdline_1_1parser.html#a745c9519abe50562987487b6bf794fd7">cmdline::parser::parse</a></div><div class="ttdeci">bool parse(const std::vector&lt; std::string &gt; &amp;args)</div><div class="ttdef"><b>Definition</b> cmdline.h:423</div></div>
 <div class="ttc" id="aclasscmdline_1_1parser_html_a75193000dd4842d7bf249e4f99a5d52e"><div class="ttname"><a href="classcmdline_1_1parser.html#a75193000dd4842d7bf249e4f99a5d52e">cmdline::parser::rest</a></div><div class="ttdeci">const std::vector&lt; std::string &gt; &amp; rest() const</div><div class="ttdef"><b>Definition</b> cmdline.h:377</div></div>
 <div class="ttc" id="aclasscmdline_1_1parser_html_a83175f24d7d9e29256b855fb249f427b"><div class="ttname"><a href="classcmdline_1_1parser.html#a83175f24d7d9e29256b855fb249f427b">cmdline::parser::parse</a></div><div class="ttdeci">bool parse(int argc, const char *const argv[])</div><div class="ttdef"><b>Definition</b> cmdline.h:433</div></div>
-<div class="ttc" id="aclasscmdline_1_1parser_html_a9bcaaea243a949bf30a40d938480d303"><div class="ttname"><a href="classcmdline_1_1parser.html#a9bcaaea243a949bf30a40d938480d303">cmdline::parser::error</a></div><div class="ttdeci">std::string error() const</div><div class="ttdef"><b>Definition</b> cmdline.h:552</div></div>
-<div class="ttc" id="aclasscmdline_1_1parser_html_a9c1aebc54c4bc0387c884888185b4941"><div class="ttname"><a href="classcmdline_1_1parser.html#a9c1aebc54c4bc0387c884888185b4941">cmdline::parser::parse_check</a></div><div class="ttdeci">void parse_check(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> cmdline.h:546</div></div>
+<div class="ttc" id="aclasscmdline_1_1parser_html_a9bcaaea243a949bf30a40d938480d303"><div class="ttname"><a href="classcmdline_1_1parser.html#a9bcaaea243a949bf30a40d938480d303">cmdline::parser::error</a></div><div class="ttdeci">std::string error() const</div><div class="ttdef"><b>Definition</b> cmdline.h:553</div></div>
+<div class="ttc" id="aclasscmdline_1_1parser_html_a9c1aebc54c4bc0387c884888185b4941"><div class="ttname"><a href="classcmdline_1_1parser.html#a9c1aebc54c4bc0387c884888185b4941">cmdline::parser::parse_check</a></div><div class="ttdeci">void parse_check(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> cmdline.h:547</div></div>
 <div class="ttc" id="aclasscmdline_1_1parser_html_aa6d002a3ef165c240d65c1e87f61a77c"><div class="ttname"><a href="classcmdline_1_1parser.html#aa6d002a3ef165c240d65c1e87f61a77c">cmdline::parser::add</a></div><div class="ttdeci">void add(const std::string &amp;name, char short_name=0, const std::string &amp;desc=&quot;&quot;, bool need=true, const T def=T(), F reader=F())</div><div class="ttdef"><b>Definition</b> cmdline.h:345</div></div>
 <div class="ttc" id="aclasscmdline_1_1parser_html_ab8ca75cca3abf36b9474edcf0ce21ca6"><div class="ttname"><a href="classcmdline_1_1parser.html#ab8ca75cca3abf36b9474edcf0ce21ca6">cmdline::parser::parse</a></div><div class="ttdeci">bool parse(const std::string &amp;arg)</div><div class="ttdef"><b>Definition</b> cmdline.h:381</div></div>
 <div class="ttc" id="aclasscmdline_1_1parser_html_abe6c9ad7c3991062076917de0514376c"><div class="ttname"><a href="classcmdline_1_1parser.html#abe6c9ad7c3991062076917de0514376c">cmdline::parser::exist</a></div><div class="ttdeci">bool exist(const std::string &amp;name) const</div><div class="ttdef"><b>Definition</b> cmdline.h:364</div></div>

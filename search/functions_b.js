@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['main_0',['main',['../RecastCmd_2Source_2main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0',1,'main(int, char **):&#160;main.cpp'],['../RecastDemo_2Source_2main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0',1,'main(int, char **):&#160;main.cpp']]],
+  ['main_0',['main',['../RecastCmd_2Source_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp'],['../RecastDemo_2Source_2main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0',1,'main(int, char **):&#160;main.cpp']]],
   ['maxcompressedsize_1',['maxcompressedsize',['../structFastLZCompressor.html#a8fb3236d4cb66a253fd98036536b51a4',1,'FastLZCompressor::maxCompressedSize(const int bufferSize)'],['../structFastLZCompressor.html#a8fb3236d4cb66a253fd98036536b51a4',1,'FastLZCompressor::maxCompressedSize(const int bufferSize)'],['../structdtTileCacheCompressor.html#aaa7fcfc5889a5f3fc5fbf689bbbc1494',1,'dtTileCacheCompressor::maxCompressedSize()']]],
   ['mergeandfilterlayerregions_2',['mergeAndFilterLayerRegions',['../RecastRegion_8cpp.html#a25912e8836b3489f54fecd65d850beff',1,'RecastRegion.cpp']]],
   ['mergeandfilterregions_3',['mergeAndFilterRegions',['../RecastRegion_8cpp.html#abd46c685c34317694a2c7bc29caa3494',1,'RecastRegion.cpp']]],

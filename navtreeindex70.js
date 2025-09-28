@@ -1,10 +1,5 @@
 var NAVTREEINDEX70 =
 {
-"structdtBVNode.html":[43,0,12],
-"structdtBVNode.html#a4f03eda2f4ae838eed627db41ebea292":[43,0,12,1],
-"structdtBVNode.html#aa7de4b9e1151b9f4bf02154cfb24a45a":[43,0,12,2],
-"structdtBVNode.html#aba981174ad61a601f743d986142ee504":[43,0,12,0],
-"structdtCompressedTile.html":[43,0,14],
 "structdtCompressedTile.html#a08600eb0ab1c1980a7e1b72839a32863":[43,0,14,2],
 "structdtCompressedTile.html#a092b83bd1a640dbdcbbd34699bc2c1bd":[43,0,14,6],
 "structdtCompressedTile.html#a0c847cc83252015006215c720fb9936b":[43,0,14,4],
@@ -249,5 +244,10 @@ var NAVTREEINDEX70 =
 "structrcChunkyTriMeshNode.html#aef4c1c5ae3d3e688449598791f65483c":[43,0,95,2],
 "structrcChunkyTriMeshNode.html#af5cca78d669f19c5b712238f30a58847":[43,0,95,0],
 "structrcCompactCell.html":[43,0,96],
-"structrcCompactCell.html#a70bb509654a28a8c9d67bcb469d0b3ce":[43,0,96,0]
+"structrcCompactCell.html#a70bb509654a28a8c9d67bcb469d0b3ce":[43,0,96,0],
+"structrcCompactCell.html#ad1695135ae520dfee8c39aa7b1fd41d8":[43,0,96,1],
+"structrcCompactSpan.html":[43,0,98],
+"structrcCompactSpan.html#a51e8cdcf30408a3f84da22c4d2623b68":[43,0,98,3],
+"structrcCompactSpan.html#a7eb3771c94cae7b6e1bc239ec8fd7043":[43,0,98,1],
+"structrcCompactSpan.html#ac01d1dafd150efc71de4ee671edb8539":[43,0,98,0]
 };

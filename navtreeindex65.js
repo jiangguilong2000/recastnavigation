@@ -1,16 +1,11 @@
 var NAVTREEINDEX65 =
 {
-"gdk.html#autotoc_md8-copying-any-data-files":[13,3,7],
-"gdk.html#autotoc_md9-build-and-run-from-visual-studio":[13,3,8],
-"gdk.html#requirements-1":[13,0],
-"gdk.html#troubleshooting-1":[13,5],
-"gdk.html#visualc-gdk-solution":[13,2],
 "gdk.html#windows-gdk-setup-detailed-steps":[13,3],
 "gdk.html#windows-gdk-status":[13,1],
 "gdk.html#xbox-gdkx-setup":[13,4],
 "git.html":[15],
-"globals.html":[44,1,0],
 "globals.html":[44,1,0,0],
+"globals.html":[44,1,0],
 "globals_a.html":[44,1,0,1],
 "globals_b.html":[44,1,0,2],
 "globals_c.html":[44,1,0,3],
@@ -249,5 +244,10 @@ var NAVTREEINDEX65 =
 "md_RecastCmd_2Contrib_2SDL_2docs_2README-cmake.html#including-sdl-in-your-project":[9,1],
 "md_RecastCmd_2Contrib_2SDL_2docs_2README-cmake.html#iostvos":[9,2,0],
 "md_RecastCmd_2Contrib_2SDL_2docs_2README-cmake.html#using-a-vendored-sdl":[9,1,1],
-"md_RecastCmd_2Contrib_2SDL_2docs_2README-dynapi.html":[11]
+"md_RecastCmd_2Contrib_2SDL_2docs_2README-dynapi.html":[11],
+"md_RecastCmd_2Contrib_2SDL_2docs_2README-emscripten.html":[12],
+"md_RecastCmd_2Contrib_2SDL_2docs_2README-emscripten.html#audio":[12,4],
+"md_RecastCmd_2Contrib_2SDL_2docs_2README-emscripten.html#building-sdlemscripten":[12,6],
+"md_RecastCmd_2Contrib_2SDL_2docs_2README-emscripten.html#building-your-app":[12,7],
+"md_RecastCmd_2Contrib_2SDL_2docs_2README-emscripten.html#data-files":[12,8]
 };

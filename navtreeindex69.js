@@ -1,10 +1,5 @@
 var NAVTREEINDEX69 =
 {
-"structSDL__PixelFormat.html#a6cdaf31f6cb153fefda47fa6b8368c0e":[43,0,184,1],
-"structSDL__PixelFormat.html#a6fec9e1809cc3da458d58b8cccd058f2":[43,0,184,7],
-"structSDL__PixelFormat.html#a94469768d8436e631a13d68623ff663f":[43,0,184,9],
-"structSDL__PixelFormat.html#a9994b4ed87a2551253aebfa191db8424":[43,0,184,16],
-"structSDL__PixelFormat.html#aac533fae3043ef44df01108248e111d8":[43,0,184,3],
 "structSDL__PixelFormat.html#abfdec7b9ee2ee39db630f4022e4e0daa":[43,0,184,18],
 "structSDL__PixelFormat.html#ac3c4ffa0de1f2c94040340deede3bf46":[43,0,184,2],
 "structSDL__PixelFormat.html#ad366812df3ae62edb9ae6cb89234fddb":[43,0,184,5],
@@ -188,7 +183,7 @@ var NAVTREEINDEX69 =
 "structSDL__version.html#aa6dacff18edee8cd037c773b843be0f1":[43,0,200,2],
 "structSDL__version.html#ad7d7674532073eed237b90f546c97cd0":[43,0,200,0],
 "structSampleItem.html":[43,0,132],
-"structSampleItem.html#a21cfe6a38a988d899f6f56dc07b0b2f1":[43,0,132,0],
+"structSampleItem.html#a5bc82d1926570b7fa1b937606c593f5c":[43,0,132,0],
 "structSampleItem.html#af696aa049ca06a8a27e9d9ed4e55c0df":[43,0,132,1],
 "structSampleTool.html":[43,0,133],
 "structSampleTool.html#a0cd44aa86008bcbc3dfc45d0117cd02c":[43,0,133,10],
@@ -249,5 +244,10 @@ var NAVTREEINDEX69 =
 "structcmdline_1_1oneof__reader.html#af1101d86b057fae4f0dbc5bef1fb7d8c":[43,0,0,3,0],
 "structcmdline_1_1range__reader.html":[43,0,0,5],
 "structcmdline_1_1range__reader.html#a7b31d754293d2f2f3df49b40a6e95a5a":[43,0,0,5,0],
-"structcmdline_1_1range__reader.html#a81dfb7277756d5b23f816481db121a20":[43,0,0,5,1]
+"structcmdline_1_1range__reader.html#a81dfb7277756d5b23f816481db121a20":[43,0,0,5,1],
+"structdtBVNode.html":[43,0,12],
+"structdtBVNode.html#a4f03eda2f4ae838eed627db41ebea292":[43,0,12,1],
+"structdtBVNode.html#aa7de4b9e1151b9f4bf02154cfb24a45a":[43,0,12,2],
+"structdtBVNode.html#aba981174ad61a601f743d986142ee504":[43,0,12,0],
+"structdtCompressedTile.html":[43,0,14]
 };

@@ -49,7 +49,7 @@ var searchData=
   ['country_46',['country',['../structSDL__Locale.html#a0a6d2720db6bc77bfa82528294c1c6e8',1,'SDL_Locale']]],
   ['cpoly_47',['cpoly',['../structdtTempContour.html#a0d3c890707733eb165076c44202b9058',1,'dtTempContour']]],
   ['crc32_5ftable_48',['crc32_table',['../structSDLTest__Crc32Context.html#ae95d0d0b48bafc4e2f6f032f754ffa4c',1,'SDLTest_Crc32Context']]],
-  ['create_49',['create',['../structSampleItem.html#a21cfe6a38a988d899f6f56dc07b0b2f1',1,'SampleItem']]],
+  ['create_49',['create',['../structSampleItem.html#a5bc82d1926570b7fa1b937606c593f5c',1,'SampleItem']]],
   ['cs_50',['cs',['../structrcContourSet.html#a1dbf04db7e828a3757e951e4f8499c95',1,'rcContourSet::cs'],['../structrcPolyMesh.html#a4c3ca520c55f96037cffcf6a92809563',1,'rcPolyMesh::cs'],['../structdtNavMeshCreateParams.html#a2297125898dd39b19c515638d31cacfc',1,'dtNavMeshCreateParams::cs'],['../structdtTileCacheParams.html#aa3d397344d70e8d65300ceec47bf6512',1,'dtTileCacheParams::cs'],['../structrcConfig.html#ae74c4bd2b0477f29a65a53ca9c59196d',1,'rcConfig::cs'],['../structrcHeightfield.html#a3f28962585b2f726d809b1a86b925edb',1,'rcHeightfield::cs'],['../structrcCompactHeightfield.html#a75ee8e198d672db29a2f98c7463c0b31',1,'rcCompactHeightfield::cs'],['../structrcHeightfieldLayer.html#af0311febcc96aa2a2b611e0a65478f49',1,'rcHeightfieldLayer::cs']]],
   ['csensor_51',['csensor',['../unionSDL__Event.html#adcfd6caae4067c338ddd6570ddb37417',1,'SDL_Event']]],
   ['cset_5fmagic_52',['CSET_MAGIC',['../RecastDump_8cpp.html#a715b66346d870827210e9b90b9e5add9',1,'RecastDump.cpp']]],

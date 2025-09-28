@@ -43,7 +43,7 @@ var searchData=
   ['test_5fresult_5fskipped_40',['TEST_RESULT_SKIPPED',['../SDL__test__harness_8h.html#aadce13b4d24fe4ac2b58578167e53846',1,'SDL_test_harness.h']]],
   ['test_5fskipped_41',['TEST_SKIPPED',['../SDL__test__harness_8h.html#adc53d81b0aba42f8a5773a4bd1c3da88',1,'SDL_test_harness.h']]],
   ['test_5fstarted_42',['TEST_STARTED',['../SDL__test__harness_8h.html#a24c50cc9207eee59e73f95faff5ef07a',1,'SDL_test_harness.h']]],
-  ['testcase_43',['testcase',['../classTestCase.html',1,'TestCase'],['../classTestCase.html#ac62aa15cb45a40bdc0b9a1c6554c7e0a',1,'TestCase::TestCase()'],['../structSDLTest__TestCaseReference.html#af9472f0c421a2845b540fc28fb30a3ef',1,'SDLTest_TestCaseReference::testCase'],['../classTestCase.html#ac62aa15cb45a40bdc0b9a1c6554c7e0a',1,'TestCase::TestCase()']]],
+  ['testcase_43',['testcase',['../classTestCase.html',1,'TestCase'],['../structSDLTest__TestCaseReference.html#af9472f0c421a2845b540fc28fb30a3ef',1,'SDLTest_TestCaseReference::testCase'],['../classTestCase.html#ac62aa15cb45a40bdc0b9a1c6554c7e0a',1,'TestCase::TestCase()'],['../classTestCase.html#ac62aa15cb45a40bdc0b9a1c6554c7e0a',1,'TestCase::TestCase()']]],
   ['testcases_44',['testCases',['../structSDLTest__TestSuiteReference.html#a06d97ce5bcf9ceb1300cc4aa39c028d3',1,'SDLTest_TestSuiteReference']]],
   ['testers_45',['Building the Testers',['../md_RecastCmd_2Contrib_2SDL_2docs_2README-macos.html#building-the-testers',1,'']]],
   ['tests_46',['tests',['../md_Docs_2__99__Roadmap.html#more-tests',1,'More Tests'],['../native-client.html#running-tests',1,'Running tests'],['../md_RecastCmd_2Contrib_2SDL_2docs_2CONTRIBUTING.html#running-the-tests',1,'Running the tests'],['../md_Docs_2__2__BuildingAndIntegrating.html#running-unit-tests',1,'Running Unit tests']]],

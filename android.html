@@ -292,7 +292,7 @@ undefined after calling eglSwapBuffers". Setting the EGL_SWAP_BEHAVIOR attribute
 Ending your application</h1>
 <p>Two legitimate ways:</p>
 <ul>
-<li>return from your <a class="el" href="RecastCmd_2Source_2main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0">main()</a> function. Java side will automatically terminate the Activity by calling Activity.finish().</li>
+<li>return from your <a class="el" href="RecastCmd_2Source_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main()</a> function. Java side will automatically terminate the Activity by calling Activity.finish().</li>
 <li>Android OS can decide to terminate your application by calling onDestroy() (see Activity life cycle). Your application will receive a SDL_QUIT event you can handle to save things and quit.</li>
 </ul>
 <p>Don't call exit() as it stops the activity badly.</p>

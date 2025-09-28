@@ -68,6 +68,7 @@ var classSample =
     [ "saveAll", "classSample.html#a5a6d7fec2a32c30cebc8f4a3c895593d", null ],
     [ "setContext", "classSample.html#a86e13c14ae1a347d4867c77ec90e49f1", null ],
     [ "setContext", "classSample.html#a86e13c14ae1a347d4867c77ec90e49f1", null ],
+    [ "setGeomSet", "classSample.html#aa511482baec1121df0c8b16bad0cc56f", null ],
     [ "setNavMeshDrawFlags", "classSample.html#a0b5f9832856a0880004b8f725366cca1", null ],
     [ "setNavMeshDrawFlags", "classSample.html#a0b5f9832856a0880004b8f725366cca1", null ],
     [ "setTool", "classSample.html#a0602082aea4402bd6db027a5aa4f33a0", null ],
