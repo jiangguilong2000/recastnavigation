@@ -5,7 +5,7 @@ var dir_b5bdb2e5de11b9ef09b966d2ec0a4963 =
     [ "CrowdTool.cpp", "CrowdTool_8cpp.html", "CrowdTool_8cpp" ],
     [ "Filelist.cpp", "Filelist_8cpp.html", "Filelist_8cpp" ],
     [ "imgui.cpp", "RecastDemo_2Source_2imgui_8cpp.html", "RecastDemo_2Source_2imgui_8cpp" ],
-    [ "imguiRenderGL.cpp", "RecastDemo_2Source_2imguiRenderGL_8cpp.html", "RecastDemo_2Source_2imguiRenderGL_8cpp" ],
+    [ "imguiRenderGL.cpp", "imguiRenderGL_8cpp.html", "imguiRenderGL_8cpp" ],
     [ "InputGeom.cpp", "RecastDemo_2Source_2InputGeom_8cpp.html", "RecastDemo_2Source_2InputGeom_8cpp" ],
     [ "main.cpp", "RecastDemo_2Source_2main_8cpp.html", "RecastDemo_2Source_2main_8cpp" ],
     [ "MeshLoaderObj.cpp", "RecastDemo_2Source_2MeshLoaderObj_8cpp.html", "RecastDemo_2Source_2MeshLoaderObj_8cpp" ],

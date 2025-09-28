@@ -153,12 +153,9 @@ var hierarchy =
     ] ],
     [ "Sample", "classSample.html", [
       [ "Sample_Debug", "classSample__Debug.html", null ],
-      [ "Sample_Debug", "classSample__Debug.html", null ],
       [ "Sample_SoloMesh", "classSample__SoloMesh.html", null ],
       [ "Sample_SoloMesh", "classSample__SoloMesh.html", null ],
       [ "Sample_TempObstacles", "classSample__TempObstacles.html", null ],
-      [ "Sample_TempObstacles", "classSample__TempObstacles.html", null ],
-      [ "Sample_TileMesh", "classSample__TileMesh.html", null ],
       [ "Sample_TileMesh", "classSample__TileMesh.html", null ]
     ] ],
     [ "SampleItem", "structSampleItem.html", null ],
@@ -166,18 +163,15 @@ var hierarchy =
       [ "ConvexVolumeTool", "classConvexVolumeTool.html", null ],
       [ "ConvexVolumeTool", "classConvexVolumeTool.html", null ],
       [ "CrowdTool", "classCrowdTool.html", null ],
-      [ "CrowdTool", "classCrowdTool.html", null ],
       [ "NavMeshPruneTool", "classNavMeshPruneTool.html", null ],
       [ "NavMeshPruneTool", "classNavMeshPruneTool.html", null ],
       [ "NavMeshTesterTool", "classNavMeshTesterTool.html", null ],
       [ "NavMeshTileTool", "classNavMeshTileTool.html", null ],
       [ "OffMeshConnectionTool", "classOffMeshConnectionTool.html", null ],
-      [ "OffMeshConnectionTool", "classOffMeshConnectionTool.html", null ],
       [ "TempObstacleCreateTool", "classTempObstacleCreateTool.html", null ],
       [ "TempObstacleHilightTool", "classTempObstacleHilightTool.html", null ]
     ] ],
     [ "SampleToolState", "structSampleToolState.html", [
-      [ "CrowdToolState", "classCrowdToolState.html", null ],
       [ "CrowdToolState", "classCrowdToolState.html", null ]
     ] ],
     [ "SDL_AssertData", "structSDL__AssertData.html", null ],

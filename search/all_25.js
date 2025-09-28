@@ -1,7 +1,7 @@
 var searchData=
 [
   ['_7ecmdline_5ferror_0',['~cmdline_error',['../classcmdline_1_1cmdline__error.html#a4fb14d65b75bf0dd97a84e76f571a8be',1,'cmdline::cmdline_error']]],
-  ['_7ecrowdtoolstate_1',['~crowdtoolstate',['../classCrowdToolState.html#a565655ca9441a3df105c266743937f8b',1,'CrowdToolState::~CrowdToolState()'],['../classCrowdToolState.html#a57f86d2033d8ec0c25648c0629d9fb85',1,'CrowdToolState::~CrowdToolState()']]],
+  ['_7ecrowdtoolstate_1',['~CrowdToolState',['../classCrowdToolState.html#a565655ca9441a3df105c266743937f8b',1,'CrowdToolState']]],
   ['_7edtcollectpolysquery_2',['~dtCollectPolysQuery',['../classdtCollectPolysQuery.html#a30a6baa977d507b2c6f0148a770655b8',1,'dtCollectPolysQuery']]],
   ['_7edtcrowd_3',['~dtCrowd',['../classdtCrowd.html#a9a6817150b328d1646e58713cef9d9b4',1,'dtCrowd']]],
   ['_7edtfindnearestpolyquery_4',['~dtFindNearestPolyQuery',['../classdtFindNearestPolyQuery.html#a0f3122a8f4d6151eb628453b3e99d74c',1,'dtFindNearestPolyQuery']]],
@@ -35,7 +35,7 @@ var searchData=
   ['_7enavmeshprunetool_32',['~navmeshprunetool',['../classNavMeshPruneTool.html#a65f0cbf67052f748e96523ed02627eee',1,'NavMeshPruneTool::~NavMeshPruneTool()'],['../classNavMeshPruneTool.html#a215a3b989c944687be233c61b4fc2614',1,'NavMeshPruneTool::~NavMeshPruneTool()']]],
   ['_7enavmeshtilebuildcontext_33',['~NavMeshTileBuildContext',['../structNavMeshTileBuildContext.html#a4a1734772cf543deb500738ebc457119',1,'NavMeshTileBuildContext']]],
   ['_7enavmeshtiletool_34',['~NavMeshTileTool',['../classNavMeshTileTool.html#a203fa6ab349cd24f1366b6d0aa837a0e',1,'NavMeshTileTool']]],
-  ['_7eoffmeshconnectiontool_35',['~offmeshconnectiontool',['../classOffMeshConnectionTool.html#acc9087666ede6f98badc4da256d52772',1,'OffMeshConnectionTool::~OffMeshConnectionTool()'],['../classOffMeshConnectionTool.html#acc9087666ede6f98badc4da256d52772',1,'OffMeshConnectionTool::~OffMeshConnectionTool()']]],
+  ['_7eoffmeshconnectiontool_35',['~OffMeshConnectionTool',['../classOffMeshConnectionTool.html#acc9087666ede6f98badc4da256d52772',1,'OffMeshConnectionTool']]],
   ['_7eparser_36',['~parser',['../classcmdline_1_1parser.html#ad656d8b9b4a38ce85cd2b630c4fc9a6d',1,'cmdline::parser']]],
   ['_7erasterizationcontext_37',['~RasterizationContext',['../structRasterizationContext.html#ac18e6bedcb3955f81484732ee8908431',1,'RasterizationContext']]],
   ['_7ercchunkytrimesh_38',['~rcchunkytrimesh',['../structrcChunkyTriMesh.html#abd0bad171797ff8785f0483fc95e260f',1,'rcChunkyTriMesh::~rcChunkyTriMesh()'],['../structrcChunkyTriMesh.html#abd0bad171797ff8785f0483fc95e260f',1,'rcChunkyTriMesh::~rcChunkyTriMesh()']]],
@@ -50,14 +50,14 @@ var searchData=
   ['_7ercscopeddelete_47',['~rcScopedDelete',['../classrcScopedDelete.html#a694ef36a44d1ccac8fd3fb255d7cf9bd',1,'rcScopedDelete']]],
   ['_7ercscopedtimer_48',['~rcScopedTimer',['../classrcScopedTimer.html#a3e1e6f826e8081e67f23cd6c35653b6e',1,'rcScopedTimer']]],
   ['_7ercvectorbase_49',['~rcVectorBase',['../classrcVectorBase.html#a8efb26bcc33ee441869bc1b7cf850171',1,'rcVectorBase']]],
-  ['_7esample_50',['~sample',['../classSample.html#aa5e7f98208f88af530af44b88da25616',1,'Sample::~Sample()'],['../classSample.html#aea8a48c34d94596f6affbbd28938fb2c',1,'Sample::~Sample()']]],
-  ['_7esample_5fdebug_51',['~sample_debug',['../classSample__Debug.html#a1d922a079270ceae17667276c6372c51',1,'Sample_Debug::~Sample_Debug()'],['../classSample__Debug.html#aa00567b6e45d1efbcc930a2bfdb4c7a0',1,'Sample_Debug::~Sample_Debug()']]],
+  ['_7esample_50',['~sample',['../classSample.html#aea8a48c34d94596f6affbbd28938fb2c',1,'Sample::~Sample()'],['../classSample.html#aa5e7f98208f88af530af44b88da25616',1,'Sample::~Sample()']]],
+  ['_7esample_5fdebug_51',['~Sample_Debug',['../classSample__Debug.html#a1d922a079270ceae17667276c6372c51',1,'Sample_Debug']]],
   ['_7esample_5fsolomesh_52',['~sample_solomesh',['../classSample__SoloMesh.html#a8b7895596e5ce8977b5727023a39573d',1,'Sample_SoloMesh::~Sample_SoloMesh()'],['../classSample__SoloMesh.html#a9cbccc6b218a1368e7fc2370276d86fb',1,'Sample_SoloMesh::~Sample_SoloMesh()']]],
-  ['_7esample_5ftempobstacles_53',['~sample_tempobstacles',['../classSample__TempObstacles.html#a2d3988c2615ecb2dae62d6df5522ba1d',1,'Sample_TempObstacles::~Sample_TempObstacles()'],['../classSample__TempObstacles.html#a87f72227ea7f096e311928a054226403',1,'Sample_TempObstacles::~Sample_TempObstacles()']]],
-  ['_7esample_5ftilemesh_54',['~sample_tilemesh',['../classSample__TileMesh.html#a9f169b24d7e30fba92498102efab85bf',1,'Sample_TileMesh::~Sample_TileMesh()'],['../classSample__TileMesh.html#aa115c16452e67c9c47a272d6127c984e',1,'Sample_TileMesh::~Sample_TileMesh()']]],
+  ['_7esample_5ftempobstacles_53',['~Sample_TempObstacles',['../classSample__TempObstacles.html#a2d3988c2615ecb2dae62d6df5522ba1d',1,'Sample_TempObstacles']]],
+  ['_7esample_5ftilemesh_54',['~Sample_TileMesh',['../classSample__TileMesh.html#aa115c16452e67c9c47a272d6127c984e',1,'Sample_TileMesh']]],
   ['_7esampletool_55',['~sampletool',['../structSampleTool.html#a8b20d1398881252989cbfeeff1a5f2f3',1,'SampleTool::~SampleTool()'],['../structSampleTool.html#a30134ebcc641147b79919ce03887d7af',1,'SampleTool::~SampleTool()']]],
   ['_7esampletoolstate_56',['~sampletoolstate',['../structSampleToolState.html#a1e263aeadeff1cd905d552fe28eeb32b',1,'SampleToolState::~SampleToolState()'],['../structSampleToolState.html#a73ed2e4fd1710f468d47091c3699218e',1,'SampleToolState::~SampleToolState()']]],
   ['_7etempobstaclecreatetool_57',['~TempObstacleCreateTool',['../classTempObstacleCreateTool.html#a8c2fa24e7c9d71e6cb90f32b61d9ae77',1,'TempObstacleCreateTool']]],
   ['_7etempobstaclehilighttool_58',['~TempObstacleHilightTool',['../classTempObstacleHilightTool.html#af0475ec4f0d02355ea68a78edd39b10b',1,'TempObstacleHilightTool']]],
-  ['_7etestcase_59',['~testcase',['../classTestCase.html#ae4684f6b106fa323a61dd13be03d7919',1,'TestCase::~TestCase()'],['../classTestCase.html#ae4684f6b106fa323a61dd13be03d7919',1,'TestCase::~TestCase()']]]
+  ['_7etestcase_59',['~TestCase',['../classTestCase.html#ae4684f6b106fa323a61dd13be03d7919',1,'TestCase']]]
 ];

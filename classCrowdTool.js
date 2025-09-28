@@ -1,25 +1,14 @@
 var classCrowdTool =
 [
     [ "CrowdTool", "classCrowdTool.html#aa66d04ddef79672215f8702a2b063f3c", null ],
-    [ "CrowdTool", "classCrowdTool.html#aa66d04ddef79672215f8702a2b063f3c", null ],
     [ "handleClick", "classCrowdTool.html#a8b1890ee57fab07f458d8370a86a6daa", null ],
-    [ "handleClick", "classCrowdTool.html#ada6daa449f9adb900ab303677c270c43", null ],
     [ "handleMenu", "classCrowdTool.html#a10481889d96be986ffbba99e4f4d751f", null ],
-    [ "handleMenu", "classCrowdTool.html#a1f1741efb3a67cb60eb8839f4d007dcd", null ],
     [ "handleRender", "classCrowdTool.html#a298f481f68d5e8a0cb183c276d182d44", null ],
-    [ "handleRender", "classCrowdTool.html#a9d8b1e5ac1da7dd165e731fd198c5b21", null ],
     [ "handleRenderOverlay", "classCrowdTool.html#a00641ff12ce93e817d07f9cfda7d500b", null ],
-    [ "handleRenderOverlay", "classCrowdTool.html#a4690b58db86b0fe0cc7a5b0c30ace5d2", null ],
     [ "handleStep", "classCrowdTool.html#aff96223c09183019e6d97ec67e6ad60d", null ],
-    [ "handleStep", "classCrowdTool.html#a80a4cfffc9f0c36ee2c7f0a320cf8ba8", null ],
     [ "handleToggle", "classCrowdTool.html#ac2427807187d8c2469d021a714f99266", null ],
-    [ "handleToggle", "classCrowdTool.html#a7eac4526984c1bf7339fbcf69c179e82", null ],
     [ "handleUpdate", "classCrowdTool.html#a8d815cab99740e219ef4ef2d1172936a", null ],
-    [ "handleUpdate", "classCrowdTool.html#afa15cf8083967512ccf58b2815f01bf9", null ],
     [ "init", "classCrowdTool.html#ab6c04d1bc27ac8ce00124e3f8936e7f4", null ],
-    [ "init", "classCrowdTool.html#a6f833b71829bf8e5fe0fa0259eec6879", null ],
     [ "reset", "classCrowdTool.html#ad997d15d14cf4815d57f843186faeba7", null ],
-    [ "reset", "classCrowdTool.html#a30ef2dd9c8ab8ab54f5fcd33bb6bd3d8", null ],
-    [ "type", "classCrowdTool.html#a5b7f620a8f1f319990286c12a4ce2e2d", null ],
     [ "type", "classCrowdTool.html#a5b7f620a8f1f319990286c12a4ce2e2d", null ]
 ];
