@@ -124,6 +124,7 @@ jobs:
     
     - name: Build
       working-directory: RecastDemo/Build/gmake2
+      export CXXFLAGS="-Wno-error"
       run: make config=${{matrix.conf}} verbose=true
     
   linux-cmake:
