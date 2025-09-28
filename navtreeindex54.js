@@ -1,14 +1,5 @@
 var NAVTREEINDEX54 =
 {
-"SDL__opengles2__khrplatform_8h.html#aea31402f1f8fad5bec8bdc4dd0919da9":[44,0,6,0,1,1,55,7],
-"SDL__opengles2__khrplatform_8h.html#af23931754c6a5adf1892efe8933bf788":[44,0,6,0,1,1,55,3],
-"SDL__opengles2__khrplatform_8h.html#af409d81dd359bf16ec33a34810a61b7c":[44,0,6,0,1,1,55,8],
-"SDL__opengles2__khrplatform_8h.html#afb103620f76ee8c038529cbf0375cfed":[44,0,6,0,1,1,55,10],
-"SDL__opengles2__khrplatform_8h.html#afd38e339bdb8f65b1ac0c8f214c427e5":[44,0,6,0,1,1,55,0],
-"SDL__opengles2__khrplatform_8h.html#aff6bea8ea37be81840add529306b32a8":[44,0,6,0,1,1,55,2],
-"SDL__opengles2__khrplatform_8h_source.html":[44,0,6,0,1,1,55],
-"SDL__opengles_8h.html":[44,0,6,0,1,1,50],
-"SDL__opengles_8h_source.html":[44,0,6,0,1,1,50],
 "SDL__pixels_8h.html":[44,0,6,0,1,1,56],
 "SDL__pixels_8h.html#a02d675543e9c5bb72232a08a529ae64e":[44,0,6,0,1,1,56,35],
 "SDL__pixels_8h.html#a03a9dee95b581ed5a268cc45a316db65":[44,0,6,0,1,1,56,21],
@@ -249,5 +240,14 @@ var NAVTREEINDEX54 =
 "SDL__render_8h.html#a7cee9cc7b0b54027860fde346ea26c71":[44,0,6,0,1,1,61,13],
 "SDL__render_8h.html#a7cee9cc7b0b54027860fde346ea26c71a9558b9559ab5d26ac398bb18cc731365":[44,0,6,0,1,1,61,13,1],
 "SDL__render_8h.html#a7cee9cc7b0b54027860fde346ea26c71adaae98d92cef330646363f08cdef6f9e":[44,0,6,0,1,1,61,13,2],
-"SDL__render_8h.html#a7cee9cc7b0b54027860fde346ea26c71af7de2943791eb2a873139506d40a305d":[44,0,6,0,1,1,61,13,0]
+"SDL__render_8h.html#a7cee9cc7b0b54027860fde346ea26c71af7de2943791eb2a873139506d40a305d":[44,0,6,0,1,1,61,13,0],
+"SDL__render_8h.html#a7fc9db6cde77fc9c95a4f65bc7d30073":[44,0,6,0,1,1,61,93],
+"SDL__render_8h.html#a8b50e3956030537b7036c1fcf3fd8f7e":[44,0,6,0,1,1,61,8],
+"SDL__render_8h.html#a8d8aacd15cb2cb24e61ae1905e7a5ab5":[44,0,6,0,1,1,61,15],
+"SDL__render_8h.html#a8d8aacd15cb2cb24e61ae1905e7a5ab5a3c1a49753bd4e0a8cfa7c64ed5a4b0df":[44,0,6,0,1,1,61,15,0],
+"SDL__render_8h.html#a8d8aacd15cb2cb24e61ae1905e7a5ab5a431abaf1e024cd43df94a967ba1e836f":[44,0,6,0,1,1,61,15,2],
+"SDL__render_8h.html#a8d8aacd15cb2cb24e61ae1905e7a5ab5a5a9d122094526405306483d856caa21e":[44,0,6,0,1,1,61,15,1],
+"SDL__render_8h.html#a8ff1a991e7a2599cfc9ea43dfa920d0b":[44,0,6,0,1,1,61,52],
+"SDL__render_8h.html#a94cef2f19a261a175e3a748dd95bec69":[44,0,6,0,1,1,61,53],
+"SDL__render_8h.html#a969ee973fd8f686777f151aa2d9275bc":[44,0,6,0,1,1,61,92]
 };

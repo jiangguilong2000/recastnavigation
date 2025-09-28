@@ -2,7 +2,7 @@ var searchData=
 [
   ['navmeshflags_0',['navmeshflags',['../classNavmeshFlags.html#a060c944fac648d5085ad1934671a2932',1,'NavmeshFlags::NavmeshFlags()'],['../classNavmeshFlags.html#a060c944fac648d5085ad1934671a2932',1,'NavmeshFlags::NavmeshFlags()']]],
   ['navmeshprunetool_1',['navmeshprunetool',['../classNavMeshPruneTool.html#a304902339a20adafa5e57ed648c884ed',1,'NavMeshPruneTool::NavMeshPruneTool()'],['../classNavMeshPruneTool.html#a304902339a20adafa5e57ed648c884ed',1,'NavMeshPruneTool::NavMeshPruneTool()']]],
-  ['navmeshtestertool_2',['navmeshtestertool',['../classNavMeshTesterTool.html#afa92228fae1154929e4819bb9119062d',1,'NavMeshTesterTool::NavMeshTesterTool()'],['../classNavMeshTesterTool.html#afa92228fae1154929e4819bb9119062d',1,'NavMeshTesterTool::NavMeshTesterTool()']]],
+  ['navmeshtestertool_2',['NavMeshTesterTool',['../classNavMeshTesterTool.html#afa92228fae1154929e4819bb9119062d',1,'NavMeshTesterTool']]],
   ['navmeshtilebuildcontext_3',['NavMeshTileBuildContext',['../structNavMeshTileBuildContext.html#a704f1e66aa26ec967683eb097415cadd',1,'NavMeshTileBuildContext']]],
   ['navmeshtiletool_4',['navmeshtiletool',['../classNavMeshTileTool.html#abe63ee741ff92fdf708f098f03e45967',1,'NavMeshTileTool::NavMeshTileTool()'],['../classNavMeshTileTool.html#abe63ee741ff92fdf708f098f03e45967',1,'NavMeshTileTool::NavMeshTileTool()']]],
   ['nearestpoint_5',['nearestPoint',['../classdtFindNearestPolyQuery.html#a713a860cc6775d929a9e0f1d64a86bda',1,'dtFindNearestPolyQuery']]],

@@ -10,7 +10,7 @@ var dir_b5bdb2e5de11b9ef09b966d2ec0a4963 =
     [ "main.cpp", "RecastDemo_2Source_2main_8cpp.html", "RecastDemo_2Source_2main_8cpp" ],
     [ "MeshLoaderObj.cpp", "RecastDemo_2Source_2MeshLoaderObj_8cpp.html", "RecastDemo_2Source_2MeshLoaderObj_8cpp" ],
     [ "NavMeshPruneTool.cpp", "RecastDemo_2Source_2NavMeshPruneTool_8cpp.html", "RecastDemo_2Source_2NavMeshPruneTool_8cpp" ],
-    [ "NavMeshTesterTool.cpp", "RecastDemo_2Source_2NavMeshTesterTool_8cpp.html", "RecastDemo_2Source_2NavMeshTesterTool_8cpp" ],
+    [ "NavMeshTesterTool.cpp", "NavMeshTesterTool_8cpp.html", "NavMeshTesterTool_8cpp" ],
     [ "OffMeshConnectionTool.cpp", "RecastDemo_2Source_2OffMeshConnectionTool_8cpp.html", null ],
     [ "PerfTimer.cpp", "RecastDemo_2Source_2PerfTimer_8cpp.html", "RecastDemo_2Source_2PerfTimer_8cpp" ],
     [ "Sample.cpp", "RecastDemo_2Source_2Sample_8cpp.html", "RecastDemo_2Source_2Sample_8cpp" ],

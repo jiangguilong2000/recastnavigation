@@ -9,7 +9,7 @@ var dir_f244c4afb4303a82689423998a79af95 =
     [ "InputGeom.h", "RecastDemo_2Include_2InputGeom_8h.html", "RecastDemo_2Include_2InputGeom_8h" ],
     [ "MeshLoaderObj.h", "RecastDemo_2Include_2MeshLoaderObj_8h.html", "RecastDemo_2Include_2MeshLoaderObj_8h" ],
     [ "NavMeshPruneTool.h", "RecastDemo_2Include_2NavMeshPruneTool_8h.html", "RecastDemo_2Include_2NavMeshPruneTool_8h" ],
-    [ "NavMeshTesterTool.h", "RecastDemo_2Include_2NavMeshTesterTool_8h.html", "RecastDemo_2Include_2NavMeshTesterTool_8h" ],
+    [ "NavMeshTesterTool.h", "NavMeshTesterTool_8h.html", "NavMeshTesterTool_8h" ],
     [ "OffMeshConnectionTool.h", "RecastDemo_2Include_2OffMeshConnectionTool_8h.html", "RecastDemo_2Include_2OffMeshConnectionTool_8h" ],
     [ "PerfTimer.h", "RecastDemo_2Include_2PerfTimer_8h.html", "RecastDemo_2Include_2PerfTimer_8h" ],
     [ "Sample.h", "RecastDemo_2Include_2Sample_8h.html", "RecastDemo_2Include_2Sample_8h" ],

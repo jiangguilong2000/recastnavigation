@@ -173,7 +173,6 @@ var hierarchy =
       [ "NavMeshPruneTool", "classNavMeshPruneTool.html", null ],
       [ "NavMeshPruneTool", "classNavMeshPruneTool.html", null ],
       [ "NavMeshTesterTool", "classNavMeshTesterTool.html", null ],
-      [ "NavMeshTesterTool", "classNavMeshTesterTool.html", null ],
       [ "NavMeshTileTool", "classNavMeshTileTool.html", null ],
       [ "NavMeshTileTool", "classNavMeshTileTool.html", null ],
       [ "OffMeshConnectionTool", "classOffMeshConnectionTool.html", null ],

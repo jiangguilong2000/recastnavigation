@@ -1,14 +1,5 @@
 var NAVTREEINDEX9 =
 {
-"SDL__config__os2_8h.html#ad7c2edb2365c947f4bff624c7be9f890":[44,0,6,0,1,1,16,76],
-"SDL__config__os2_8h.html#adb4fd1059ec949b0d8add00e3602c44e":[44,0,6,0,1,1,16,86],
-"SDL__config__os2_8h.html#adca0e8e7c3827189abcd6ceae6f60c32":[44,0,6,0,1,1,16,75],
-"SDL__config__os2_8h.html#ae021ce4fe74984428cc97427b7358fda":[44,0,6,0,1,1,16,59],
-"SDL__config__os2_8h.html#ae1bedb7f7b2e73bea7dfb335ddb6c58c":[44,0,6,0,1,1,16,9],
-"SDL__config__os2_8h.html#ae4a04ebc256919da1ad32f7aa36042d1":[44,0,6,0,1,1,16,91],
-"SDL__config__os2_8h.html#ae91f4e5a39dc5d860202b397c9aaa37c":[44,0,6,0,1,1,16,16],
-"SDL__config__os2_8h.html#ae93a78f9d076138897af441c9f86f285":[44,0,6,0,1,1,16,43],
-"SDL__config__os2_8h.html#aebc308e17ca187e22a415060b0d3817d":[44,0,6,0,1,1,16,11],
 "SDL__config__os2_8h.html#aedb06b9a9fb649d9218d46247085c02c":[44,0,6,0,1,1,16,18],
 "SDL__config__os2_8h.html#aef62cc050a5e0734c3b1b2920b00fd1d":[44,0,6,0,1,1,16,99],
 "SDL__config__os2_8h.html#af48c354ae84b052a66066ac1e0f5c8e0":[44,0,6,0,1,1,16,32],
@@ -249,5 +240,14 @@ var NAVTREEINDEX9 =
 "SDL__config__winrt_8h.html#a4ac6a60cb19181437136206238f16497":[44,0,6,0,1,1,20,83],
 "SDL__config__winrt_8h.html#a4e31ef0be24f881a3a13e42723db7095":[44,0,6,0,1,1,20,35],
 "SDL__config__winrt_8h.html#a4f6ff4162269254c4c4b86bc9892ecce":[44,0,6,0,1,1,20,44],
-"SDL__config__winrt_8h.html#a52de22f2e81bce94222ff968b2b3c8c1":[44,0,6,0,1,1,20,14]
+"SDL__config__winrt_8h.html#a52de22f2e81bce94222ff968b2b3c8c1":[44,0,6,0,1,1,20,14],
+"SDL__config__winrt_8h.html#a550e5c272cc3cf3814651721167dcd23":[44,0,6,0,1,1,20,107],
+"SDL__config__winrt_8h.html#a561075a6afb23894833fc887a1552928":[44,0,6,0,1,1,20,62],
+"SDL__config__winrt_8h.html#a575cd33d7c103a84b4d54759e71ea78d":[44,0,6,0,1,1,20,32],
+"SDL__config__winrt_8h.html#a57ecbd1638a8fd89373c41c933e973ec":[44,0,6,0,1,1,20,38],
+"SDL__config__winrt_8h.html#a5807a152fd68558b1eac13d9e3c94e59":[44,0,6,0,1,1,20,100],
+"SDL__config__winrt_8h.html#a608eed28b615f1a30639b34756ffb4f2":[44,0,6,0,1,1,20,104],
+"SDL__config__winrt_8h.html#a61909f2610e1cfb79b200baa2d6c6ce7":[44,0,6,0,1,1,20,15],
+"SDL__config__winrt_8h.html#a631f7011e0e3afd6f6732e18ea7be4ac":[44,0,6,0,1,1,20,21],
+"SDL__config__winrt_8h.html#a6f6c666b70354db02cd6d26318ae70d2":[44,0,6,0,1,1,20,82]
 };
