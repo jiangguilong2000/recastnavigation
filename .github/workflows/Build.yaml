@@ -117,7 +117,10 @@ jobs:
     
     - name: Run premake
       working-directory: RecastDemo
-      run: ./premake5 --cc=${{matrix.compiler}} gmake2
+      run: chmod +x premake5
+       ./premake5 --cc=${{matrix.compiler}} gmake2
+       # 验证生成的目录
+       ls -la Build/gmake2/
     
     - name: Build
       working-directory: RecastDemo/Build/gmake2
