@@ -31,17 +31,12 @@
 #include "NavMeshTesterTool.h"
 #include "Sample.h"
 #include "Recast.h"
-#include <iostream>
-#include <sstream>
-#include <string>
 #include "RecastDebugDraw.h"
 #include "DetourNavMesh.h"
 #include "DetourNavMeshBuilder.h"
 #include "DetourDebugDraw.h"
 #include "DetourCommon.h"
 #include "DetourPathCorridor.h"
-
-using namespace std;
 
 #ifdef WIN32
 #	define snprintf _snprintf
@@ -178,7 +173,7 @@ NavMeshTesterTool::NavMeshTesterTool() :
 	m_navMesh(0),
 	m_navQuery(0),
 	m_pathFindStatus(DT_FAILURE),
-	m_toolMode(TOOLMODE_PATHFIND_STRAIGHT),
+	m_toolMode(TOOLMODE_PATHFIND_FOLLOW),
 	m_straightPathOptions(0),
 	m_startRef(0),
 	m_endRef(0),
@@ -193,8 +188,7 @@ NavMeshTesterTool::NavMeshTesterTool() :
 	m_eposSet(false),
 	m_pathIterNum(0),
 	m_pathIterPolyCount(0),
-	m_steerPointCount(0),
-	m_showCoord(true)
+	m_steerPointCount(0)
 {
 	m_filter.setIncludeFlags(SAMPLE_POLYFLAGS_ALL ^ SAMPLE_POLYFLAGS_DISABLED);
 	m_filter.setExcludeFlags(0);
@@ -422,59 +416,7 @@ void NavMeshTesterTool::handleMenu()
 	}
 	imguiUnindent();
 
-	imguiSeparator();
-
-	imguiLabel("Extend Operation");
-
-	//拷贝
-	if (imguiButton("Copy Log"))
-	{
-		HGLOBAL hGlobal;
-		string allLog = "";
-		string prefix = "total point";
-		bool flag=false;
-		for (int i = 0; i < m_sample->getContext()->getLogCount(); ++i)
-		{
-			string content = string(m_sample->getContext()->getLogText(i));
-
-			if(flag)
-			{
-				allLog += content + "\n";
-			}else
-			{
-				size_t index = content.find(prefix);
-				if(index < content.length())
-				{
-					flag=true;
-					allLog += content + "\n";
-				}
-			}
-			
-			
-				
-			
-		}
-		const char* content = allLog.c_str();
-
-		int bufSize = MultiByteToWideChar(CP_ACP, 0, content, -1, NULL, 0);
-		wchar_t* wbuf = new wchar_t[bufSize];
-		MultiByteToWideChar(CP_ACP, 0, content, -1, wbuf, bufSize);
-
-		hGlobal = GlobalAlloc(GHND, (lstrlenW(wbuf) + 1) * sizeof(wchar_t)); // lstrlenW sizeof(wchar_t)
-		wchar_t* pGlobal = (wchar_t*)GlobalLock(hGlobal); // wchar_t
-		lstrcpyW(pGlobal, wbuf); // lstrcpyW
-		GlobalUnlock(hGlobal);
-
-		OpenClipboard(NULL);
-		EmptyClipboard();
-		SetClipboardData(CF_UNICODETEXT, hGlobal); // UnicodeCF_UNICODETEXT
-		CloseClipboard();
-
-
-		recalc();
-	}
-	
-	
+	imguiSeparator();	
 }
 
 void NavMeshTesterTool::handleClick(const float* /*s*/, const float* p, bool shift)
@@ -1022,25 +964,6 @@ void NavMeshTesterTool::recalc()
 											   m_polys, m_parent, &m_npolys, MAX_POLYS);
 		}
 	}
-		if (m_toolMode == TOOLMODE_PATHFIND_STRAIGHT&& m_nstraightPath>0) 
-    	{
-    		stringstream os;
-		
-    		os << "total point start{"<<m_spos[0]<<","<<  m_spos[1] <<","<<  m_spos[2] <<"} end{"<<m_epos[0]<<","<<  m_epos[1] <<","<<  m_epos[2] <<"}  size=" << m_nstraightPath<< ",";
-    
-    		//m_sample->getContext()->log(RC_LOG_PROGRESS, "total point size=%d", m_nstraightPath);
-    		
-    		for (int i = 0; i < m_nstraightPath; ++i)
-    		{
-    			if (i > 0&&i%10==0) {
-    				m_sample->getContext()->log(RC_LOG_PROGRESS, "%s", os.str().c_str());
-    				
-    				os.str("");
-    			}
-    			os << "[" << m_straightPath[i * 3] << "," << m_straightPath[i * 3 + 1] << "," << m_straightPath[i * 3 + 2] << "] ";
-    		}
-    		m_sample->getContext()->log(RC_LOG_PROGRESS, "%s", os.str().c_str());
-    	}
 }
 
 static void getPolyCenter(dtNavMesh* navMesh, dtPolyRef ref, float* center)
@@ -1409,54 +1332,23 @@ void NavMeshTesterTool::handleRender()
 void NavMeshTesterTool::handleRenderOverlay(double* proj, double* model, int* view)
 {
 	GLdouble x, y, z;
-	char buf[64];
-
+	
 	// Draw start and end point labels
 	if (m_sposSet && gluProject((GLdouble)m_spos[0], (GLdouble)m_spos[1], (GLdouble)m_spos[2],
-		model, proj, view, &x, &y, &z))
+								model, proj, view, &x, &y, &z))
 	{
-		if (m_showCoord)
-		{
-			snprintf(buf, sizeof(buf), "Start (%.1f, %.1f, %.1f)", m_spos[0], m_spos[1], m_spos[2]);
-			imguiDrawText((int)x, (int)(y - 25), IMGUI_ALIGN_CENTER, buf, imguiRGBA(0, 0, 0, 220));
-		}
-		else
-			imguiDrawText((int)x, (int)(y - 25), IMGUI_ALIGN_CENTER, "Start", imguiRGBA(0, 0, 0, 220));
-	}
-
-
-
-	if (m_toolMode == TOOLMODE_RAYCAST && m_hitResult && m_showCoord &&
-		gluProject((GLdouble)m_hitPos[0], (GLdouble)m_hitPos[1], (GLdouble)m_hitPos[2],
-			model, proj, view, &x, &y, &z))
-	{
-		snprintf(buf, sizeof(buf), "HitPos (%.1f, %.1f, %.1f)", m_hitPos[0], m_hitPos[1], m_hitPos[2]);
-		imguiDrawText((int)x, (int)(y - 25), IMGUI_ALIGN_CENTER, buf, imguiRGBA(0, 0, 0, 220));
+		imguiDrawText((int)x, (int)(y-25), IMGUI_ALIGN_CENTER, "Start", imguiRGBA(0,0,0,220));
 	}
 	if (m_eposSet && gluProject((GLdouble)m_epos[0], (GLdouble)m_epos[1], (GLdouble)m_epos[2],
-		model, proj, view, &x, &y, &z))
+								model, proj, view, &x, &y, &z))
 	{
-		if (m_showCoord)
-		{
-			float totalCost = 0.0f;
-			for (int i = 0; i + 1 < m_nstraightPath; i++)
-				totalCost += dtVdist(&m_straightPath[i * 3], &m_straightPath[(i + 1) * 3]);
-			snprintf(buf, sizeof(buf), "End (%.1f, %.1f, %.1f), Cost %.1f", m_epos[0], m_epos[1], m_epos[2], totalCost);
-			imguiDrawText((int)x, (int)(y - 25), IMGUI_ALIGN_CENTER, buf, imguiRGBA(0, 0, 0, 220));
-			
-			
-		}
-		else
-			imguiDrawText((int)x, (int)(y - 25), IMGUI_ALIGN_CENTER, "End", imguiRGBA(0, 0, 0, 220));
+		imguiDrawText((int)x, (int)(y-25), IMGUI_ALIGN_CENTER, "End", imguiRGBA(0,0,0,220));
 	}
-
+	
 	// Tool help
 	const int h = view[3];
-	imguiDrawText(280, h - 40, IMGUI_ALIGN_LEFT, "LMB+SHIFT: Set start location  LMB: Set end location", imguiRGBA(255, 255, 255, 192));
+	imguiDrawText(280, h-40, IMGUI_ALIGN_LEFT, "LMB+SHIFT: Set start location  LMB: Set end location", imguiRGBA(255,255,255,192));	
 }
-
-
-
 
 void NavMeshTesterTool::drawAgent(const float* pos, float r, float h, float c, const unsigned int col)
 {
