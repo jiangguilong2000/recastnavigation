@@ -133,7 +133,6 @@ protected:
 	SampleDebugDraw m_dd;
 	
 	dtNavMesh* loadAll(const char* path);
-	void saveAll(const char* path, const dtNavMesh* mesh);
 
 public:
 	Sample();
@@ -174,6 +173,7 @@ public:
 	
 	unsigned char getNavMeshDrawFlags() const { return m_navMeshDrawFlags; }
 	void setNavMeshDrawFlags(unsigned char flags) { m_navMeshDrawFlags = flags; }
+	void setGeomSet(const BuildSettings* settings);
 
 	void updateToolStates(const float dt);
 	void initToolStates(Sample* sample);
@@ -183,6 +183,7 @@ public:
 
 	void resetCommonSettings();
 	void handleCommonSettings();
+	void saveAll(const char* path, const dtNavMesh* mesh);
 
 private:
 	// Explicitly disabled copy constructor and copy assignment operator.

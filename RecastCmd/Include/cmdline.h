@@ -540,7 +540,8 @@ namespace cmdline {
 		void parse_check(const std::vector<std::string>& args) {
 			if (!options.count("help"))
 				add("help", '?', "print this message");
-			check(args.size(), parse(args));
+			int argc = static_cast<int>(args.size());
+			check(argc, parse(args));
 		}
 
 		void parse_check(int argc, char* argv[]) {

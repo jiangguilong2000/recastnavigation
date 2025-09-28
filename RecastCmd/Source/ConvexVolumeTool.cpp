@@ -245,38 +245,7 @@ void ConvexVolumeTool::handleUpdate(const float /*dt*/)
 
 void ConvexVolumeTool::handleRender()
 {
-	duDebugDraw& dd = m_sample->getDebugDraw();
 	
-	// Find height extent of the shape.
-	float minh = FLT_MAX, maxh = 0;
-	for (int i = 0; i < m_npts; ++i)
-		minh = rcMin(minh, m_pts[i*3+1]);
-	minh -= m_boxDescent;
-	maxh = minh + m_boxHeight;
-
-	dd.begin(DU_DRAW_POINTS, 4.0f);
-	for (int i = 0; i < m_npts; ++i)
-	{
-		unsigned int col = duRGBA(255,255,255,255);
-		if (i == m_npts-1)
-			col = duRGBA(240,32,16,255);
-		dd.vertex(m_pts[i*3+0],m_pts[i*3+1]+0.1f,m_pts[i*3+2], col);
-	}
-	dd.end();
-
-	dd.begin(DU_DRAW_LINES, 2.0f);
-	for (int i = 0, j = m_nhull-1; i < m_nhull; j = i++)
-	{
-		const float* vi = &m_pts[m_hull[j]*3];
-		const float* vj = &m_pts[m_hull[i]*3];
-		dd.vertex(vj[0],minh,vj[2], duRGBA(255,255,255,64));
-		dd.vertex(vi[0],minh,vi[2], duRGBA(255,255,255,64));
-		dd.vertex(vj[0],maxh,vj[2], duRGBA(255,255,255,64));
-		dd.vertex(vi[0],maxh,vi[2], duRGBA(255,255,255,64));
-		dd.vertex(vj[0],minh,vj[2], duRGBA(255,255,255,64));
-		dd.vertex(vj[0],maxh,vj[2], duRGBA(255,255,255,64));
-	}
-	dd.end();	
 }
 
 void ConvexVolumeTool::handleRenderOverlay(double* /*proj*/, double* /*model*/, int* view)

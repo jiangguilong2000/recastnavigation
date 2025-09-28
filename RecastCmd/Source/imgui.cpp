@@ -650,7 +650,7 @@ void imguiSeparatorLine()
 	int h = 1;
 	g_state.widgetY -= DEFAULT_SPACING*4;
 
-	addGfxCmdRect((float)x, (float)y, (float)w, (float)h, imguiRGBA(255,255,255,32));
+	addGfxCmdRect(static_cast<float>(x),  static_cast<float>(y), static_cast<float>(w), static_cast<float>(h), imguiRGBA(255,255,255,32));
 }
 
 void imguiDrawText(int x, int y, int align, const char* text, unsigned int color)
