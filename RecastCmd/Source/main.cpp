@@ -1,4 +1,4 @@
-#include "cmdline.h"
+﻿#include "cmdline.h"
 #include "InputGeom.h"
 #include "Sample_SoloMesh.h"
 
@@ -6,24 +6,35 @@ int main(int argc, char** argv) {
 
 	std::cout << "begin"<< std::endl;
 	cmdline::parser p = cmdline::parser();
-	p.add<float>("cellSize", 's', "cellSize", false, 0.3f);
-	p.add<float>("cellHeight", 'e', "cellHeight", false, 0.2f);
-	p.add<float>("agentHeight", 'h', "agentHeight", false, 2.0f);
-	p.add<float>("agentRadius", 'r', "agentRadius", false, 7.5f);
-	p.add<float>("agentMaxClimb", 'c', "agentMaxClimb", false, 0.9f);
-	p.add<float>("agentMaxSlope", 'l', "agentMaxSlope", false, 45.0f);
-	p.add<float>("regionMinSize", 'g', "regionMinSize", false, 8.0f);
-	p.add<float>("regionMergeSize", 'n', "regionMergeSize", false, 20.0f);
-	p.add<float>("edgeMaxLen", 'd', "edgeMaxLen", false, 12.0f);
-	p.add<float>("edgeMaxError", 'a', "edgeMaxError", false, 1.3f);
-	p.add<float>("vertsPerPoly", 'v', "vertsPerPoly", false, 6.0f);
-	p.add<float>("detailSampleDist", 't', "detailSampleDist", false, 6.0f);
-	p.add<float>("detailSampleMaxError", 'p', "detailSampleMaxError", false, 1.0f);
-	p.add<int>("partitionType", 'y', "partitionType", false, 0);
+	// 网格参数
+	p.add<float>("cellSize", 's', "网格单元大小(voxel size)", false, 0.3f);  // 体素大小，影响导航网格的精度
+	p.add<float>("cellHeight", 'e', "网格单元高度", false, 0.2f);  // 体素高度
+	p.add<float>("agentHeight", 'h', "寻路体高度", false, 2.0f);  // 寻路代理的高度
+	p.add<float>("agentRadius", 'r', "寻路体半径", false, 7.5f);  // 寻路代理的半径
+	p.add<float>("agentMaxClimb", 'c', "寻路体最大攀爬高度", false, 0.9f);  // 代理能攀爬的最大高度
+	p.add<float>("agentMaxSlope", 'l', "寻路体最大坡度(角度)", false, 45.0f);  // 代理能行走的最大坡度角度
 
-	p.add<std::string>("in", 'i', "input filename", true, "");
-	p.add<std::string>("out", 'o', "output filename", false, "");
+	// 区域参数
+	p.add<float>("regionMinSize", 'g', "最小区域大小", false, 8.0f);  // 可行走区域的最小尺寸
+	p.add<float>("regionMergeSize", 'n', "区域合并大小", false, 20.0f);  // 小区域合并的阈值
+
+	// 多边形参数
+	p.add<float>("edgeMaxLen", 'd', "多边形边最大长度", false, 12.0f);  // 多边形边的最大长度
+	p.add<float>("edgeMaxError", 'a', "多边形边最大误差", false, 1.3f);  // 允许的简化误差
+	p.add<float>("vertsPerPoly", 'v', "每个多边形顶点数", false, 6.0f);  // 每个多边形的最大顶点数
+
+	// 细节网格参数
+	p.add<float>("detailSampleDist", 't', "细节采样距离", false, 6.0f);  // 生成细节网格的采样距离
+	p.add<float>("detailSampleMaxError", 'p', "细节采样最大误差", false, 1.0f);  // 细节网格的最大误差
+
+	// 分割类型
+	p.add<int>("partitionType", 'y', "分割类型(0:watershed, 1:monotone, 2:layers)", false, 0);  // 网格分割算法类型
+
+	// 输入输出文件
+	p.add<std::string>("in", 'i', "输入文件名(.obj)", true, "");  // 输入的3D模型文件(.obj格式)
+	p.add<std::string>("out", 'o', "输出文件名(.bin)", false, "");  // 输出的导航网格文件(.bin格式)
 	p.parse_check(argc, argv);
+
 
 	BuildContext ctx;
 	InputGeom geom;
