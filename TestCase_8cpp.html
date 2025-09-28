@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Recast Navigation: Filelist.cpp File Reference</title>
+<title>Recast Navigation: TestCase.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -67,7 +67,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('RecastDemo_2Source_2Filelist_8cpp.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('TestCase_8cpp.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -95,45 +95,51 @@ $(document).ready(function(){initNavTree('RecastDemo_2Source_2Filelist_8cpp.html
 <div class="header">
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
-  <div class="headertitle"><div class="title">Filelist.cpp File Reference</div></div>
+  <div class="headertitle"><div class="title">TestCase.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;Filelist.h&quot;</code><br />
-<code>#include &lt;algorithm&gt;</code><br />
-<code>#include &lt;dirent.h&gt;</code><br />
-<code>#include &lt;cstring&gt;</code><br />
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;ctype.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &quot;TestCase.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="DetourNavMesh_8h_source.html">DetourNavMesh.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="DetourNavMeshQuery_8h_source.html">DetourNavMeshQuery.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="DetourCommon_8h_source.html">DetourCommon.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="SDL_8h_source.html">SDL.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="SDL__opengl_8h_source.html">SDL_opengl.h</a>&quot;</code><br />
+<code>#include &lt;GL/glu.h&gt;</code><br />
+<code>#include &quot;imgui.h&quot;</code><br />
+<code>#include &quot;PerfTimer.h&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab77bcf8d92348f01734b4aeafec8c4d6" id="r_ab77bcf8d92348f01734b4aeafec8c4d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RecastDemo_2Source_2Filelist_8cpp.html#ab77bcf8d92348f01734b4aeafec8c4d6">scanDirectoryAppend</a> (const <a class="el" href="SDL__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">string</a> &amp;<a class="el" href="SDL__opengl__glext_8h.html#ab25d8cd967ccbd19b630d7100ff8f67e">path</a>, const <a class="el" href="SDL__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">string</a> &amp;ext, vector&lt; <a class="el" href="SDL__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">string</a> &gt; &amp;filelist)</td></tr>
-<tr class="separator:ab77bcf8d92348f01734b4aeafec8c4d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2baf53e840e4fefc5e6933fb3d53569e" id="r_a2baf53e840e4fefc5e6933fb3d53569e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RecastDemo_2Source_2Filelist_8cpp.html#a2baf53e840e4fefc5e6933fb3d53569e">scanDirectory</a> (const <a class="el" href="SDL__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">string</a> &amp;<a class="el" href="SDL__opengl__glext_8h.html#ab25d8cd967ccbd19b630d7100ff8f67e">path</a>, const <a class="el" href="SDL__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">string</a> &amp;ext, vector&lt; <a class="el" href="SDL__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">string</a> &gt; &amp;filelist)</td></tr>
-<tr class="separator:a2baf53e840e4fefc5e6933fb3d53569e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b013f0ef0748c11fdbea5004542d1dd" id="r_a5b013f0ef0748c11fdbea5004542d1dd"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TestCase_8cpp.html#a5b013f0ef0748c11fdbea5004542d1dd">parseRow</a> (char *<a class="el" href="SDL__opengl__glext_8h.html#aa3b73d9ca9f2e2396cbeae1ce6ce14be">buf</a>, char *bufEnd, char *<a class="el" href="SDL__opengl__glext_8h.html#a90d3e7e4182a9630993f640fa0443b0b">row</a>, int <a class="el" href="SDL__opengl__glext_8h.html#a652168017ea9a8bbcead03d5c16269fb">len</a>)</td></tr>
+<tr class="separator:a5b013f0ef0748c11fdbea5004542d1dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7f9a7a9c338992807552d44ffce013a" id="r_aa7f9a7a9c338992807552d44ffce013a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TestCase_8cpp.html#aa7f9a7a9c338992807552d44ffce013a">copyName</a> (<a class="el" href="SDL__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">std::string</a> &amp;<a class="el" href="SDL__opengl__glext_8h.html#a85e59cd56e10d0a7f49ab199f277d486">dst</a>, const char *<a class="el" href="SDL__opengl__glext_8h.html#a2a98ddb6f79ec1048ff9e15cdd2422ba">src</a>)</td></tr>
+<tr class="separator:aa7f9a7a9c338992807552d44ffce013a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a2baf53e840e4fefc5e6933fb3d53569e" name="a2baf53e840e4fefc5e6933fb3d53569e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2baf53e840e4fefc5e6933fb3d53569e">&#9670;&#160;</a></span>scanDirectory()</h2>
+<a id="aa7f9a7a9c338992807552d44ffce013a" name="aa7f9a7a9c338992807552d44ffce013a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7f9a7a9c338992807552d44ffce013a">&#9670;&#160;</a></span>copyName()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a> scanDirectory </td>
+          <td class="memname">static <a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a> copyName </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="SDL__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">string</a> &amp;&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
+          <td class="paramtype"><a class="el" href="SDL__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">std::string</a> &amp;&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="SDL__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">string</a> &amp;&#160;</td>
-          <td class="paramname"><em>ext</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">vector&lt; <a class="el" href="SDL__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">string</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>filelist</em>&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>src</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -141,33 +147,47 @@ Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ab77bcf8d92348f01734b4aeafec8c4d6" name="ab77bcf8d92348f01734b4aeafec8c4d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab77bcf8d92348f01734b4aeafec8c4d6">&#9670;&#160;</a></span>scanDirectoryAppend()</h2>
+<a id="a5b013f0ef0748c11fdbea5004542d1dd" name="a5b013f0ef0748c11fdbea5004542d1dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b013f0ef0748c11fdbea5004542d1dd">&#9670;&#160;</a></span>parseRow()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="SDL__opengl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a> scanDirectoryAppend </td>
+          <td class="memname">static char * parseRow </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="SDL__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">string</a> &amp;&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="SDL__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">string</a> &amp;&#160;</td>
-          <td class="paramname"><em>ext</em>, </td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>bufEnd</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">vector&lt; <a class="el" href="SDL__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">string</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>filelist</em>&#160;</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -175,6 +195,11 @@ Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -185,7 +210,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_bd8164545b6b3da3c53f0f7457fcb102.html">RecastDemo</a></li><li class="navelem"><a class="el" href="dir_b5bdb2e5de11b9ef09b966d2ec0a4963.html">Source</a></li><li class="navelem"><a class="el" href="RecastDemo_2Source_2Filelist_8cpp.html">Filelist.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_bd8164545b6b3da3c53f0f7457fcb102.html">RecastDemo</a></li><li class="navelem"><a class="el" href="dir_b5bdb2e5de11b9ef09b966d2ec0a4963.html">Source</a></li><li class="navelem"><a class="el" href="TestCase_8cpp.html">TestCase.cpp</a></li>
       &nbsp;&nbsp;<a href="https://github.com/recastnavigation/recastnavigation">Project Home</a> 
       | <a href="./License.txt">Licence (ZLib)</a>
       | Copyright 2009 Mikko Mononen

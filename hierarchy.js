@@ -54,11 +54,9 @@ var hierarchy =
     [ "dtTempContour", "structdtTempContour.html", null ],
     [ "dtTileCache", "classdtTileCache.html", null ],
     [ "dtTileCacheAlloc", "structdtTileCacheAlloc.html", [
-      [ "LinearAllocator", "structLinearAllocator.html", null ],
       [ "LinearAllocator", "structLinearAllocator.html", null ]
     ] ],
     [ "dtTileCacheCompressor", "structdtTileCacheCompressor.html", [
-      [ "FastLZCompressor", "structFastLZCompressor.html", null ],
       [ "FastLZCompressor", "structFastLZCompressor.html", null ]
     ] ],
     [ "dtTileCacheContour", "structdtTileCacheContour.html", null ],
@@ -66,7 +64,6 @@ var hierarchy =
     [ "dtTileCacheLayer", "structdtTileCacheLayer.html", null ],
     [ "dtTileCacheLayerHeader", "structdtTileCacheLayerHeader.html", null ],
     [ "dtTileCacheMeshProcess", "structdtTileCacheMeshProcess.html", [
-      [ "MeshProcess", "structMeshProcess.html", null ],
       [ "MeshProcess", "structMeshProcess.html", null ]
     ] ],
     [ "dtTileCacheObstacle", "structdtTileCacheObstacle.html", null ],
@@ -174,12 +171,9 @@ var hierarchy =
       [ "NavMeshPruneTool", "classNavMeshPruneTool.html", null ],
       [ "NavMeshTesterTool", "classNavMeshTesterTool.html", null ],
       [ "NavMeshTileTool", "classNavMeshTileTool.html", null ],
-      [ "NavMeshTileTool", "classNavMeshTileTool.html", null ],
       [ "OffMeshConnectionTool", "classOffMeshConnectionTool.html", null ],
       [ "OffMeshConnectionTool", "classOffMeshConnectionTool.html", null ],
       [ "TempObstacleCreateTool", "classTempObstacleCreateTool.html", null ],
-      [ "TempObstacleCreateTool", "classTempObstacleCreateTool.html", null ],
-      [ "TempObstacleHilightTool", "classTempObstacleHilightTool.html", null ],
       [ "TempObstacleHilightTool", "classTempObstacleHilightTool.html", null ]
     ] ],
     [ "SampleToolState", "structSampleToolState.html", [
