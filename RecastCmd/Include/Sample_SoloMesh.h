@@ -37,30 +37,6 @@ protected:
 	rcConfig m_cfg;	
 	rcPolyMeshDetail* m_dmesh;
 	
-	enum DrawMode
-	{
-		DRAWMODE_NAVMESH,
-		DRAWMODE_NAVMESH_TRANS,
-		DRAWMODE_NAVMESH_BVTREE,
-		DRAWMODE_NAVMESH_NODES,
-		DRAWMODE_NAVMESH_INVIS,
-		DRAWMODE_MESH,
-		DRAWMODE_VOXELS,
-		DRAWMODE_VOXELS_WALKABLE,
-		DRAWMODE_COMPACT,
-		DRAWMODE_COMPACT_DISTANCE,
-		DRAWMODE_COMPACT_REGIONS,
-		DRAWMODE_REGION_CONNECTIONS,
-		DRAWMODE_RAW_CONTOURS,
-		DRAWMODE_BOTH_CONTOURS,
-		DRAWMODE_CONTOURS,
-		DRAWMODE_POLYMESH,
-		DRAWMODE_POLYMESH_DETAIL,
-		MAX_DRAWMODE
-	};
-	
-	DrawMode m_drawMode;
-	
 	void cleanup();
 
 public:
@@ -68,11 +44,6 @@ public:
 	virtual ~Sample_SoloMesh();
 	
 	virtual void handleSettings();
-	virtual void handleTools();
-	virtual void handleDebugMode();
-	
-	virtual void handleRender();
-	virtual void handleRenderOverlay(double* proj, double* model, int* view);
 	virtual void handleMeshChanged(class InputGeom* geom);
 	virtual bool handleBuild();
 
