@@ -181,6 +181,9 @@ jobs:
       run: |
         (new-object System.Net.WebClient).DownloadFile("https://github.com/libsdl-org/SDL/releases/download/release-2.32.10/SDL2-devel-2.32.10-VC.zip","${{github.workspace}}/RecastDemo/Contrib/SDL.zip")
         tar -xf SDL.zip
+        if (Test-Path "SDL") {
+        Remove-Item -Recurse -Force "SDL"
+        }
         ren SDL2-2.32.10 SDL
         del SDL.zip
 
@@ -224,6 +227,9 @@ jobs:
       run: |
         (new-object System.Net.WebClient).DownloadFile("https://github.com/libsdl-org/SDL/releases/download/release-2.32.10/SDL2-devel-2.32.10-VC.zip","${{github.workspace}}/RecastDemo/Contrib/SDL.zip")
         tar -xf SDL.zip
+        if (Test-Path "SDL") {
+        Remove-Item -Recurse -Force "SDL"
+        }
         ren SDL2-2.32.10 SDL
         del SDL.zip
 
