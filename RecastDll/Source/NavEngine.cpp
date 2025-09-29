@@ -194,9 +194,9 @@ void NavMesh::Remove(int32_t id)
 	}
 }
 
-const char* NavMesh::Version()
+std::string NavMesh::Version()
 {
-	return  ""+ NAVMESHSET_VERSION;
+	return std::to_string(NAVMESHSET_VERSION);
 }
 
 

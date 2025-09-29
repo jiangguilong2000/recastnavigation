@@ -26,7 +26,7 @@ public:
 
 	void Clear();
 
-	const char* Version();
+	std::string Version();
 
 	void Remove(int32_t id);
 
