@@ -59,6 +59,7 @@ workspace "recastnavigation"
 project "DebugUtils"
 	language "C++"
 	kind "StaticLib"
+	pic "On" 
 	includedirs { 
 		"../DebugUtils/Include",
 		"../Detour/Include",
@@ -73,6 +74,7 @@ project "DebugUtils"
 project "Detour"
 	language "C++"
 	kind "StaticLib"
+	pic "On" 
 	includedirs { 
 		"../Detour/Include" 
 	}
@@ -90,6 +92,7 @@ project "Detour"
 project "DetourCrowd"
 	language "C++"
 	kind "StaticLib"
+	pic "On" 
 	includedirs {
 		"../DetourCrowd/Include",
 		"../Detour/Include",
@@ -103,6 +106,7 @@ project "DetourCrowd"
 project "DetourTileCache"
 	language "C++"
 	kind "StaticLib"
+	pic "On" 
 	includedirs {
 		"../DetourTileCache/Include",
 		"../Detour/Include",
@@ -116,6 +120,7 @@ project "DetourTileCache"
 project "Recast"
 	language "C++"
 	kind "StaticLib"
+	pic "On" 
 	includedirs { 
 		"../Recast/Include" 
 	}
@@ -204,6 +209,7 @@ project "RecastDemo"
 project "RecastDll"
 	language "C++"
 	kind "SharedLib"
+	pic "On"
 	    -- 获取 JAVA_HOME 环境变量
     local java_home = os.getenv("JAVA_HOME")
     local platform_dir = ""
