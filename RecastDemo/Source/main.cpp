@@ -42,6 +42,7 @@
 #include "Sample_TileMesh.h"
 #include "Sample_TempObstacles.h"
 #include "Sample_Debug.h"
+#include <cstring> 
 
 #ifdef WIN32
 #	define snprintf _snprintf
