@@ -22,10 +22,10 @@ workspace "recastnavigation"
 	defines { "RC_FAST_MATH" }
 
 	exceptionhandling "Off"
-	rtti "Off"
+	rtti "On"
 	symbols "On"
 	warnings "High"
-	cppdialect "C++11"
+	cppdialect "C++14" -- Catch requires newer C++ features
 
 	-- debug configs
 	filter "configurations:Debug"
@@ -252,11 +252,9 @@ project "RecastDll"
 project "Tests"
 	language "C++"
 	kind "ConsoleApp"
-	cppdialect "C++14" -- Catch requires newer C++ features
 
 	-- Catch requires RTTI and exceptions
 	exceptionhandling "On"
-	rtti "On"
 
 	includedirs { 
 		"../DebugUtils/Include",
@@ -338,11 +336,9 @@ project "Tests"
 project "RecastCmd"
 	language "C++"
 	kind "ConsoleApp"
-	cppdialect "C++14" -- Catch requires newer C++ features
 
 	-- Catch requires RTTI and exceptions
 	exceptionhandling "On"
-	rtti "On"
 
 	includedirs { 
 		"../RecastCmd/Contrib",
