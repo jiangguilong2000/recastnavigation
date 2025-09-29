@@ -18,6 +18,7 @@
 
 #include <math.h>
 #include <stdio.h>
+
 #include "Sample.h"
 #include "InputGeom.h"
 #include "Recast.h"
@@ -29,6 +30,7 @@
 #include "imgui.h"
 #include "SDL.h"
 #include "SDL_opengl.h"
+#include <cstring> 
 
 #ifdef WIN32
 #	define snprintf _snprintf
