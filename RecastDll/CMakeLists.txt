@@ -4,6 +4,8 @@ find_package(JNI REQUIRED)
 set(CMAKE_CXX_STANDARD 11)
 # Require (at least) it
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+# Enable position independent code for shared libraries
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 # Don't use e.g. GNU extension (like -std=gnu++11) for portability
 set(CMAKE_CXX_EXTENSIONS OFF)
 include_directories(${JNI_INCLUDE_DIRS})
