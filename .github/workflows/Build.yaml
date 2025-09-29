@@ -122,13 +122,9 @@ jobs:
       working-directory: RecastDemo
       run: chmod +x premake5 && ./premake5 --cc=${{matrix.compiler}} gmake2
     
-    - name: Build with correct JNI paths
-      run: |    # 移除错误的win32路径，添加正确的linux路径
-        make config=debug JNI_INCLUDES="-I$JAVA_HOME/include -I$JAVA_HOME/include/linux"
-    
     - name: Build
       working-directory: RecastDemo/Build/gmake2
-      run: make config=${{matrix.conf}} verbose=true
+      run: make config=${{matrix.conf}} JNI_INCLUDES="-I$JAVA_HOME/include -I$JAVA_HOME/include/linux" verbose=true
     
   linux-cmake:
     strategy:
