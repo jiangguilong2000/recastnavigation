@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.22)
 find_package(JNI REQUIRED)
-# Use C++11
-set(CMAKE_CXX_STANDARD 11)
+# Use C++14
+set(CMAKE_CXX_STANDARD 14)
 # Require (at least) it
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-# Don't use e.g. GNU extension (like -std=gnu++11) for portability
+# Don't use e.g. GNU extension (like -std=gnu++14) for portability
 set(CMAKE_CXX_EXTENSIONS OFF)
 include_directories(${JNI_INCLUDE_DIRS})
 
