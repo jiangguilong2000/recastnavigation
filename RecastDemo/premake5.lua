@@ -204,13 +204,27 @@ project "RecastDemo"
 project "RecastDll"
 	language "C++"
 	kind "SharedLib"
-	includedirs {
-		os.getenv("JAVA_HOME").."/include/win32",
-		os.getenv("JAVA_HOME").."/include",
-		"../RecastDll/Include",
-		"../Detour/Include",
-		"../Recast/Include"
-	}
+	    -- 获取 JAVA_HOME 环境变量
+    local java_home = os.getenv("JAVA_HOME")
+    local platform_dir = ""
+    
+    -- 根据平台设置目录
+    if os.host() == "linux" then
+        platform_dir = "linux"
+    elseif os.host() == "windows" then
+        platform_dir = "win32"
+    else
+        platform_dir = "darwin"  -- macOS
+    end
+    
+    includedirs {
+        java_home.."/include/"..platform_dir,
+        java_home.."/include",
+        "../RecastDll/Include",
+        "../Detour/Include",
+        "../Recast/Include"
+    }
+	
 	files {
 		"../RecastDll/Include/*.h",
 		"../RecastDll/Source/*.cpp"

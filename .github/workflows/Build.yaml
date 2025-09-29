@@ -106,9 +106,6 @@ jobs:
     - name: Install opengl and SDL
       run: |
         echo "JAVA_HOME = $JAVA_HOME"
-        ls -la $JAVA_HOME/include/
-        ls -la $JAVA_HOME/include/linux/
-        find $JAVA_HOME -name "jni_md.h" 2>/dev/null
         sudo apt-get update
         sudo apt-get install -y libgl1-mesa-dev libglu1-mesa-dev libsdl2-dev clang gcc
         clang --version
@@ -127,7 +124,7 @@ jobs:
     
     - name: Build
       working-directory: RecastDemo/Build/gmake2
-      run: make config=${{matrix.conf}} JNI_INCLUDES="-I$JAVA_HOME/include -I$JAVA_HOME/include/linux" verbose=true
+      run: make config=${{matrix.conf}} verbose=true
     
   linux-cmake:
     strategy:
