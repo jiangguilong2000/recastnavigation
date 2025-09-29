@@ -120,10 +120,10 @@ jobs:
     
     - name: Run premake
       working-directory: RecastDemo
-      run: chmod +x premake5 && ./premake5 --cc=${{matrix.compiler}} gmake2
+      run: chmod +x premake5 && ./premake5 --cc=${{matrix.compiler}} gmake
     
     - name: Build
-      working-directory: RecastDemo/Build/gmake2
+      working-directory: RecastDemo/Build/gmake
       run: make config=${{matrix.conf}} verbose=true
     
   linux-cmake:
