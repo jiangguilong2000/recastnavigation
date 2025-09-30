@@ -70,3 +70,5 @@ if ( WIN32 AND NOT CYGWIN )
     target_compile_definitions (RecastDll PRIVATE DLL_EXPORTS)
 endif ( )
 
+set_target_properties(RecastDll PROPERTIES OUTPUT_NAME "recast" PREFIX "")
+
