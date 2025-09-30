@@ -4,7 +4,6 @@
 
 int main(int argc, char** argv) {
 
-	std::cout << "begin\n";
 	cmdline::parser p = cmdline::parser();
 	// 网格参数
 	p.add<float>("cellSize", 's', "网格单元大小(voxel size)", false, 0.3f);  // 体素大小，影响导航网格的精度
@@ -48,6 +47,8 @@ int main(int argc, char** argv) {
 	}
 
 	
+	std::cout << "Starting navigation mesh processing for " << input_filename << "...\n";
+	
 	if (!geom.load(&ctx, input_filename))
 	{
 		std::cout<<"Failed to load file "<< input_filename<< "\n";
@@ -81,6 +82,5 @@ int main(int argc, char** argv) {
 	}
 
 	build.saveAll(output_filename.c_str(), build.getNavMesh());
-	std::cout << "save end\n";
+	std::cout << "Navigation Mesh generation completed! Output saved to " << output_filename << "\n";
 }
-
