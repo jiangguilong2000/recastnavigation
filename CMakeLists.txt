@@ -11,6 +11,7 @@ set_property(GLOBAL PROPERTY CXX_STANDARD 98)
 
 option(RECASTNAVIGATION_DEMO "Build demo" ON)
 option(RECASTNAVIGATION_COMMAND "Build command" ON)
+option(RECASTNAVIGATION_DLL "Build dll" ON)
 option(RECASTNAVIGATION_TESTS "Build tests" ON)
 option(RECASTNAVIGATION_EXAMPLES "Build examples" ON)
 option(RECASTNAVIGATION_DT_POLYREF64 "Use 64bit polyrefs instead of 32bit for Detour" OFF)
@@ -94,6 +95,10 @@ endif ()
 
 if (RECASTNAVIGATION_COMMAND)
     add_subdirectory(RecastCmd)
+endif ()
+
+if (RECASTNAVIGATION_DLL)
+    add_subdirectory(RecastDll)
 endif ()
 
 if (RECASTNAVIGATION_TESTS)
