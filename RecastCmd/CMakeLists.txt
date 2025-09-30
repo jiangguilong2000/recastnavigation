@@ -13,4 +13,4 @@ add_executable (RecastCmd ${SRC_LIST})
 add_dependencies(RecastCmd DebugUtils Detour DetourCrowd DetourTileCache Recast)
 target_link_libraries(RecastCmd DebugUtils Detour DetourCrowd DetourTileCache Recast)
 
-set (EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/Bin)
+set (EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR})
